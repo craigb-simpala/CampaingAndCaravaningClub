@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Month_Memberships</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Hybrid_Membership_Number__c</columns>
+    <columns>Membership_Type_Name__c</columns>
+    <columns>Tenure2__c</columns>
+    <columns>Payment_Method2__c</columns>
+    <columns>Renewal_Date__c</columns>
+    <columns>Status_Indicator__c</columns>
+    <columns>Re_run_Batch_Renewal__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Renewal_Date__c</field>
+        <operation>equals</operation>
+        <value>NEXT_MONTH</value>
+    </filters>
+    <filters>
+        <field>Membership_Type_Name__c</field>
+        <operation>equals</operation>
+        <value>Paper</value>
+    </filters>
+    <filters>
+        <field>Payment_Method2__c</field>
+        <operation>equals</operation>
+        <value>Debit/Credit Card</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Memberships</value>
+    </filters>
+    <label>Month Memberships - to renew next month</label>
+</ListView>

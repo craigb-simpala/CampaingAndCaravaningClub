@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treasurers</fullName>
+    <columns>Membership_Number__c</columns>
+    <columns>Member__c</columns>
+    <columns>Office_Email__c</columns>
+    <columns>Voluntary_Office_Title__c</columns>
+    <columns>Association__c</columns>
+    <columns>Section__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Voluntary_Office_Title__c</field>
+        <operation>equals</operation>
+        <value>Treasurer</value>
+    </filters>
+    <filters>
+        <field>End_date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Treasurers</label>
+</ListView>

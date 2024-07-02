@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_Type__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Membership Type</label>
+    <lookupFilter>
+        <active>false</active>
+        <errorMessage>Please select a valid membership type.</errorMessage>
+        <filterItems>
+            <field>Club_Product__c.Record_Type_Name__c</field>
+            <operation>equals</operation>
+            <value>Membership Code</value>
+        </filterItems>
+        <filterItems>
+            <field>Club_Product__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Club_Product__c.Show_in_New_Membership_Picklist__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Club_Product__c.Visible_to_Admin_Users_Only__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Club_Product__c</referenceTo>
+    <relationshipLabel>New Memberships</relationshipLabel>
+    <relationshipName>New_Memberships</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

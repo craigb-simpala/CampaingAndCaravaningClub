@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Member_Age__c</fullName>
+    <externalId>false</externalId>
+    <formula>YEAR(TODAY()) - YEAR(Secondary_Member_Date_of_Birth__c) - 
+IF( 
+OR ( 
+MONTH(TODAY()) &lt; MONTH(Secondary_Member_Date_of_Birth__c), 
+AND( 
+MONTH(TODAY()) == MONTH(Secondary_Member_Date_of_Birth__c), 
+DAY(TODAY()) &lt; DAY(Secondary_Member_Date_of_Birth__c) 
+) 
+), 
+1, 
+0 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Secondary Member Age</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

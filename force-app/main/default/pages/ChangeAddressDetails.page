@@ -1,0 +1,155 @@
+<apex:page standardController="Account" extensions="ChangeMembershipController" lightningStylesheets="true" tabstyle="Opportunity">
+<apex:stylesheet value="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"  />
+    <apex:includeScript value="//code.jquery.com/jquery-1.9.1.js" />
+    <apex:includeScript value="//code.jquery.com/ui/1.10.3/jquery-ui.js" />
+    <script type="text/javascript">
+        function selectAllCheckboxes(obj,receivedInputID){
+            var inputCheckBox = document.getElementsByTagName("input");                  
+            for(var i=0; i<inputCheckBox.length; i++){          
+                if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){                                     
+                    inputCheckBox[i].checked = obj.checked;
+                }
+            }
+        }
+        
+        
+        
+    </script> 
+    
+
+    <apex:sectionHeader title="Change Address Details" />
+    <apex:form >
+        <apex:pageMessages id="msgs" />
+        <apex:outputPanel rendered="{!(wizardStep==1)}"> 
+            <apex:pageblock title="Address">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!cancel}" value="Cancel"/>
+                    <apex:commandButton action="{!changeaddressdetails}" value="Submit" /> 
+                </apex:pageBlockButtons>
+                
+                <style type="text/css">
+        
+                 .bPageBlock.pbHeader 
+                {
+                font-color:#FF0000;
+                }
+   
+                </style>
+                
+                <apex:pageblocksection title="Warning" collapsible="false" columns="1" rendered="{!acc.id!=null}">
+                    <apex:outputtext ><img src="/img/msg_icons/warning32.png" /> <b><span style="font-size:25px;">Changing address method will update the current address</span></b></apex:outputtext>
+                </apex:pageblocksection> 
+                
+                <apex:pageBlockSection title="Current Address Details" columns="1" rendered="{!acc.id!=null}">
+                    <apex:outputfield value="{!acc.billingstreet}"/>
+                    <apex:outputfield value="{!acc.billingpostalcode}"/>
+                    <apex:outputfield value="{!acc.billingcity}"/>
+                    <apex:outputfield value="{!acc.billingcountry}"/>
+                    <apex:outputfield value="{!acc.billingstate}"/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel for="om" value="Overseas Membership" />
+                        <apex:ActionRegion > 
+                            <apex:inputcheckbox id="om" value="{!lea.Overseas_Membership__c}" >
+                                <apex:actionSupport event="onchange" rerender="leadaddruk,pclookup,mslookup,msgs" action="{!changeLocation}" /> 
+                            </apex:inputcheckbox>
+                        </apex:ActionRegion>
+                    </apex:pageBlockSectionItem> 
+                </apex:pageBlockSection>    
+
+                <apex:ActionRegion >
+                    <apex:outputpanel id="pclookup" >
+                        <apex:pageBlockSection title="Postcode Lookup" columns="2" rendered="{!!lea.Overseas_Membership__c}">
+                            <apex:pageblocksectionitem >
+                                <apex:outputLabel for="mhno">House Number</apex:outputLabel>
+                                <apex:inputText id="mhno" value="{!housenumber}" />
+                            </apex:pageblocksectionitem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="addr" value="Select Address" />
+                                <apex:outputpanel id="addropts">
+                                    <apex:selectList id="addr" value="{!selAddr}" size="1"  >
+                                        <apex:selectOptions value="{!addressOptions}"/>
+                                        <apex:actionSupport event="onchange" action="{!filladdress}" rerender="leadaddr,leadaddruk"  />
+                                    </apex:selectList>              
+                                </apex:outputpanel>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageblocksectionitem >
+                                <apex:outputLabel for="mpco">Postcode</apex:outputLabel>
+                                <apex:outputpanel >
+                                    <apex:inputText id="mpco" value="{!pcode}" />
+                                    <apex:commandButton Id="pcSearch" rerender="addropts,msgs" action="{!addrsearch}" title="Search" value="Search"/>
+                                </apex:outputpanel> 
+                            </apex:pageblocksectionitem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="mt" value="Manual Entry" />
+                                <apex:inputcheckbox id="mt" value="{!showmanual}" >
+                                    <apex:actionSupport event="onchange" rerender="mslookup,leadaddruk" action="{!changems}" /> 
+                                </apex:inputcheckbox>
+                            </apex:pageBlockSectionItem> 
+                        </apex:pageBlockSection>
+                    </apex:outputpanel>
+                </apex:ActionRegion>
+                <apex:outputpanel id="mslookup">
+                    <apex:ActionRegion > 
+                        <apex:pageBlockSection title="Manual Lookup" columns="2" rendered="{!showmanual && !lea.Overseas_Membership__c}" >
+                            <apex:pageblocksectionitem >
+                                <apex:outputLabel for="mhno">House Number</apex:outputLabel>
+                                <apex:inputText id="mhno" value="{!mhousenumber}" />
+                            </apex:pageblocksectionitem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="maddr" value="Select Address" />
+                                <apex:outputpanel id="maddropts">
+                                    <apex:selectList id="maddr" value="{!mselAddr}" size="1"  >
+                                        <apex:selectOptions value="{!maddressOptions}"/>
+                                        <apex:actionSupport event="onchange" action="{!mfilladdress}" rerender="maddr2,leadaddruk"  />
+                                    </apex:selectList>              
+                                </apex:outputpanel>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageblocksectionitem >
+                                <apex:outputLabel for="mst">Street</apex:outputLabel>
+                                <apex:inputText id="mst" value="{!mstreet}" />
+                            </apex:pageblocksectionitem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="maddr" value="" />
+                                <apex:outputpanel id="maddropts2">
+                                    <apex:selectList id="maddr2" value="{!mseladdr2}" size="1" >
+                                        <apex:selectOptions value="{!maddressOptions2}" />
+                                        <apex:actionSupport event="onchange" action="{!mfilladdress2}"  rerender="leadaddruk"/>
+                                    </apex:selectList>               
+                                </apex:outputpanel>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageblocksectionitem >
+                                <apex:outputLabel for="mcity">City</apex:outputLabel>
+                                <apex:outputpanel >
+                                    <apex:inputText id="mst" value="{!mcity}" />
+                                    <apex:commandButton Id="mSearch" rerender="maddropts,maddropts2,msgs" action="{!maddrsearch}" title="Search" value="Search"/>
+                                </apex:outputpanel> 
+                            </apex:pageblocksectionitem>
+                        </apex:pageBlockSection>
+                    </apex:ActionRegion>
+                </apex:outputpanel>
+
+                <apex:pageBlockSection title="Address" columns="1" id="leadaddruk" >
+                    <apex:inputField id="orginput" value="{!lea.Organisation__c}" />
+                    <apex:inputField id="streetinput" value="{!lea.street}" />
+                    <apex:inputField id="cityinput" value="{!lea.city}" />
+                    <apex:inputField id="stateinput" value="{!lea.state}" />
+                    <apex:inputField id="PostalCodeinput" value="{!lea.PostalCode}" />
+                    <apex:inputField id="countryinput" value="{!lea.country}" />
+                    <script>
+                        document.getElementById('{!$Component.orginput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.streetinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.cityinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.stateinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.PostalCodeinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.countryinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                    </script>
+                </apex:pageBlockSection>
+
+
+
+
+                            
+            </apex:pageblock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

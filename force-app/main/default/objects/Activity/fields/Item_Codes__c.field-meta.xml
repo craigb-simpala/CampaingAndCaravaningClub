@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_Codes__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Mail House item codes for fulfilment at Paragon</inlineHelpText>
+    <label>Item Codes</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Mailhouse_items__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CCC-13738 Price Guide</fullName>
+                <default>false</default>
+                <label>CCC-13738</label>
+            </value>
+            <value>
+                <fullName>CCC-13024 Enquiry Pack (Membership)</fullName>
+                <default>false</default>
+                <label>CCC-13024</label>
+            </value>
+            <value>
+                <fullName>CCC-13576  Window Stickers</fullName>
+                <default>false</default>
+                <label>CCC-13576</label>
+            </value>
+            <value>
+                <fullName>CCC-13737 siteseeker update book</fullName>
+                <default>false</default>
+                <label>CCC-13737</label>
+            </value>
+            <value>
+                <fullName>CCC-13830 Siteseeker Directory</fullName>
+                <default>false</default>
+                <label>CCC-13830</label>
+            </value>
+            <value>
+                <fullName>CCC-13563 Siteseeker Map</fullName>
+                <default>false</default>
+                <label>CCC-13563</label>
+            </value>
+            <value>
+                <fullName>CCC-13971 May Out &amp; About supplement</fullName>
+                <default>false</default>
+                <label>CCC-13971</label>
+            </value>
+            <value>
+                <fullName>CCC-13970 May Replacement Magazine</fullName>
+                <default>false</default>
+                <label>CCC-13970</label>
+            </value>
+            <value>
+                <fullName>CCC-13565 Bookmark</fullName>
+                <default>false</default>
+                <label>CCC-13565</label>
+            </value>
+            <value>
+                <fullName>CCC-13206 Self-catering Brochure</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CCC-13206</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Enquiry Pack</controllingFieldValue>
+            <valueName>CCC-13024 Enquiry Pack (Membership)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Out &amp; About</controllingFieldValue>
+            <valueName>CCC-13971 May Out &amp; About supplement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price Guide</controllingFieldValue>
+            <valueName>CCC-13738 Price Guide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Replacement Magazine</controllingFieldValue>
+            <valueName>CCC-13970 May Replacement Magazine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SS Directory</controllingFieldValue>
+            <valueName>CCC-13830 Siteseeker Directory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SS Map</controllingFieldValue>
+            <valueName>CCC-13563 Siteseeker Map</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SS Update</controllingFieldValue>
+            <valueName>CCC-13737 siteseeker update book</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Window Sticker</controllingFieldValue>
+            <valueName>CCC-13576  Window Stickers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bookmark</controllingFieldValue>
+            <valueName>CCC-13565 Bookmark</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

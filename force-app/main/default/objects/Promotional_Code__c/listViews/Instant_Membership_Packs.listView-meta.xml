@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instant_Membership_Packs</fullName>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Valid_From__c</columns>
+    <columns>Expiry_Date__c</columns>
+    <columns>Number_Allowed__c</columns>
+    <columns>Number_Used__c</columns>
+    <columns>Valid_for_Memberships__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Description__c</field>
+        <operation>contains</operation>
+        <value>IM Pack,Instant</value>
+    </filters>
+    <label>Instant Membership Packs</label>
+</ListView>

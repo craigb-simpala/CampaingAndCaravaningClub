@@ -1,0 +1,1705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>European_Case_Record_Type</fullName>
+    <active>true</active>
+    <businessProcess>Standard</businessProcess>
+    <description>Overseas inbox cases</description>
+    <label>European Case Record Type</label>
+    <picklistValues>
+        <picklist>BusinessArea__c</picklist>
+        <values>
+            <fullName>Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overseas</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Spam%2FOut of Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website %2F App</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CaseCategory__c</picklist>
+        <values>
+            <fullName>Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Positive Feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request for Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Systems</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Third Party</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instagram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Show Enquiry Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Confidential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Amend Personal Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Club Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Dissatisfaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Join</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Log-in</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Positive Feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Enquiry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason__c</picklist>
+        <values>
+            <fullName>Amend Personal Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brittany Ferries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Condor Ferries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DFDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eurotunnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Dissatisfaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Irish Ferries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Join</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Log-in</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P %26 O Ferries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Positive Feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stenna Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wight Link</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work On Site</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Site_Name__c</picklist>
+        <values>
+            <fullName>Adgestone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aldridge Hill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alton%2C The Star</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ashbourne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ashurst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bakewell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barnard Castle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beadnell Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bellingham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blackmore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boroughbridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bowness in Windermere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bracelands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Braithwaite Village</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bude</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California Cross</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannock Chase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canterbury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardigan Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cashel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charmouth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cheddar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chertsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chichester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chipping Norton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clent Hills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clitheroe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cobleland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conkers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corfe Castle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crowborough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crowden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Culzean Castle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dartmouth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delamere F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delamont CP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denny Wood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derwentwater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Devizes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dingwall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drayton Manor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dunbar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dunstan Hill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ebury Hill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folkestone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glencoe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glenmore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graffham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haltwhistle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hayfield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hereford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hertford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hollands Wood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holmsley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horsley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inverewe Gardens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jedburgh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kelvedon Hatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kendal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kessingland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keswick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kingsbury WP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lauder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Llanystumdwy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lochness Shores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Longbeech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lynton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mablethorpe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matley Wood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Milarrochy Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minehead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moffat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moreton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nairn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normans Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norwich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oban</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ocknall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oldbury Hill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oxford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polstead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postern Hill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ravenglass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rhandirmwyn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosemarkie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roundhill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salisbury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sandringham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scarborough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sennen Cove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setthorns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sherrif Hutton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sherwood Pines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skye</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slapton Sands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slindon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slingsby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speyside</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>St Davids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>St Neots</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tavistock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teversal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Theobalds Park</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tregurrian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Umberleigh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verwood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veryan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walton on Thames</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Runton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winchombe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windermere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wolverley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woodhall Spa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wyeside</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tech_Category__c</picklist>
+        <values>
+            <fullName>Battery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Buying %26 Selling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campsites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driving Licence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heating Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overseas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satnav</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Television %26 Satellite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Towing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unit Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unit Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheels %26 Tyres</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workshop%2C Repairs %26 Spares</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tech_Type__c</picklist>
+        <values>
+            <fullName>%40 70</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 Volt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12V or 240V%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13 Pin Mis-Alignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2005 or before</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2006-2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2011-2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2016-2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2021-2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5th wheel caravan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A Frame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACOPS %2F STGW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AWS Complaints</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AWS Referral - Fixed %2F Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional Cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Addresses %26 Zipcodes Abroad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aerial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air Conditioning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alarm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appliances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awning Types</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Axle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B Only Licence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B%2BE Requirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bodywork Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Break-Away Cable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C1 Entitlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO - Poisoning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRiS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cameras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Camping Appliances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campsites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Charging %28Electric%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Trailer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caravan Chassis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caravan Site Act 1960</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caravan Steps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cleaning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Club Classifieds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compare Tow Vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compulsory Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Condensation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction %26 Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer %26 Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corrosion%2FOxidation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cruise Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DVLA Status of Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Damp%2FWater Ingress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealer No Longer Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diesel%2FPetrol%2FLPG%2FHybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dismantlers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driving - Limits Weights etc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Earth Fault</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>End of Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engine Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excess Weight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fault Indication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faulty Unit%2FUnfit unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fire Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floor Delamination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folding Camper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freezing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fresh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generators</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handbooks %2F Manuals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Height</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holiday Homes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homologated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hook Up %2F Mains</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hosepipe Ban</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inflator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inspection %26 Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invertors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jockey Wheel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leaks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limits %26 Weights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linking in Parallel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Locked Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lubrication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOT Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical Locks %26 Clamps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moisture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring %2F TPMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motorcaravan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motorhome Seatbelts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motormover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCC Scheme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noseweight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PIR %2F EICR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POIs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parking Restrictions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts %2F Spares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pitches %2F Types</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polarity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pole Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pressure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Covenant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protectors for Mirrors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pump</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Push Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rear Loads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regulator Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remap %26 Chipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removable %28Boot Camp et al%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental %2F Hire %2F Hire before you Buy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential - 28%2B day stays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restoration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retailer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return Cylinder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Road Tax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roof Tent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Marking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self Build</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sites Query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish Length Markers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spare Provision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speed Limits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stabiliser Hitch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steadies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension %26 Levelling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tacho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax %26 SORN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tow Car Winner Or Runner Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Towing Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Towing Service 3rd party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trailer Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training %2F Courses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tread Depth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tyron Bands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Using Towsafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAT Exempt - Disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viewing the Website %2F Bookings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waste Disposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weight %26 Dimensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weight Up %26 Down Plating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheel Loss %26 Bolt Torque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WiFi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wild camping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wind turbine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wiring inc Tell Tail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wood Burners - Solid Fuel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enquiry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Request__c</picklist>
+        <values>
+            <fullName>ACSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit %2F Voucher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Enquiry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

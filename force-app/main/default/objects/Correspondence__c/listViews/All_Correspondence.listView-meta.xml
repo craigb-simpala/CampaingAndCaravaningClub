@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Correspondence</fullName>
+    <columns>NAME</columns>
+    <columns>Correspondence_Type__c</columns>
+    <columns>Membership_Number__c</columns>
+    <columns>Membership__c</columns>
+    <columns>Membership_Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Date_Processed__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Correspondence_date__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>All Correspondence</label>
+</ListView>

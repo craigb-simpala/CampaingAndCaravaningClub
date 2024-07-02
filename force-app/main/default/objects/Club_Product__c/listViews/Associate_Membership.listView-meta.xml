@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Associate_Membership</fullName>
+    <columns>NAME</columns>
+    <columns>Product_Detail__c</columns>
+    <columns>Active__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Club_Product__c.Associate_Membership</value>
+    </filters>
+    <label>Associate Membership</label>
+</ListView>

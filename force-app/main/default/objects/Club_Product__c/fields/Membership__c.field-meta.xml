@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+CASE( Name ,
+&quot;50 Years&quot;, &quot;/resource/0000000000000/fifty&quot;, /* fifty*/
+&quot;Certificated Sites - Digital&quot;, &quot;/resource/0000000000000/other&quot;, /* other*/
+&quot;CHH - Digital&quot;, &quot;/resource/0000000000000/chh3&quot;, /* chh*/
+&quot;Complimentary&quot;, &quot;/resource/0000000000000/complimentary&quot;, /* complimentary*/
+&quot;Honorary&quot;, &quot;/resource/0000000000000/honorary2&quot;, /* honorary*/
+&quot;Honorary (VP)&quot;, &quot;/resource/0000000000000/honorary2&quot;, /* honorary*/
+&quot;Digital&quot;, &quot;/resource/0000000000000/digital&quot;, /* online*/
+&quot;Overseas - Digital Membership&quot;, &quot;/resource/0000000000000/overseas&quot;, /* overseas*/
+&quot;Overseas - Paper&quot;, &quot;/resource/0000000000000/overseas&quot;, /* overseas*/
+&quot;Paper&quot;, &quot;/resource/0000000000000/paper2&quot;, /* paper*/
+&quot;Press Card Holder&quot;, &quot;/resource/0000000000000/press&quot;, /* press*/
+&quot;Senior Youth - Digital&quot;, &quot;/resource/0000000000000/senioryouth&quot;, /* senioryouth*/
+&quot;Senior Youth - Paper&quot;, &quot;/resource/0000000000000/senioryouth&quot;, /* senioryouth*/
+&quot;Staff&quot;, &quot;/resource/0000000000000/staff&quot;, /* staff*/
+&quot;Technical&quot;, &quot;/resource/0000000000000/tech&quot;, /* tech*/
+&quot;Temporary Overseas Membership&quot;, &quot;/resource/0000000000000/tempoverseas&quot;, /* tempoverseas*/
+&quot;Veteran - Digital&quot;, &quot;/resource/0000000000000/veteran2&quot;, /* veteran*/
+&quot;Veteran - Paper&quot;, &quot;/resource/0000000000000/veteran2&quot;, /* veteran*/
+&quot;Veteran Overseas - Digital&quot;, &quot;/resource/0000000000000/veteran2&quot;, /* veteran*/
+&quot;Vice President&quot;, &quot;/resource/0000000000000/vp2&quot;, /* vp*/
+&quot;Youth - Digital&quot;, &quot;/resource/0000000000000/youth&quot;, /* youth*/
+&quot;Youth - Paper&quot;, &quot;/resource/0000000000000/youth&quot;, /* youth*/
+&quot;Site Paper&quot;, &quot;/resource/0000000000000/ccc_site_paper&quot;, /* site*/
+&quot;Site Digital&quot;, &quot;/resource/0000000000000/ccc_site_digital&quot;, /* site*/
+&quot;/resource/0000000000000/trans_circle&quot;), /* Other */
+&quot;Membership Status&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Membership</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

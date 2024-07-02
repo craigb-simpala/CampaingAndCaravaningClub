@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DD_Payments</fullName>
+    <columns>NAME</columns>
+    <columns>Membership_Number__c</columns>
+    <columns>Membership__c</columns>
+    <columns>Bank_Account_Number__c</columns>
+    <columns>Sort_Code__c</columns>
+    <columns>Mandate_Amount__c</columns>
+    <columns>Status2__c</columns>
+    <columns>DD_Transaction_dd_mm__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Payment_Method__c.Direct_Debit</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>DD Payments</label>
+</ListView>

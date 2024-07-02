@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificated_Sites_70002</fullName>
+    <columns>NAME</columns>
+    <columns>Contact_Name__c</columns>
+    <columns>RT_Code__c</columns>
+    <columns>Level_One__c</columns>
+    <columns>Commission_Paid__c</columns>
+    <columns>Active__c</columns>
+    <columns>Show_on_Website__c</columns>
+    <columns>No_Monthly_Magazines__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Dealer_Ad_Category__c</field>
+        <operation>contains</operation>
+        <value>Certificated Site</value>
+    </filters>
+    <filters>
+        <field>RT_Code__c</field>
+        <operation>equals</operation>
+        <value>70002</value>
+    </filters>
+    <label>Certificated Sites 70002</label>
+</ListView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewals_completed</fullName>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Hybrid_Membership_Number__c</columns>
+    <columns>Renewal_Date__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>OPPORTUNITY.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.WON</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Renewal</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <filters>
+        <field>UPDATEDBY_USER.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>Sandyx</value>
+    </filters>
+    <label>Renewals completed this week</label>
+</ListView>

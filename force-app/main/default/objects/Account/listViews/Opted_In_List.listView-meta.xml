@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opted_In_List</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Hybrid_Membership_Number__c</columns>
+    <columns>Membership_Type__c</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>Status_Indicator__c</columns>
+    <columns>District_Association__c</columns>
+    <columns>Opted_In__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Opted_In__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Opted-In List</label>
+</ListView>

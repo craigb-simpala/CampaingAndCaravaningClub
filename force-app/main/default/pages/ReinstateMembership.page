@@ -1,0 +1,88 @@
+<apex:page standardController="Account" extensions="ReinstateMembershipController" lightningStylesheets="true" tabstyle="Opportunity" action="{!setupLead}">
+    <apex:sectionHeader title="Reinstate Membership" />
+    <apex:form >
+        <apex:pageMessages id="msgs" />
+        <apex:outputPanel rendered="{!(wizardstep==0)}">
+            <apex:pageblock title="Error">
+                <apex:pageBlockButtons location="top">
+                    <apex:commandButton action="{!cancel}" value="Back"/>
+                </apex:pageBlockButtons>
+                <apex:outputtext >{!errorMsg}</apex:outputtext>
+            </apex:pageblock>
+        </apex:outputPanel>
+
+    <apex:outputPanel rendered="{!(wizardStep>=1) }">
+    <apex:pageblock title="Payment">
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton action="{!cancel}" value="Back"/>
+            <apex:commandButton action="{!confirm}" value="Submit" rendered="{!costtotal==0}"/>
+            <apex:commandButton onclick="nonjava.submit(); return false;" value="Submit Payment" rendered="{!and(lea.Payment_Method__c="Debit/Credit Card",costtotal>0)}"/>
+            <apex:commandButton action="{!confirm}" value="Submit Payment"  rendered="{!and(lea.Payment_Method__c=='Direct Debit',costtotal>0) }"/>
+            <apex:commandButton action="{!confirm}" value="Submit Payment" rendered="{!and(lea.Payment_Method__c="Cash/Cheque",costtotal>0)}"/> 
+        </apex:pageBlockButtons>
+        <apex:pageblocksection title="Payment Details" collapsible="false" >
+                <apex:inputfield id="ptype" value="{!lea.Payment_Method__c}"  >
+                    <apex:actionSupport event="onchange" action="{!changepayment}"  />
+                </apex:inputfield>
+       </apex:pageblocksection>
+        <apex:pageblocksection title="Bank Details" collapsible="false" rendered="{!lea.Payment_Method__c=='Direct Debit'}">
+            <apex:inputfield id="baname" value="{!lea.Bank_Account_Name__c}"  />
+            <apex:inputfield id="bname" value="{!lea.Bank_Name__c}"  />
+            <apex:inputfield id="banum" value="{!lea.Bank_Account_Number__c}"  />
+            <apex:inputfield id="bsort" value="{!lea.Sort_Code__c}"  />
+        </apex:pageblocksection>
+       <!-- 
+       <apex:pageblocksection title="Error" collapsible="false" rendered="{!and(lea.Payment_Method__c=='Direct Debit',costtotal>0)}">
+           <apex:outputtext >Reinstatement Payments cannot be made via Direct Debit from  this form</apex:outputtext>   
+       </apex:pageblocksection>       
+        <apex:pageblocksection title="Error" collapsible="false" rendered="{!and(lea.Payment_Method__c="Direct Debit",costtotal==0)}">
+           <apex:outputtext >Reinstatement Payments cannot be made via Direct Debit from  this form</apex:outputtext>   
+       </apex:pageblocksection>
+        -->       
+       
+    </apex:pageblock>
+    </apex:outputPanel>
+
+    <apex:outputPanel rendered="{!wizardStep>=1}">
+    <apex:pageblock title="Costs" >
+        <apex:pageblocksection title="Costs" collapsible="false" columns="1">
+                    <apex:pageblocksectionitem >
+                        <apex:outputLabel for="mcost">Membership</apex:outputLabel>
+                             <apex:outputtext id="mcost" value="£{0, number, ###,###,##0.00}" >
+                            <apex:param value="{!mtCost}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                    <apex:pageblocksectionitem rendered="{!amCost!=null}">
+                        <apex:outputLabel for="amcost">Associate Member</apex:outputLabel>
+                            <apex:outputtext id="amcost" value="£{0, number, ###,###,##0.00}" >
+                            <apex:param value="{!amCost}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+        <apex:repeat value="{!sections}" var="s">
+                    <apex:pageblocksectionitem rendered="{!s.selected}">
+                        <apex:outputLabel for="mcost">{!s.s.Product_Detail__c}</apex:outputLabel>
+                            <apex:outputtext id="mcost" value="£{0, number, ###,###,##0.00}" >
+                            <apex:param value="{!s.Price}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+        </apex:repeat>
+                    <apex:pageblocksectionitem />
+                    <apex:pageblocksectionitem >
+                        <apex:outputLabel for="tcost" style="font-weight:bolder">Total Cost</apex:outputLabel>
+                        <apex:outputtext id="tcost" value="£{0, number, ###,###,##0.00}" >
+                        <apex:param value="{!costTotal}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+       </apex:pageblocksection>
+    </apex:pageblock>
+    </apex:outputPanel>
+
+    </apex:form>
+    <apex:iframe rendered="{!wizardStep>=1}">
+        <apex:outputtext escape="false" >
+            <form id="nonjava" name="nonjava" method="post" action="{!$Setup.Verifone__c.Endpoint__c}" >
+                <input name="postdata" id="nonjavapostdata" type="hidden" value="{!payform}"/>
+            </form>
+        </apex:outputtext>
+    </apex:iframe>
+</apex:page>

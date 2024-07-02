@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Today_s_payment_transactions</fullName>
+    <columns>NAME</columns>
+    <columns>Membership_Number__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Status__c</columns>
+    <columns>Transaction_Date__c</columns>
+    <columns>Transaction_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Transaction_Date__c</field>
+        <operation>equals</operation>
+        <value>TODAY,YESTERDAY</value>
+    </filters>
+    <filters>
+        <field>Transaction_Type__c</field>
+        <operation>equals</operation>
+        <value>01,17</value>
+    </filters>
+    <label>Copy of Today&apos;s payment transactions</label>
+</ListView>

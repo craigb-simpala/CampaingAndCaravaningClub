@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Postcode_Part_1__c</fullName>
+    <description>Outward section of the Postcode i.e. PR1 or L15 - does not include the trailing space. Used to determine the Region and DA allocation</description>
+    <externalId>false</externalId>
+    <label>Postcode Part 1</label>
+    <length>5</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

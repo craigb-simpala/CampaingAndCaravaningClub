@@ -1,0 +1,91 @@
+<!--
+  @description       : 
+  @author            : Kev Cadger (Wipro)
+  @group             : 
+  @last modified on  : 01-06-2022
+  @last modified by  : Kev Cadger (Wipro)
+  Modifications Log
+  Ver   Date         Author               Modification
+  1.0   19-05-2022   Kev Cadger (Wipro)   Initial Version
+-->
+<template>
+  <div
+    class="slds-grid slds-wrap slds-size_1-of-1 slds-var-p-around_small slds-align_absolute-center"
+  >
+    <div class="slds-size_2-of-5"></div>
+    <div class="slds-size_1-of-5">
+      <!-- Report Type -->
+      <lightning-combobox
+        data-name="cmbReportType"
+        label="Select the Report Type"
+        options={getOptions_ReportType}
+        value={report.type}
+        onchange={handleChange_ReportType}
+      ></lightning-combobox>
+    </div>
+    <div class="slds-size_2-of-5"></div>
+    <div class="slds-size_1-of-1 slds-var-p-top_medium slds-align_absolute-center">
+      <!-- If report type has been selected -->
+      <template if:true={isSelected_ReportType}>
+        <!-- If report has NOT been created -->
+        <template if:false={isCreated_Report}>
+          <!-- Button: Create Report -->
+          <lightning-button
+            data-name="btnReportCreate"
+            class="slds-button slds-button_brand"
+            icon-name="utility:process"
+            label="Create Report"
+            variant="brand"
+            onclick={handleClick_btnReportCreate}
+          ></lightning-button>
+        </template>
+        <!-- If report has been created -->
+        <template if:true={isCreated_Report}>
+          <!-- If report has NOT been uploaded -->
+          <template if:false={isUploaded_Report}>
+            <!-- Button: Upload Report -->
+            <lightning-button
+              data-name="btnReportUpload"
+              class="slds-button slds-button_brand"
+              icon-name="utility:file"
+              label="Upload Report"
+              variant="brand"
+              onclick={switchShowModal}
+            ></lightning-button>
+            <!-- Modal: File Upload -->
+            <template if:true={_showModal}>
+              <!-- File Upload: Upload Report -->
+              <section aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                  <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_small">Upload the Report</h2>
+                  </header>
+                  <div class="slds-modal__content">
+                    <div
+                      class="slds-align_absolute-center slds-var-p-around_small"
+                    >
+                      <lightning-file-upload
+                        label="Upload the Report to Process"
+                        record-id={report.id}
+                        onuploadfinished={handleUploadFinished}
+                      ></lightning-file-upload>
+                    </div>
+                  </div>
+                  <footer class="slds-modal__footer">
+                    <lightning-button
+                      variant="brand"
+                      label="Cancel"
+                      onclick={switchShowModal}
+                      class="slds-var-p-around_x-small"
+                    ></lightning-button>
+                  </footer>
+                </div>
+              </section>
+              <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
+          </template>
+        </template>
+      </template>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <name>birthdateChanged</name>
+        <label>birthdateChanged?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>birthdate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Age__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>60.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Age_Concession__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Age_Concession</targetReference>
+            </connector>
+            <label>birthdate</label>
+        </rules>
+    </decisions>
+    <description>This flow only will be use to test the functionality on a daily flow that will do the same but at midnight</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>CurrentAge</name>
+        <dataType>Number</dataType>
+        <expression>IF( NOT( ISBLANK( {!$Record.Birthdate} ) ) ,
+IF( DATE( 2000 , MONTH( {!$Record.Birthdate} ) , DAY( {!$Record.Birthdate} ) ) &lt;= DATE( 2000 , MONTH( TODAY() ) , DAY( TODAY() ) ),
+     YEAR (Today()) - YEAR ( {!$Record.Birthdate} ),
+     YEAR (Today()) - YEAR ( {!$Record.Birthdate} ) -1 ),
+  null)</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>TEST_Update Age Concession {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>TEST_Update Age Concession</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Age_Concession</name>
+        <label>Update Age Concession</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Age_Concession__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>birthdateChanged</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Birthdate</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

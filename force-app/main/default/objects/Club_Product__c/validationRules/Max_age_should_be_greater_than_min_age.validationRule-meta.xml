@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Max_age_should_be_greater_than_min_age</fullName>
+    <active>true</active>
+    <errorConditionFormula>Max_Age_for_Membership__c  &lt;  Min_Age_for_Membership__c</errorConditionFormula>
+    <errorDisplayField>Max_Age_for_Membership__c</errorDisplayField>
+    <errorMessage>Max age for the membership code should be greater than Min age</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Associate_isnt_allowed_on_New_Membership</fullName>
+    <active>false</active>
+    <description>Used to check if Associate&apos;s aren&apos;t allowed with current member types</description>
+    <errorConditionFormula>AND(
+ Membership_Type__r.Associate_Allowed__c = False,
+ hasAssociate__c = TRUE)</errorConditionFormula>
+    <errorDisplayField>hasAssociate__c</errorDisplayField>
+    <errorMessage>Associate members cannot be added to the selected membership type.</errorMessage>
+</ValidationRule>

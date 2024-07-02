@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ad_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Ad Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0001 - A Class Exhibitions</fullName>
+                <default>false</default>
+                <label>0001 - A Class Exhibitions</label>
+            </value>
+            <value>
+                <fullName>0109 - Brand Media</fullName>
+                <default>false</default>
+                <label>0109 - Brand Media</label>
+            </value>
+            <value>
+                <fullName>0004 - Certificated Sites</fullName>
+                <default>false</default>
+                <label>0004 - Certificated Sites</label>
+            </value>
+            <value>
+                <fullName>0062 - Club Enquiries – Recruitment Book3</fullName>
+                <default>false</default>
+                <label>0062 - Club Enquiries – Recruitment Book3</label>
+            </value>
+            <value>
+                <fullName>0088 - Club Services</fullName>
+                <default>false</default>
+                <label>0088 - Club Services</label>
+            </value>
+            <value>
+                <fullName>0102 - Club Sites Literature</fullName>
+                <default>false</default>
+                <label>0102 - Club Sites Literature</label>
+            </value>
+            <value>
+                <fullName>0006 - DA Recruitment</fullName>
+                <default>false</default>
+                <label>0006 - DA Recruitment</label>
+            </value>
+            <value>
+                <fullName>0000 - Dealers</fullName>
+                <default>false</default>
+                <label>0000 - Dealers</label>
+            </value>
+            <value>
+                <fullName>0010 - Dealers (Millers Shops)</fullName>
+                <default>false</default>
+                <label>0010 - Dealers (Millers Shops)</label>
+            </value>
+            <value>
+                <fullName>0014 - Dealers (Outdoor Ltd/Scout Shops)</fullName>
+                <default>false</default>
+                <label>0014 - Dealers (Outdoor Ltd/Scout Shops)</label>
+            </value>
+            <value>
+                <fullName>0015 - Dealers (YHA Shops)</fullName>
+                <default>false</default>
+                <label>0015 - Dealers (YHA Shops)</label>
+            </value>
+            <value>
+                <fullName>0070 - Direct Mail</fullName>
+                <default>false</default>
+                <label>0070 - Direct Mail</label>
+            </value>
+            <value>
+                <fullName>0054 - Employee Members</fullName>
+                <default>false</default>
+                <label>0054 - Employee Members</label>
+            </value>
+            <value>
+                <fullName>0031 - Enquirer Follow-ups</fullName>
+                <default>false</default>
+                <label>0031 - Enquirer Follow-ups</label>
+            </value>
+            <value>
+                <fullName>0103 - Franchise Member Recruitment</fullName>
+                <default>false</default>
+                <label>0103 - Franchise Member Recruitment</label>
+            </value>
+            <value>
+                <fullName>0003 - General Membership Codes</fullName>
+                <default>false</default>
+                <label>0003 - General Membership Codes</label>
+            </value>
+            <value>
+                <fullName>0030 - Gift Memberships</fullName>
+                <default>false</default>
+                <label>0030 - Gift Memberships</label>
+            </value>
+            <value>
+                <fullName>0049 - Internet</fullName>
+                <default>false</default>
+                <label>0049 - Internet</label>
+            </value>
+            <value>
+                <fullName>0055 - Journalists</fullName>
+                <default>false</default>
+                <label>0055 - Journalists</label>
+            </value>
+            <value>
+                <fullName>0106 - Media Advertising 2010</fullName>
+                <default>false</default>
+                <label>0106 - Media Advertising 2010</label>
+            </value>
+            <value>
+                <fullName>1002 - Membership Advertising – Old</fullName>
+                <default>false</default>
+                <label>1002 - Membership Advertising – Old</label>
+            </value>
+            <value>
+                <fullName>0009 - Miscellaneous</fullName>
+                <default>false</default>
+                <label>0009 - Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>1006 - Miscellaneous Archive</fullName>
+                <default>false</default>
+                <label>1006 - Miscellaneous Archive</label>
+            </value>
+            <value>
+                <fullName>0079 - NCCW Archive</fullName>
+                <default>false</default>
+                <label>0079 - NCCW Archive</label>
+            </value>
+            <value>
+                <fullName>0107 - New to camping 2010</fullName>
+                <default>false</default>
+                <label>0107 - New to camping 2010</label>
+            </value>
+            <value>
+                <fullName>0064 - Overseas Recruitment</fullName>
+                <default>false</default>
+                <label>0064 - Overseas Recruitment</label>
+            </value>
+            <value>
+                <fullName>0011 - Partnerships/Offer Recruitment</fullName>
+                <default>false</default>
+                <label>0011 - Partnerships/Offer Recruitment</label>
+            </value>
+            <value>
+                <fullName>0007 - Pro Advertising</fullName>
+                <default>false</default>
+                <label>0007 - Pro Advertising</label>
+            </value>
+            <value>
+                <fullName>0008 - Pro Shows</fullName>
+                <default>false</default>
+                <label>0008 - Pro Shows</label>
+            </value>
+            <value>
+                <fullName>1005 - Pro’s Current</fullName>
+                <default>false</default>
+                <label>1005 - Pro’s Current</label>
+            </value>
+            <value>
+                <fullName>0104 - Retention and Development Activities</fullName>
+                <default>false</default>
+                <label>0104 - Retention and Development Activities</label>
+            </value>
+            <value>
+                <fullName>0013 - Sites Advertising</fullName>
+                <default>false</default>
+                <label>0013 - Sites Advertising</label>
+            </value>
+            <value>
+                <fullName>1003 - Sites Advertising - Old</fullName>
+                <default>false</default>
+                <label>1003 - Sites Advertising - Old</label>
+            </value>
+            <value>
+                <fullName>0080 - Special dealer Schemes</fullName>
+                <default>false</default>
+                <label>0080 - Special dealer Schemes</label>
+            </value>
+            <value>
+                <fullName>0002 - THS and DA Recruitment</fullName>
+                <default>false</default>
+                <label>0002 - THS and DA Recruitment</label>
+            </value>
+            <value>
+                <fullName>0033 - TIC’s</fullName>
+                <default>false</default>
+                <label>0033 - TIC’s</label>
+            </value>
+            <value>
+                <fullName>0032 - UK Old Sites</fullName>
+                <default>false</default>
+                <label>0032 - UK Old Sites</label>
+            </value>
+            <value>
+                <fullName>0018 - Uncoded Dealers</fullName>
+                <default>false</default>
+                <label>0018 - Uncoded Dealers</label>
+            </value>
+            <value>
+                <fullName>0108 - Yeomans stores</fullName>
+                <default>false</default>
+                <label>0108 - Yeomans stores</label>
+            </value>
+            <value>
+                <fullName>0100 - 2006 Membership Advertising</fullName>
+                <default>false</default>
+                <label>0100 - 2006 Membership Advertising</label>
+            </value>
+            <value>
+                <fullName>0101 - 2006 Sites advertising</fullName>
+                <default>false</default>
+                <label>0101 - 2006 Sites advertising</label>
+            </value>
+            <value>
+                <fullName>0005 - 5-Van Site enquiry packs</fullName>
+                <default>false</default>
+                <label>0005 - 5-Van Site enquiry packs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

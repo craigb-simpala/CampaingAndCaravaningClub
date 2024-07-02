@@ -1,0 +1,103 @@
+<apex:page standardController="Account" extensions="ChangeMembershipController" lightningStylesheets="true" tabstyle="Opportunity">
+    <apex:stylesheet value="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"  />
+    <apex:includeScript value="//code.jquery.com/jquery-1.9.1.js" />
+    <apex:includeScript value="//code.jquery.com/ui/1.10.3/jquery-ui.js" />
+    <script type="text/javascript">
+        function selectAllCheckboxes(obj,receivedInputID){
+            var inputCheckBox = document.getElementsByTagName("input");                  
+            for(var i=0; i<inputCheckBox.length; i++){          
+                if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){                                     
+                    inputCheckBox[i].checked = obj.checked;
+                }
+            }
+        }
+        
+        
+        
+    </script> 
+    
+
+    <apex:sectionHeader title="Change Payment Details" />
+    <apex:form >
+    <apex:variable var="amountLabel" value="Leave this field at 0 or blank, changing it will incur an unnecessary charge" />
+        <apex:pageMessages id="msgs" />
+        <apex:outputPanel rendered="{!(wizardStep==1)}"> 
+            <apex:pageblock title="Payment">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!cancel}" value="Cancel"/>
+                    <apex:commandButton action="{!changepaymentdetails}" value="Submit" rendered="{!lea.Payment_Method__c!=null && (lea.Payment_Method__c != "Debit/Credit Card" || joinFee = 0)}"/>
+                    <apex:commandButton onclick="nonjava.submit(); return false;" value="Submit Payment" rendered="{!and(lea.Payment_Method__c="Debit/Credit Card",joinFee > 0)}"/>
+                </apex:pageBlockButtons>
+                
+                 <style type="text/css">
+        
+                 .bPageBlock.pbHeader 
+                {
+                font-color:#FF0000;
+                }
+   
+                </style>
+                <apex:pageblocksection title="Joining Fee" collapsible="false" rendered="{!lea.Payment_Method__c !=null && joinDateFee && lea.Payment_Method__c != "Direct Debit"}">
+                    <apex:inputfield id="JFwaive" value="{!lea.Joining_Fee_Waived__c}"  >
+                        <apex:actionSupport event="onchange" action="{!changepayment}"  />
+                    </apex:inputfield>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Warning" collapsible="false" columns="1" rendered="{!currentDD!=null}">
+                    <apex:outputtext ><img src="/img/msg_icons/warning32.png" /> <b><span style="font-size:25px;">Changing payment method will cancel the current direct debit</span></b></apex:outputtext>
+                </apex:pageblocksection> 
+                
+                 <apex:pageBlockSection title="Active Direct Debit Details" columns="1" rendered="{!currentDD!=null}">
+                     <apex:outputfield value="{!currentDD.Bank_Account_Name__c}"/>
+                      <apex:outputfield value="{!currentDD.Bank_Account_Number__c}"/>
+                      <apex:outputfield value="{!currentDD.Bank_Name__c}"/>
+                      <apex:outputfield value="{!currentDD.Sort_Code__c}"/>
+                </apex:pageBlockSection>                
+                <apex:pageblocksection title="Payment Details" collapsible="false" >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel for="pt" value="Payment Method" />
+                        <apex:selectList id="pt" value="{!lea.Payment_Method__c}" size="1" >
+                             <apex:selectOptions value="{!PaymentOptions}"/>
+                             <apex:actionSupport event="onchange" action="{!changepayment}"  />
+                        </apex:selectList>             
+                    </apex:pageBlockSectionItem>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Bank Details" collapsible="false" rendered="{!lea.Payment_Method__c='Direct Debit' && ddPayAllowed}">
+                    <apex:inputfield id="baname" value="{!lea.Bank_Account_Name__c}"  />
+                    <apex:inputfield id="bname" value="{!lea.Bank_Name__c}"  />
+                    <apex:inputfield id="banum" value="{!lea.Bank_Account_Number__c}"  />
+                    <apex:inputfield id="bsort" value="{!lea.Sort_Code__c}"  />
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Amount"  columns="1" collapsible="false" rendered="{!lea.Payment_Method__c='Direct Debit' && ddPayAllowed}">
+                    <apex:inputfield id="bamount" value="{!lea.Amount__c}"  />
+                    <apex:outputlabel style="margin-left:14.4%;" id="lamount" for="bamount" value="Enter value only if payment is due and Renewal date in the past."/>          
+                </apex:pageblocksection>
+                <apex:pageblockSection id="fees" title="Fees" columns="2" rendered="{!(joinDateFee && lea.Payment_Method__c !='Direct Debit' && joinFee > 0)}">
+                    <apex:pageblocksectionitem >
+                            <apex:outputLabel for="jcost">Joining Fee</apex:outputLabel>
+                            <apex:outputtext id="jcost" value="£{0, number, ###,###,##0.00}" >
+                            <apex:param value="{!joinFee}" />
+                             </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Error" collapsible="false" rendered="{!lea.Payment_Method__c='Direct Debit' && !ddPayAllowed}">
+                    <apex:outputtext >Direct Debit Payments not valid for this Membership Type</apex:outputtext>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Error" collapsible="false" rendered="{!lea.Payment_Method__c='Debit / Credit Card' && !cardPayAllowed}">
+                    <apex:outputtext >Credit/Debit Card Payments not valid for this Membership Type</apex:outputtext>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Error" collapsible="false" rendered="{!lea.Payment_Method__c='Cash / Cheque' && !cashPayAllowed}">
+                    <apex:outputtext >Cash Payments not valid for this Membership Type</apex:outputtext>
+                </apex:pageblocksection>
+
+            </apex:pageblock>
+        </apex:outputPanel>
+        
+    </apex:form>
+    <apex:iframe >
+            <apex:outputtext escape="false" >
+                <form id="nonjava" name="nonjava" method="post" action="{!$Setup.Verifone__c.Endpoint__c}" >
+                    <input name="postdata" id="nonjavapostdata" type="hidden" value="{!payform}"/>
+                </form>
+            </apex:outputtext>
+        </apex:iframe>
+</apex:page>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_status_to_Cancelled</fullName>
+        <description>Updates Membership status to Cancelled</description>
+        <field>Membership_Status__c</field>
+        <literalValue>Cancelled</literalValue>
+        <name>Update status to Cancelled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_Ex_Member</fullName>
+        <description>Updates Membership Status to Ex-Member</description>
+        <field>Membership_Status__c</field>
+        <literalValue>Ex-Member</literalValue>
+        <name>Update status to Ex-Member</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_Lapsed</fullName>
+        <field>Membership_Status__c</field>
+        <literalValue>Lapsed</literalValue>
+        <name>Update status to Lapsed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Membership status change to Ex-Member2</fullName>
+        <active>false</active>
+        <formula>AND(Renewal_Date__c &lt; Today(),     OR(TEXT(Membership_Status__c) = &apos;Cancelled&apos;,      TEXT(Membership_Status__c) = &apos;Lapsed&apos;,      TEXT(Membership_Status__c) = &apos;DD Mandate Rejected&apos;,      TEXT(Membership_Status__c) = &apos;DD Payment Rejected&apos;   )   )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_status_to_Ex_Member</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Account.Renewal_Date__c</offsetFromField>
+            <timeLength>365</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Membership status change to Unpaid</fullName>
+        <active>false</active>
+        <formula>AND(Renewal_Date__c &lt; Today(),  TEXT(Membership_Status__c) = &apos;Paid&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_status_to_Lapsed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Account.Renewal_Date__c</offsetFromField>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RtM Record Type</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Membership_Status__c</field>
+            <operation>equals</operation>
+            <value>Refer to Manager</value>
+        </criteriaItems>
+        <description>Deactivated: Replaced by Roles&amp;Profiles mods</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Non-Renewers to Cancelled</fullName>
+        <active>false</active>
+        <formula>TEXT ( Membership_Status__c )= &apos;Non-Renewer&apos;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_status_to_Cancelled</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Account.Renewal_Date__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

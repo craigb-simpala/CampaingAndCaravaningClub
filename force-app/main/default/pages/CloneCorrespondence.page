@@ -1,0 +1,2 @@
+<apex:page standardcontroller="Correspondence__c" extensions="CloneCorrespondenceController" lightningStylesheets="true" action="{!cloneCorr}">
+</apex:page>

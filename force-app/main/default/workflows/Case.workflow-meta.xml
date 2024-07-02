@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Case_Escalation_Tier_1</fullName>
+        <description>Case Escalation Tier 1</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Tier1Escalation__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Customer_Service_Email_Templates/SUPPORTCaseescalationnotification</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Escalation_Tier_2</fullName>
+        <description>Case Escalation Tier 2</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Tier2Escalation__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Customer_Service_Email_Templates/SUPPORTCaseescalationnotification</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Escalation_Tier_3</fullName>
+        <description>Case Escalation Tier 3</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Tier3Escalation__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Customer_Service_Email_Templates/SUPPORTCaseescalationnotification</template>
+    </alerts>
+    <alerts>
+        <fullName>Milestone_Violation</fullName>
+        <description>Milestone Violation</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Customer_Service_Email_Templates/SUPPORTCaseescalationnotification</template>
+    </alerts>
+</Workflow>

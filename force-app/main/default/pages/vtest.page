@@ -1,0 +1,10 @@
+<apex:page standardController="Lead" extensions="vcontroller" tabStyle="Account">
+ <apex:form >
+        <apex:pageMessages id="msgs" />
+        <apex:pageBlock >
+        <apex:pageblockbuttons >
+        <apex:commandButton action="{!validate}" title="test" value="test"/>
+        </apex:pageblockbuttons>
+        </apex:pageBlock>
+ </apex:form>
+ </apex:page>

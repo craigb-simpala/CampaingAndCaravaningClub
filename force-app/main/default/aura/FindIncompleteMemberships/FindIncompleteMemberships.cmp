@@ -1,0 +1,55 @@
+<aura:component implements="flexipage:availableForAllPAgeTypes,force:appHostable" controller="FindIncompleteMembershipsHandler">
+
+	<aura:attribute name="surname" type="String"/>
+	<aura:attribute name="postcode" type="String"/>
+	<aura:attribute name="email" type="String"/>
+	<aura:attribute name="leadData" type="Object"/>
+	<aura:attribute name="leadColumns" type="List"/>
+	<aura:attribute name="accountData" type="Object"/>
+	<aura:attribute name="accountColumns" type="List"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<!-- Search criteria -->
+	<lightning:card title="Check for Existing Membership" iconName="standard:lead">
+		<div class="slds-m-around_small">
+			<lightning:input label="Surname" value="{!v.surname}"/>
+			<lightning:input label="Postcode" value="{!v.postcode}"/>
+			<lightning:input label="Email" value="{!v.email}"/>
+			<div class="slds-m-top_small slds-align_absolute-center">
+				<lightning:button variant="brand" label="Search" title="Search" onclick="{!c.search}"/>
+				<lightning:button variant="neutral" label="Create New" title="New" onclick="{!c.callCreateLead}"/>
+			</div>
+		</div>
+	</lightning:card>
+    
+    <!-- Table of returned Accounts -->
+	<aura:if isTrue="{!v.accountData != null}">
+		<lightning:card title="Existing Memberships" iconName="standard:account">
+			<div class="slds-m-around_small">
+				
+				<lightning:datatable keyField="id"
+								data="{!v.accountData}"
+								columns="{!v.accountColumns}"
+								hideCheckboxColumn="true"/>
+
+			</div>
+		</lightning:card>
+	</aura:if>
+	
+	<!-- Table of returned Leads. -->
+	<aura:if isTrue="{!v.leadData != null}">
+		<lightning:card title="Incomplete Memberships" iconName="standard:lead">
+			<div class="slds-m-around_small">
+				
+				<lightning:datatable keyField="id"
+									data="{!v.leadData}"
+									columns="{!v.leadColumns}"
+									hideCheckboxColumn="true"/>
+			
+			</div>
+		</lightning:card>
+	</aura:if>
+		
+
+</aura:component>

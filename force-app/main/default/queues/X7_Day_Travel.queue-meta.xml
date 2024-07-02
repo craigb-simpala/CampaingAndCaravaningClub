@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>7 Day Travel</name>
+    <queueMembers>
+        <users>
+            <user>alexander.lewis@campingandcaravanningclub.co.uk</user>
+            <user>amanda.sale@campingandcaravanningclub.co.uk</user>
+            <user>ann-marie.casey@campingandcaravanningclub.co.uk</user>
+            <user>donna.beech@campingandcaravanningclub.co.uk</user>
+            <user>emma.jones@campingandcaravanningclub.co.uk</user>
+            <user>gemma.edwards@campingandcaravanningclub.co.uk</user>
+            <user>jane.bedford@campingandcaravanningclub.co.uk</user>
+            <user>jessica.daniel@campingandcaravanningclub.co.uk</user>
+            <user>joanne.clayton@campingandcaravanningclub.co.uk</user>
+            <user>john.mayor@campingandcaravanningclub.co.uk</user>
+            <user>jonathan.ward@campingandcaravanningclub.co.uk</user>
+            <user>june.o&apos;connell@campingandcaravanningclub.co.uk</user>
+            <user>kara.edwards@campingandcaravanningclub.co.uk</user>
+            <user>katie.coleman@campingandcaravanningclub.co.uk</user>
+            <user>laura.sheridan@campingandcaravanningclub.co.uk</user>
+            <user>lorraine.roston@campingandcaravanningclub.co.uk</user>
+            <user>nadia.daw@campingandcaravanningclub.co.uk</user>
+            <user>naomi.kealey@campingandcaravanningclub.co.uk</user>
+            <user>nicola.daniel@campingandcaravanningclub.co.uk</user>
+            <user>rachael.clewlow@campingandcaravanningclub.co.uk</user>
+            <user>rebekah.clarke@campingandcaravanningclub.co.uk</user>
+            <user>samantha.bennett@campingandcaravanningclub.co.uk</user>
+            <user>shirley.horsley@campingandcaravanningclub.co.uk</user>
+            <user>suey.bilke@campingandcaravanningclub.co.uk</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>X7_Day_Travel</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

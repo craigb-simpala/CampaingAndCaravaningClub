@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tenure_in_Office__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(End_date__c), 
+IF (MONTH(TODAY()) &gt; MONTH(Start_Date__c), 
+(YEAR(TODAY()) - YEAR(Start_Date__c) + 1), 
+IF (MONTH(TODAY()) = MONTH(Start_Date__c), 
+IF (DAY(TODAY()) &gt;= DAY(Start_Date__c), 
+(YEAR(TODAY()) - YEAR(Start_Date__c) + 1), 
+YEAR(TODAY()) - YEAR(Start_Date__c) 
+), 
+YEAR(TODAY()) - YEAR(Start_Date__c) 
+) 
+), 
+IF (MONTH(End_date__c) &gt; MONTH(Start_Date__c), 
+(YEAR(End_date__c) - YEAR(Start_Date__c) + 1), 
+IF (MONTH(End_date__c) = MONTH(Start_Date__c), 
+IF (DAY(End_date__c) &gt;= DAY(Start_Date__c), 
+(YEAR(End_date__c) - YEAR(Start_Date__c) + 1), 
+YEAR(End_date__c) - YEAR(Start_Date__c) 
+), 
+YEAR(End_date__c) - YEAR(Start_Date__c) 
+) 
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tenure in Office</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

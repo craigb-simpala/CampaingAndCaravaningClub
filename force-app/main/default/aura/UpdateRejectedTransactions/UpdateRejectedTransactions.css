@@ -1,0 +1,11 @@
+.THIS p.successMsg{
+    color: green;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.THIS p.errorMsg{
+    color: red;
+    font-weight: 800;
+    font-size: 16px;
+}

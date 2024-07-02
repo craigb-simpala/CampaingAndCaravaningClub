@@ -1,0 +1,73 @@
+<!-- This component is a child of 'PD_FlexiPage_LightningPopUpModal_Button.cmp' -->
+
+<aura:component controller="PaymentTypeSelectorController" implements="force:hasRecordId,flexipage:availableForRecordHome,force:lightningQuickAction">
+	<aura:attribute name="recordId" type="Id" access="global"/>
+	<aura:attribute name="screen" type="String" access="global" default="payment-type"/>
+	<aura:attribute name="productOptions" type="List" access="global"/>
+	 <aura:attribute name="paymentTypeOptions" type="List" default="[{'label': 'Direct Debit', 'value': 'Direct Debit'},
+	 	{'label': 'Cash/Cheque', 'value': 'Cash/Cheque'},{'label': 'Debit/Credit Card', 'value': 'Debit/Credit Card'}]"/>
+	<aura:attribute name="selectedPaymentType" type="String" default="Direct Debit"/>
+	<aura:attribute name="selectedProductOption" type="String"/>
+	<aura:attribute name="accountName" type="String" default="" /> 
+	<aura:attribute name="accountNumber" type="String" default="" /> 
+	<aura:attribute name="sortCode" type="String" default="" />
+	<aura:attribute name="errors" type="String" default="" /> 
+	<aura:attribute name="endpoint" type="String" />
+
+	<aura:attribute name="xml" type="String"/>
+
+	<ltng:require scripts="{!$Resource.jQuery}"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+
+	<lightning:card>
+		<aura:renderIf isTrue="{!v.screen=='payment-type'}">
+			<table class="slds-table">
+				<lightning:radioGroup name="radioGroup" label="Payment type" options="{! v.paymentTypeOptions }" value="{! v.selectedPaymentType }" type="radio"/>
+			</table>
+			<br/>
+			<aura:renderIf isTrue="{!v.selectedPaymentType!='Cash/Cheque'}">
+				<lightning:button label="Next" onclick="{!c.next}" class="slds-button slds-button_brand button" />
+				<aura:set attribute="else">
+					<lightning:button label="Save" onclick="{!c.save}" class="slds-button slds-button_brand button" />
+				</aura:set>
+			</aura:renderIf>
+		</aura:renderIf>
+
+
+		<aura:renderIf isTrue="{!v.screen=='club-product'}">
+			<aura:renderIf isTrue="{!v.selectedPaymentType=='Direct Debit'}">
+				<lightning:input label="Account Name" value="{!v.accountName}"/>
+				<lightning:input label="Account Number" value="{!v.accountNumber}"/>
+				<lightning:input label="Sort Code" value="{!v.sortCode}"/>
+
+				<aura:renderIf isTrue="{!v.errors!=''}">
+				<br/>
+					{!v.errors}
+				<br/>
+				</aura:renderIf>
+			</aura:renderIf>
+				
+				<aura:renderIf isTrue="{!v.selectedPaymentType=='Debit/Credit Card'}">
+
+					<div id="testContainer" aura:id="testContainer" class="slds-hide">
+						<!--<aura:unescapedHtml value="{!v.xml}"/>-->
+						
+							<form id="paymentFrame" aura:id="paymentFrame"  method="POST" action="{!v.endpoint}" target="res">
+	            				<input name="postdata" id="nonjavapostdata" type="hidden" value="{!v.xml}"/>
+	       					</form>
+                        <iframe name="res" class="resIFrame">
+						</iframe>
+					</div>
+					<lightning:button label="Callout" onclick="{!c.callout}" class="slds-button slds-button_brand button" />
+				</aura:renderIf>
+				<br/>
+				<lightning:button label="Save" onclick="{!c.save}" class="slds-button slds-button_brand button" />
+				<lightning:button label="Back" onclick="{!c.back}" class="slds-button slds-button_brand button"  />
+				
+
+		</aura:renderIf>
+	</lightning:card>
+
+</aura:component>

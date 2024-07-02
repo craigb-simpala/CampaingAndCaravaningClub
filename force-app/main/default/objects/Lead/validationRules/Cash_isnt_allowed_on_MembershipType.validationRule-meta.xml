@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cash_isnt_allowed_on_MembershipType</fullName>
+    <active>false</active>
+    <description>Used to check if cash/cheques aren&apos;t allowed with the current membership type</description>
+    <errorConditionFormula>AND(
+ Membership_Type__r.Cash_Payment_Allowed__c = FALSE,
+ ISPICKVAL( Payment_Method__c, &apos;Cash/Cheque&apos;))</errorConditionFormula>
+    <errorMessage>You’re trying to add cash/cheque as a payment method but its not allowed with the current membership type selected.</errorMessage>
+</ValidationRule>

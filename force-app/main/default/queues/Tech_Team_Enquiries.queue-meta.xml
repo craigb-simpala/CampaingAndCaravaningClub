@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Tech Team Enquiries</name>
+    <queueMembers>
+        <users>
+            <user>ccc-ms@weare4c.com</user>
+            <user>helen.farrell@campingandcaravanningclub.co.uk</user>
+            <user>iain.geddes@campingandcaravanningclub.co.uk</user>
+            <user>ian.hewlett@campingandcaravanningclub.co.uk</user>
+            <user>jonathan.brown@campingandcaravanningclub.co.uk</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

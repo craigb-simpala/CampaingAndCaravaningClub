@@ -1,0 +1,223 @@
+<apex:page standardController="Account" extensions="ChangeMembershipController" lightningStylesheets="true">
+    <apex:stylesheet value="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"  />
+    <apex:includeScript value="//code.jquery.com/jquery-1.9.1.js" />
+    <apex:includeScript value="//code.jquery.com/ui/1.10.3/jquery-ui.js" />
+    <script type="text/javascript">
+        function selectAllCheckboxes(obj,receivedInputID){
+            var inputCheckBox = document.getElementsByTagName("input");                  
+            for(var i=0; i<inputCheckBox.length; i++){          
+                if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){                                     
+                    inputCheckBox[i].checked = obj.checked;
+                }
+            }
+        }
+    </script>
+     <script type="text/javascript"> 
+    
+        j$ = jQuery.noConflict();
+    
+        j$(document).ready(function() {
+            setCalendars();
+            if(j$('[id$=movieTextBox]').length)setAutoCom();
+        });
+
+        function setCalendars(){
+            j$('[id$=doba]').attr('readOnly','true'); 
+            j$('[id$=doba]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1", 
+                maxDate: "-18y",
+                showAnim: "slide"
+            })
+        };
+        
+        
+    </script> 
+    <apex:sectionHeader title="Add Associate Members and Sections"/>
+    <apex:form >
+        <apex:outputPanel rendered="{!(wizardStep==1)}">
+            <apex:pageblock id="MemberBlock" title="Member Details">
+                <apex:pageBlockButtons >               
+                     <apex:commandButton action="{!Cancel}" value="Cancel"/>
+                     <apex:commandButton action="{!secStep2}" value="Next"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Associate Member Details" columns="2">
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel value="First Name"/>
+                        <apex:outputpanel >
+                            <apex:outputfield value="{!cAssocMember.Title}" />
+                                &nbsp;
+                            <apex:outputfield value="{!cAssocMember.FirstName}"/>
+                        </apex:outputpanel> 
+                    </apex:pageblocksectionitem>
+                    <apex:outputfield value="{!cAssocMember.LastName}"/>
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel for="doboa" value="Date of Birth"/>
+                        <apex:outputField id="doboa" value="{!cAssocMember.Birthdate}"  />
+                    </apex:pageblocksectionitem>
+                    <apex:pageblocksectionitem />
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel for="mt" value="{!if(isnull(cAssocMember.LastName),'Add Associate Member','Change Associate Member')}" />
+                        <apex:inputcheckbox value="{!lea.hasAssociate__c}" >
+                            <apex:actionSupport event="onchange" rerender="assoc" oncomplete="setCalendars();"/>
+                        </apex:inputcheckbox>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem rendered="{!!isnull(cAssocMember.LastName)}">
+                        <apex:outputLabel for="mt" value="Remove Associate Member" />
+                        <apex:inputcheckbox value="{!lea.hasPartner__c}" >
+                        </apex:inputcheckbox>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+
+                <a name="assc" />
+
+                <apex:outputpanel id="assoc">
+                    <apex:pageBlockSection id="asection" title="New Associate Details" columns="2" rendered="{!lea.hasAssociate__c}">
+                        <apex:pageblocksectionitem >
+                            <apex:outputlabel value="First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Associate_Member_Title__c}" />
+                                    &nbsp;
+                                <apex:inputfield value="{!lea.Associate_Member_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:inputField value="{!lea.Associate_Member_Surname__c}" />
+                        <apex:pageblocksectionitem >
+                            <apex:outputlabel for="doba" value="Date of Birth"/>
+                            <apex:outputPanel >
+                                <div class="requiredInput">
+                                    <div class="requiredBlock"></div>
+                                    <apex:inputText id="doba" value="{!MemberABday}"  />
+                                </div>
+                            </apex:outputPanel>
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem />
+                    </apex:pageBlockSection>
+                </apex:outputpanel>
+            </apex:pageblock>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!(wizardStep==2)}">
+            <apex:pageblock title="Add Sections to Membership">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!secStep1}" value="Back"/>
+                    <apex:commandButton action="{!secStep3}" value="Next" />
+                </apex:pageBlockButtons>  
+                <apex:pageBlockSection title="Current Sections" columns="1">
+                    <apex:pageblocktable value="{!cop}" var="s" >
+                        <apex:column value="{!s.product__r.Product_Detail__c}"/>
+                    </apex:pageblocktable>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Sections" columns="1">
+                    <apex:pageblocktable value="{!sections}" var="s" >
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:inputCheckbox onclick="selectAllCheckboxes(this,'selid')" />
+                            </apex:facet>
+                            <apex:inputcheckbox value="{!s.selected}" id="selid"/>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                Section
+                            </apex:facet>
+                            <apex:image value="/s.gif" styleClass="helpIcon" title="{!s.s.Product_Description__c}"/>
+                            <apex:outputtext value="{!s.s.Product_Detail__c}" title="{!s.s.Product_Description__c}" />
+                        </apex:column> 
+                        <apex:column >
+                            <apex:outputtext id="pr" value="£{0, number, ###,###,##0.00}" >
+                                <apex:param value="{!s.Price}" />
+                            </apex:outputtext>
+                        </apex:column>
+                    </apex:pageblocktable>          
+                </apex:pageBlockSection>
+            </apex:pageblock>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!(wizardStep==3)}">
+
+            <div class="slds-scope">
+                <div id="spinner" class="slds-spinner_container" style="background: transparent">
+                    <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="paymentComponent"></div>
+
+            <apex:includeLightning />
+            <script>
+
+                var accountId = '{!acc.Id}';
+                var leadId = '{!lea.Id}';
+                var totalCost = '{!costTotal}';
+                var membershipCode = '{!lea.Membership_Code__c}';
+
+                $Lightning.use("c:Main", function () {
+                    $Lightning.createComponent("c:cmpChangeAssociateMemberSectionsPayment", {
+                            accountId: accountId,
+                            leadId: leadId,
+                            totalCostString: totalCost,
+                            membershipCode: membershipCode
+                        }, "paymentComponent",
+                        function (cmp) {
+                            document.getElementById("spinner").style.display = 'none';
+                        });
+                });
+            </script>
+
+            <apex:pageblock rendered="{!joinDateFee && costtotal>0}">
+                <apex:pageblocksection title="Joining Fee" collapsible="false">
+                    <apex:inputfield id="JFwaive" value="{!lea.Joining_Fee_Waived__c}"  >
+                        <apex:actionSupport event="onchange" action="{!changepayment}"  />
+                    </apex:inputfield>
+                </apex:pageblocksection>
+            </apex:pageblock>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!(wizardStep>=1 )}">
+            <apex:pageblock title="Costs" >
+                <apex:pageblocksection title="Costs" collapsible="false" columns="1">                  
+                    <apex:pageblocksectionitem rendered="{!lea.hasAssociate__c}">
+                        <apex:outputLabel for="amcost">Associate Member</apex:outputLabel>
+                        <apex:outputtext id="amcost" value="£{0, number, ###,###,##0.00}" >
+                            <apex:param value="{!amCost}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                    <apex:pageblocksectionitem rendered="{!(wizardStep==3  && joinFeeChangeMem > 0)}">
+                        <apex:outputLabel for="jcost">Joining Fee</apex:outputLabel>
+                        <apex:outputtext id="jcost" value="£{0, number, ###,###,##0.00}" >
+                        <apex:param value="{!joinFeeChangeMem}" />
+                         </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                    <apex:repeat value="{!newsections}" var="s" >
+                        <apex:pageblocksectionitem rendered="{!s.selected}">
+                            <apex:outputLabel for="mcost">{!s.s.Product_Detail__c}</apex:outputLabel>
+                            <apex:outputtext id="mcost" value="£{0, number, ###,###,##0.00}" >
+                                <apex:param value="{!s.Price}" />
+                            </apex:outputtext>
+                        </apex:pageblocksectionitem>
+                    </apex:repeat>
+                    <apex:pageblocksectionitem />
+                    <apex:pageblocksectionitem >
+                        <apex:outputLabel for="tcost" style="font-weight:bolder">Total Cost</apex:outputLabel>
+                        <apex:outputtext id="tcost" value="£{0, number, ###,###,##0.00}" >
+                            <apex:param value="{!costTotal}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                </apex:pageblocksection>
+            </apex:pageblock>
+        </apex:outputPanel>
+        
+        </apex:form>
+        <apex:iframe >
+        <apex:outputtext escape="false" >
+            <form id="nonjava" name="nonjava" method="post" action="{!$Setup.Verifone__c.Endpoint__c}" >
+                <input name="postdata" id="nonjavapostdata" type="hidden" value="{!payform}"/>
+            </form>
+        </apex:outputtext>
+    </apex:iframe>
+</apex:page>

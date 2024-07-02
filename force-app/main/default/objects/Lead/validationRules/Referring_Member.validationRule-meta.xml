@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referring_Member</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+OR(
+NOT(Referring_Member__r.Lead_Member__r.Status__c=&apos;Active&apos;), NOT(ISPICKVAL(Referring_Member__r.Membership_Status__c, &apos;Paid&apos;))
+),
+NOT(ISBLANK( Referring_Member__c ))
+)</errorConditionFormula>
+    <errorMessage>Existing Member either hasn&apos;t &apos;Paid&apos; or isn&apos;t a current Member</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Online_Membership_Payment</fullName>
+    <active>false</active>
+    <description>Forces Online Memberships to be created with Direct Debit payment method only</description>
+    <errorConditionFormula>Membership_Type_Name__c  = &apos;Online&apos;  &amp;&amp; 
+NOT ISPICKVAL(Payment_Method2__c  , &apos;Direct Debit&apos;)</errorConditionFormula>
+    <errorMessage>Payment Method must be &apos;Direct Debit&apos; for Membership Types of ONLINE (40)</errorMessage>
+</ValidationRule>

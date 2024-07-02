@@ -1,0 +1,72 @@
+<apex:page standardController="Contact" extensions="NewMemberController" lightningStylesheets="true" tabstyle="Opportunity">
+
+ <apex:stylesheet value="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"  />
+ <apex:includeScript value="//code.jquery.com/jquery-1.9.1.js" />
+ <apex:includeScript value="//code.jquery.com/ui/1.10.3/jquery-ui.js" />
+
+<script type="text/javascript"> 
+
+j$ = jQuery.noConflict();
+    
+        j$(document).ready(function() {
+            setCalendars();
+           
+        });
+
+
+function setCalendars(){
+            
+         
+            j$('[id$=dobc1]').attr('readOnly','true'); 
+           
+  
+            j$('[id$=dobc1]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "-18y",
+                minDate: "-100y +1d",
+                showAnim: "slide"
+            })
+
+
+        };
+    </script> 
+
+
+ <apex:sectionHeader title="Add New Secondary Member" />
+    <apex:form >
+        <apex:pageblock title="New Secondary Member Details">
+                
+            <apex:pageBlockSection title="Member Details" columns="2">
+            
+            <apex:pageblocksectionitem >
+            <apex:outputlabel value="First Name"/>
+                        <apex:outputpanel >
+                <apex:inputField value="{!Contact.Salutation}"/>
+                &nbsp;
+                <apex:inputField value="{!Contact.FirstName} " />
+                </apex:outputpanel> 
+                </apex:pageblocksectionitem>
+                <apex:inputField value="{!Contact.LastName}" />
+                <apex:inputField value="{!Contact.Phone}"/>
+                <apex:inputField value="{!Contact.Email}"/>
+                <apex:pageBlockSectionItem >
+                <apex:outputlabel for="dobc1" value="Date of Birth"/>
+                <apex:inputText id="dobc1"  value="{!Bday}" />
+                </apex:pageBlockSectionItem>    
+             </apex:pageBlockSection>       
+                
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!cancl}" immediate="true" value="Cancel"/>
+                    <apex:commandButton action="{!saverec}" value="Save"/>
+                </apex:pageBlockButtons>
+
+        </apex:pageblock>
+    </apex:form>
+
+</apex:page>

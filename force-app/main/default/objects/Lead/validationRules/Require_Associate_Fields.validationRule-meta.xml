@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Associate_Fields</fullName>
+    <active>false</active>
+    <description>When hasAssociate__c is selected, all associate-related fields are required.</description>
+    <errorConditionFormula>OR(
+AND(
+hasAssociate__c = true,
+OR(
+ISBLANK( Associate_Member_Date_of_Birth__c ),
+ISBLANK( Associate_Member_First_Name__c ),
+ISBLANK( Associate_Member_Surname__c ),
+ISBLANK( TEXT( Associate_Member_Title__c ))
+)
+),
+
+AND(
+hasAssociate__c = FALSE,
+OR(
+NOT(ISBLANK( Associate_Member_Date_of_Birth__c )),
+NOT(ISBLANK( Associate_Member_First_Name__c )),
+NOT(ISBLANK( Associate_Member_Surname__c )),
+NOT(ISBLANK( TEXT( Associate_Member_Title__c )))
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>hasAssociate__c</errorDisplayField>
+    <errorMessage>Please provide the First Name, Last Name, Title and Date of Birth of the associate member and tick the &apos;Add Associate&apos; checkbox.</errorMessage>
+</ValidationRule>

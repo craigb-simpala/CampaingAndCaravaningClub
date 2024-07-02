@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Website_Gift__c</fullName>
+    <externalId>false</externalId>
+    <label>Website_Gift</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Club Site Voucher</fullName>
+                <default>false</default>
+                <label>Club Site Voucher</label>
+            </value>
+            <value>
+                <fullName>Foldable Camping Chair</fullName>
+                <default>false</default>
+                <label>RAF -  Camping Chair</label>
+            </value>
+            <value>
+                <fullName>Golf Umbrella</fullName>
+                <default>false</default>
+                <label>RAF - Umbrella</label>
+            </value>
+            <value>
+                <fullName>Insulated Picnic Bag</fullName>
+                <default>false</default>
+                <label>RAF - Cooler Bag</label>
+            </value>
+            <value>
+                <fullName>1 - Small Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1 - Small Fleece</label>
+            </value>
+            <value>
+                <fullName>2 - Medium Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2 - Medium Fleece</label>
+            </value>
+            <value>
+                <fullName>3 - Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3 - Large Fleece</label>
+            </value>
+            <value>
+                <fullName>4 - X Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4 - X Large Fleece</label>
+            </value>
+            <value>
+                <fullName>5 - XX Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5 - XX Large Fleece</label>
+            </value>
+            <value>
+                <fullName>6 - XXX Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6 - XXX Large Fleece</label>
+            </value>
+            <value>
+                <fullName>CCC1-13324-Camper Hamper (Caravan)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camper Hamper (Caravan)</label>
+            </value>
+            <value>
+                <fullName>CCC1-13325-Camper Hamper (Motorhome)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camper Hamper (Motorhome)</label>
+            </value>
+            <value>
+                <fullName>CCC1-13326-Camper Hamper (Tent)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camper Hamper (Tent)</label>
+            </value>
+            <value>
+                <fullName>Camping in the Forest Voucher</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camping in the Forest Voucher</label>
+            </value>
+            <value>
+                <fullName>Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Large Fleece</label>
+            </value>
+            <value>
+                <fullName>Medium Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Medium Fleece</label>
+            </value>
+            <value>
+                <fullName>Small Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Small Fleece</label>
+            </value>
+            <value>
+                <fullName>X Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>X Large Fleece</label>
+            </value>
+            <value>
+                <fullName>XX Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>XX Large Fleece</label>
+            </value>
+            <value>
+                <fullName>XXX Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>XXX Large Fleece</label>
+            </value>
+            <value>
+                <fullName>£10 Decathlon Voucher - Youth members only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>£10 Decathlon Voucher - Youth members only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

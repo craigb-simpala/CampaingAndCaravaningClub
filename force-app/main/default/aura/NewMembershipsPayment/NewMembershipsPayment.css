@@ -1,0 +1,8 @@
+.THIS.account-details-form{
+    width: 20%; 
+    margin: 0 40%;
+}
+
+.THIS .disabled {
+    cursor: not-allowed; 
+}

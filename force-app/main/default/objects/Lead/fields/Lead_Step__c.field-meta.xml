@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Step__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( LeadStep__c , 
+1, &quot;1: Check Existing&quot;, 
+2, &quot;2: Create Membership&quot;,
+3,&quot;3: Member Details&quot;,
+4,&quot;4: Camping Unit&quot;,
+5,&quot;5: Sections&quot;,
+6,&quot;6: MGM&quot;,
+7,&quot;7: Payment&quot;,
+&quot;Unknown&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lead Step</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

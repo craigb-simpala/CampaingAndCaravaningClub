@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Renewers</fullName>
+    <columns>Membership_Number__c</columns>
+    <columns>Date_Joined__c</columns>
+    <columns>Cancellation_Date__c</columns>
+    <columns>Reason_for_Leaving__c</columns>
+    <columns>Cancellation_Type__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Cancellation_Type__c</field>
+        <operation>equals</operation>
+        <value>Non-Renewer</value>
+    </filters>
+    <filters>
+        <field>Cancellation_Type__c</field>
+        <operation>notContain</operation>
+        <value>Cancelled,Ex-Member</value>
+    </filters>
+    <label>Non-Renewers</label>
+</ListView>

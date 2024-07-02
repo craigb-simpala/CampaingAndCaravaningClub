@@ -1,0 +1,38 @@
+<apex:page standardcontroller="Association__c" extensions="DisbandDAAllocationExtension" lightningStylesheets="true">
+    <script>
+        function toggleAll(id) {
+            var inputList = document.getElementsByClassName('selectInput');
+            for(var i=0;i<inputList.length;i++)
+                document.getElementsByClassName('selectInput')[i].checked = id.checked;
+        } 
+    </script>
+    <apex:pageMessages id="messages"/> <!-- this is where the error messages will appear -->
+    <apex:form >
+        <apex:pageBlock title="Disband {!daName}">
+            <apex:pageBlockButtons location="top">
+                <apex:commandbutton value="Back" action="{!cancel}" />
+                <apex:commandButton value="Save" action="{!saveData}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection showHeader="false" columns="2" id="allAvailablePostcodes">
+                <apex:pageBlockTable value="{!allocatePostcodeWrapper}" var="pc"  columnswidth="5px,95px">
+                    <apex:facet name="header" >
+                        Select Postcodes from to Move to New DA
+                    </apex:facet>
+                    <apex:column width="10%" > 
+                        <apex:facet name="header"> 
+                            <input type="checkbox" id="checkAllBox" onchange="toggleAll(this)"/>
+                        </apex:facet>
+                        <apex:inputCheckbox styleClass="selectInput"  value="{!pc.selected}"/> 
+                    </apex:column>
+                    <apex:column value="{!pc.pc.Postcode_Part_1__c} {!pc.pc.Postcode_Part_2__c}"  />
+                 </apex:pageBlockTable>
+                 <apex:outputText rendered="{!(daRelatedPostcodes.size = 0)}" value="There are no available postcodes to display." />
+                <!-- <apex:outputLabel value="Available Associations " for="allAssociations"/> -->
+                <apex:selectList id="allAssociations" value="{!selectedAllAsso}"
+                        size="1" required="true" label="New DA" >
+                  <apex:selectOptions value="{!items}"/>
+                </apex:selectList>
+            </apex:pageBlockSection>  
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page standardController="Account" extensions="CreateCorrespondenceController" lightningStylesheets="true" tabstyle="Account">
+    <apex:sectionHeader title="New Mailing House Item" />
+    <apex:form >
+        <apex:pageMessages id="msgs" />
+        <apex:pageblock >
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!saveCorr}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/> 
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Correspondence Type" columns="1" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel for="mt" value="Correspondence Type" />
+                    <apex:inputfield value="{!corr.Correspondence_Type_MailingHouse__c}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

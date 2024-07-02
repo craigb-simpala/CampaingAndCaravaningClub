@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Leaving__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Leaving</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Campsites in unsuitable locations</fullName>
+                <default>false</default>
+                <label>Campsites in unsuitable locations</label>
+            </value>
+            <value>
+                <fullName>Change in Circumstance</fullName>
+                <default>false</default>
+                <label>Change in Circumstance</label>
+            </value>
+            <value>
+                <fullName>COVID 19</fullName>
+                <default>false</default>
+                <label>COVID 19</label>
+            </value>
+            <value>
+                <fullName>DD Rejected</fullName>
+                <default>false</default>
+                <label>DD Rejected</label>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+                <label>Deceased</label>
+            </value>
+            <value>
+                <fullName>Does Not Use Membership</fullName>
+                <default>false</default>
+                <label>Does Not Use Membership</label>
+            </value>
+            <value>
+                <fullName>General Dissatisfaction</fullName>
+                <default>false</default>
+                <label>General Dissatisfaction</label>
+            </value>
+            <value>
+                <fullName>General Site Issues</fullName>
+                <default>false</default>
+                <label>General Site Issues</label>
+            </value>
+            <value>
+                <fullName>Illness/Age</fullName>
+                <default>false</default>
+                <label>Illness/Age</label>
+            </value>
+            <value>
+                <fullName>Joined Caravan Club</fullName>
+                <default>false</default>
+                <label>Joined Caravan Club</label>
+            </value>
+            <value>
+                <fullName>Joined the wrong Club</fullName>
+                <default>false</default>
+                <label>Joined the wrong Club</label>
+            </value>
+            <value>
+                <fullName>Moved Abroad</fullName>
+                <default>false</default>
+                <label>Moved Abroad</label>
+            </value>
+            <value>
+                <fullName>Not enough campsites</fullName>
+                <default>false</default>
+                <label>Not enough campsites</label>
+            </value>
+            <value>
+                <fullName>No Unit</fullName>
+                <default>false</default>
+                <label>No Unit</label>
+            </value>
+            <value>
+                <fullName>Partner Deceased</fullName>
+                <default>false</default>
+                <label>Partner Deceased</label>
+            </value>
+            <value>
+                <fullName>Changed to Refer to Manager status</fullName>
+                <default>false</default>
+                <label>Refer to Manager status</label>
+            </value>
+            <value>
+                <fullName>Re-Joined (late renewal)</fullName>
+                <default>false</default>
+                <label>Re-Joined (late renewal)</label>
+            </value>
+            <value>
+                <fullName>Requested Right to Erasure</fullName>
+                <default>false</default>
+                <label>Requested Right to Erasure</label>
+            </value>
+            <value>
+                <fullName>See Notes</fullName>
+                <default>false</default>
+                <label>See Notes</label>
+            </value>
+            <value>
+                <fullName>Taking other holidays</fullName>
+                <default>false</default>
+                <label>Taking other holidays</label>
+            </value>
+            <value>
+                <fullName>Test Membership</fullName>
+                <default>false</default>
+                <label>Test Membership</label>
+            </value>
+            <value>
+                <fullName>Too Expensive</fullName>
+                <default>false</default>
+                <label>Too Expensive</label>
+            </value>
+            <value>
+                <fullName>Unhappy with Membership</fullName>
+                <default>false</default>
+                <label>Unhappy with Membership</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

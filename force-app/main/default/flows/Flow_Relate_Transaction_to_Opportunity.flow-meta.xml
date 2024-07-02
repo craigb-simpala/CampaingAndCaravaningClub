@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <description>Determines whether the transaction is a payment or an instruction.</description>
+        <name>Transaction_Type</name>
+        <label>Transaction Type</label>
+        <locationX>217</locationX>
+        <locationY>244</locationY>
+        <defaultConnectorLabel>Payment</defaultConnectorLabel>
+        <rules>
+            <name>Instruction</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varTransactionType</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>01</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varTransactionType</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>17</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Instruction</label>
+        </rules>
+    </decisions>
+    <description>Relates the triggering transaction to the appropriate opportunity.</description>
+    <interviewLabel>[Flow] Relate Transaction to Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Flow] Relate Transaction to Opportunity</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Find the relevant opportunity record.</description>
+        <name>Find_Opp</name>
+        <label>Find Opp</label>
+        <locationX>452</locationX>
+        <locationY>49</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Transaction</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Amount</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varTransactionAmount</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Payment_Method__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varPaymentMethodId</elementReference>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <outputReference>varOppRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Amount</queriedFields>
+        <queriedFields>Status__c</queriedFields>
+        <queriedFields>RecordTypeId</queriedFields>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+    </recordLookups>
+    <recordUpdates>
+        <description>Relate transaction to the opportunity identified.</description>
+        <name>Update_Transaction</name>
+        <label>Update Transaction</label>
+        <locationX>648</locationX>
+        <locationY>49</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varTransactionId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Amendment_Renewal__c</field>
+            <value>
+                <elementReference>varOppRecord.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Transaction__c</object>
+    </recordUpdates>
+    <startElementReference>Find_Opp</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>The opportunity record identified.</description>
+        <name>varOppRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <description>The Id of the parent Payment Method.</description>
+        <name>varPaymentMethodId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>The value of the transaction.</description>
+        <name>varTransactionAmount</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <description>The Id of the Transaction record that launched the process.</description>
+        <name>varTransactionId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>The code associated with the transaction.</description>
+        <name>varTransactionType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

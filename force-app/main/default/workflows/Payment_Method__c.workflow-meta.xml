@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>DDI_Instruction</fullName>
+        <description>DDI Instruction</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Membership_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>membershipadmin@campingandcaravanningclub.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Club_Templates/DDI_Email_Template_New_Joiner</template>
+    </alerts>
+    <alerts>
+        <fullName>DDI_New_joiner</fullName>
+        <description>DDI - New joiner</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Membership_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>membershipadmin@campingandcaravanningclub.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Club_Templates/DDI_Email_Template_New_Joiner</template>
+    </alerts>
+    <alerts>
+        <fullName>DDI_Not_Within_Renewal</fullName>
+        <description>DDI - Not Within Renewal</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Membership_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>membershipadmin@campingandcaravanningclub.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Club_Templates/DDI_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>DDI_Update_Not_Paid</fullName>
+        <description>DDI - Update - Not Paid</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Membership_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>membershipadmin@campingandcaravanningclub.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Club_Templates/DDI_Email_Template_Not_Paid_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>DDI_Update_Paid</fullName>
+        <description>DDI - Update - Paid</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Membership_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>membershipadmin@campingandcaravanningclub.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Club_Templates/DDI_Email_Template_Paid_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>DDI_Within_Renewal_PM</fullName>
+        <description>DDI - Within Renewal - PM</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Membership_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>membershipadmin@campingandcaravanningclub.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Club_Templates/DDI_Email_Template_Within_Renewal_PM</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_Mandate_Prior</fullName>
+        <field>MandatePriorValue__c</field>
+        <formula>PRIORVALUE( Mandate_Amount__c )</formula>
+        <name>Update Mandate Prior</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Cancelled</literalValue>
+        <name>Update Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Cancel Payment Method</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Payment_Method__c.End_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Time: 1 Hour After Payment Method: End Date - Payment Method: Status = Cancelled</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_Status</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Payment_Method__c.End_Date__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Mandate Previous Value</fullName>
+        <actions>
+            <name>Update_Mandate_Prior</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Field that holds the previous value of the Mandate Value field.</description>
+        <formula>AND(
+   ISCHANGED(Mandate_Amount__c),
+   NOT(ISBLANK(TEXT(Mandate_Amount__c)))
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,10 @@
+<apex:page standardController="Transaction__c" extensions="CloneTransactionController" lightningStylesheets="true" tabstyle="Transaction__c"  action="{!dmlOperation}">
+     <apex:form >
+        <apex:pageMessages id="msgs" />
+        <apex:pageblock title="Transaction Error" >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!cancel}" value="Back"/>
+            </apex:pageBlockButtons>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

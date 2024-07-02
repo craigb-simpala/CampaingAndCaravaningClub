@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift__c</fullName>
+    <externalId>false</externalId>
+    <label>Gift</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Club Site Voucher</fullName>
+                <default>false</default>
+                <label>Club Site Voucher</label>
+            </value>
+            <value>
+                <fullName>Foldable Camping Chair</fullName>
+                <default>false</default>
+                <label>RAF - Camping Chair</label>
+            </value>
+            <value>
+                <fullName>Golf Umbrella</fullName>
+                <default>false</default>
+                <label>RAF - Umbrella</label>
+            </value>
+            <value>
+                <fullName>Insulated Picnic Bag</fullName>
+                <default>false</default>
+                <label>RAF - Cooler Bag</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,31 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="UpdateRejectedTransactionsController">
+    <aura:attribute name="BACSRecordId" type="Id" description="desc" default="null"/>
+    <aura:attribute name="reportType" type="String"/>
+    <aura:attribute name="updateResult" type="String"/>
+    
+    <lightning:card class="slds-p-horizontal_medium">
+        <div>
+            <lightning:button variant="brand" label="Create New ARUDD BACS Report" title="Brand action" onclick="{! c.createARUDDRecord }" />
+            <lightning:button variant="brand" label="Create New ADDACS BACS Report" title="Brand action" onclick="{! c.createADDACSRecord }" />
+            <lightning:button variant="brand" label="Create New AUDDIS BACS Report" title="Brand action" onclick="{! c.createAUDDISRecord }" />
+            
+            <aura:if isTrue="{!v.BACSRecordId != 'null'}">
+                <p class="successMsg">
+                    BACS record created successfully
+                </p>
+                <lightning:fileUpload name="fileUploader"
+                                      label= "Upload File"
+                                      accept=".xml"
+                                      recordId="{!v.BACSRecordId}"
+                                      onuploadfinished="{!c.updateRejectedTransactions_c}"
+                                      />
+                
+            </aura:if>
+            
+            <div >
+                <aura:unescapedHtml value="{!v.updateResult}"/>
+            </div>
+        </div>
+    </lightning:card>
+    
+</aura:component>

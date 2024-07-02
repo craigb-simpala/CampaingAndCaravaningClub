@@ -1,0 +1,44 @@
+<apex:page standardController="Account" extensions="RedirectController"  
+   action="{!hpredirectC}">
+</apex:page> 
+
+
+
+
+<!--  <apex:page standardController="Contact" extensions="RedirectController">
+ <apex:outputPanel id="all">
+  <apex:form >
+    <apex:pageBlock title="Member Edit">
+      <apex:pageBlockSection title="Contact Information" columns="2">
+        
+        
+         
+          <apex:inputField value="{!Con.FirstName}"/>
+          <apex:inputField value="{!Con.LastName}"/>
+           <apex:inputField value="{!Con.Post_nominal_Letters__c}"/>
+           <apex:inputField value="{!Acc.Name}"/>
+           <apex:inputField value="{!Con.Date_Joined__c}"/>
+           <apex:inputField value="{!Con.Officer__c}"/>
+           <apex:inputField value="{!Con.AS400_ID__c}"/>
+           
+  
+          <apex:inputField value="{!Con.Phone}"/>
+          <apex:inputField value="{!Con.MobilePhone}"/>
+          <apex:inputField value="{!Con.Email}"/>
+          <apex:inputField value="{!Con.Birthdate}"/>
+          <apex:inputField value="{!Con.Age_Concession__c}"/>
+          <apex:inputField value="{!Con.Tenure__c}"/>
+
+       
+      </apex:pageBlockSection>
+      
+      <apex:inputField value="{!Con.Comments__c}"/>
+      
+      
+      <apex:pageBlockSection title="Additional Information">
+        <apex:inputField value="{!Con.RecordType}"/> 
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+ </apex:outputPanel>
+</apex:page> -->

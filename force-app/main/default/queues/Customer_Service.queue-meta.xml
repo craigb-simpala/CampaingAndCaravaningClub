@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Customer Service</name>
+    <queueMembers>
+        <users>
+            <user>claire.jordan@campingandcaravanningclub.co.uk</user>
+            <user>donna.beech@campingandcaravanningclub.co.uk</user>
+            <user>faye.elvidge@campingandcaravanningclub.co.uk</user>
+            <user>jo.orr-munro@campingandcaravanningclub.co.uk</user>
+            <user>katherine.greenhalgh@campingandcaravanningclub.co.uk</user>
+            <user>laura.swanborough@campingandcaravanningclub.co.uk</user>
+            <user>leah.cliff@campingandcaravanningclub.co.uk</user>
+            <user>mia.mara@campingandcaravanningclub.co.uk</user>
+            <user>naomi.kealey@campingandcaravanningclub.co.uk</user>
+            <user>sophie.taylor@campingandcaravanningclub.co.uk</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Customer_Service</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

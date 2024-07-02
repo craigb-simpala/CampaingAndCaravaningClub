@@ -1,0 +1,38 @@
+<!-- @who   Patrick Duncan <patrick.duncan@weare4c.com>
+@what  Aura component to be hosted on the Hopewiser Postcode Search flow
+@when  19/7/2019 -->
+<aura:component controller="AddressLookupController" implements="flexipage:availableForRecordHome,lightning:availableForFlowScreens" access="global">
+
+	
+	<aura:attribute name="recordId" type="String" access="global"/>
+	<aura:attribute name="inputAddresses" type="String"  access="global"/>
+	<aura:attribute name="addresses" type="String[]"  access="global"/>
+	<aura:attribute name="selectedAddress" type="String"/>
+	<aura:attribute name="errors" type="String" default=""/>
+
+
+
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<lightning:card>
+		<!-- Address picklist -->
+		<lightning:select value="{!v.selectedAddress}" >
+			<aura:iteration items="{!v.addresses}" var="add" indexVar="i">
+				<option value="{!add}" >{!add}</option>
+			</aura:iteration>
+		</lightning:select>
+		<br/>
+		<!-- Save button -->
+		<lightning:button onclick="{!c.save}" label="Save Address" class="slds-button slds-button_brand button"/>
+		<br/>
+		<br/>
+		<!-- Error reporting -->
+		<aura:renderIf isTrue="{!v.errors!=''}">
+			{!v.errors}
+		</aura:renderIf>
+
+	</lightning:card>
+
+
+</aura:component>

@@ -1,0 +1,97 @@
+<!--
+  @description       : 
+  @author            : Kev Cadger (Wipro)
+  @group             : 
+  @last modified on  : 20-07-2022
+  @last modified by  : Kev Cadger (Wipro)
+  Modifications Log
+  Ver   Date         Author               Modification
+  1.0   11-07-2022   Kev Cadger (Wipro)   Initial Version
+-->
+<template>
+  <c-cmp-toast></c-cmp-toast>
+  <div class="slds-card slds-var-p-around_small">
+    <div class="slds-text-heading_medium">Payment Processor</div>
+    <!-- Spinner -->
+    <template if:true={isLoading}>
+      <div class="slds-align_absolute-center">
+        <lightning-spinner
+          alternative-text="Loading"
+          size="medium"
+        ></lightning-spinner>
+      </div>
+    </template>
+    <!-- Payment Processor -->
+    <template if:false={isLoading}>
+      <!-- Payment Method -->
+      <div class="slds-align_absolute-center slds-var-p-around_small">
+        <div class="slds-size_1-of-2">
+          <lightning-combobox
+            data-name="cmbPaymentMethod"
+            label="Method"
+            options={getMethods}
+            placeholder="Select Method"
+            value={paymentDetails.method}
+            onchange={handleChange_Method}
+            dropdown-alignment="auto"
+          ></lightning-combobox>
+        </div>
+      </div>
+      <!-- Payment Details -->
+      <div class="slds-box slds-box_x-small slds-var-m-top_small">
+        <!-- Amount -->
+        <lightning-input
+          data-name="numAmount"
+          formatter="currency"
+          label="Amount"
+          min="0"
+          step="0.01"
+          type="number"
+          value={amount}
+          read-only={amountReadOnly}
+          onchange={handleChange_Amount}
+        ></lightning-input>
+        <!-- Debit/Credit Card -->
+        <template if:true={displayCard}>
+          <c-cmp-payment-processor-card
+            amount={amount}
+            record-id={recordId}
+            onpaymentprocessed={handlePaymentProcessed}
+            onpaymentdetailvalidityupdate={handlePaymentDetailValidityUpdate}
+          ></c-cmp-payment-processor-card>
+        </template>
+        <!-- Cash/Cheque -->
+        <template if:true={displayCash}>
+          <c-cmp-payment-processor-cash
+            amount={amount}
+            onpaymentprocessed={handlePaymentProcessed}
+            onpaymentdetailvalidityupdate={handlePaymentDetailValidityUpdate}
+          ></c-cmp-payment-processor-cash>
+        </template>
+        <!-- Direct Debit -->
+        <template if:true={displayDebit}>
+          <c-cmp-payment-processor-debit
+            amount={amount}
+            source={source}
+            record-id={recordId}
+            onpaymentprocessed={handlePaymentProcessed}
+            onpaymentdetailvalidityupdate={handlePaymentDetailValidityUpdate}
+            onhidepaymentbutton={handleHidePaymentButton}
+          ></c-cmp-payment-processor-debit>
+        </template>
+        <!-- Button -->
+        <template if:true={displayProcessPaymentButton}>
+          <div class="slds-clearfix slds-var-m-top_small">
+            <lightning-button
+              class="slds-button slds-button_brand slds-float_right"
+              icon-name="utility:money"
+              label="Process Payment"
+              variant="brand"
+              onclick={handleClick_Process}
+            ></lightning-button>
+          </div>
+        </template>
+      </div>
+    </template>
+  </div>
+</template>

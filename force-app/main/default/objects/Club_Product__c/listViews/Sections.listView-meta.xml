@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sections</fullName>
+    <columns>NAME</columns>
+    <columns>Product_Detail__c</columns>
+    <columns>Active__c</columns>
+    <columns>Price_for_Initial_Picklist__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Club_Product__c.Section</value>
+    </filters>
+    <label>Sections</label>
+</ListView>

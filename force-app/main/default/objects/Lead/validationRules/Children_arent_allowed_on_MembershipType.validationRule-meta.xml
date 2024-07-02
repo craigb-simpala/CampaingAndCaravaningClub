@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Children_arent_allowed_on_MembershipType</fullName>
+    <active>false</active>
+    <description>Used to check if Children aren&apos;t allowed with the current membership type</description>
+    <errorConditionFormula>AND(
+Membership_Type__r.Children_Allowed__c =FALSE,
+NOT(ISBLANK(TEXT(Number_of_Children__c))),
+NOT(ISPICKVAL(Number_of_Children__c, &apos;0&apos;)))</errorConditionFormula>
+    <errorDisplayField>Number_of_Children__c</errorDisplayField>
+    <errorMessage>Children cannot be added to the selected membership type.</errorMessage>
+</ValidationRule>

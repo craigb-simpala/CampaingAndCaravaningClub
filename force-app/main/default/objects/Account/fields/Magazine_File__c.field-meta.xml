@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Magazine_File__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+AND( 
+Mag_Stop__c = FALSE, 
+Membership_Code__r.Monthly_Magazine__c = TRUE, 
+OR( TEXT (Membership_Status__c) = &quot;Paid&quot; , TEXT (Membership_Status__c) = &quot;Non-Renewer&quot; , TEXT (Membership_Status__c) = &quot;DD Pending&quot; , TEXT (Membership_Status__c) = &quot;Lapsed&quot;), 
+Renewal_Date__c &gt;= (TODAY() -30 ) 
+) 
+, 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Magazine File</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

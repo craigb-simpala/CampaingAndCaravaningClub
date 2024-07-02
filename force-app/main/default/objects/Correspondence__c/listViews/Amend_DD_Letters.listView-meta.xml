@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amend_DD_Letters</fullName>
+    <columns>NAME</columns>
+    <columns>Correspondence_date__c</columns>
+    <columns>Correspondence_Type__c</columns>
+    <columns>Date_Joined__c</columns>
+    <columns>Renewal_Date__c</columns>
+    <columns>Date_Processed__c</columns>
+    <columns>Membership_Number__c</columns>
+    <columns>Membership_Status__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>Correspondence_Type_MailingHouse__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Correspondence_Type__c</field>
+        <operation>equals</operation>
+        <value>Amend DD</value>
+    </filters>
+    <label>Amend DD Letters</label>
+</ListView>

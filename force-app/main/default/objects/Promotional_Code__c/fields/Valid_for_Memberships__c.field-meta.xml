@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_for_Memberships__c</fullName>
+    <externalId>false</externalId>
+    <label>Valid for (Memberships)</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CHH - Digital</fullName>
+                <default>false</default>
+                <label>CHH - Digital</label>
+            </value>
+            <value>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+                <label>Complimentary</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>Honorary</fullName>
+                <default>false</default>
+                <label>Honorary</label>
+            </value>
+            <value>
+                <fullName>Overseas - Digital</fullName>
+                <default>false</default>
+                <label>Overseas - Digital</label>
+            </value>
+            <value>
+                <fullName>Paper</fullName>
+                <default>false</default>
+                <label>Paper</label>
+            </value>
+            <value>
+                <fullName>Press Card Holder</fullName>
+                <default>false</default>
+                <label>Press Card Holder</label>
+            </value>
+            <value>
+                <fullName>Senior Youth - Digital</fullName>
+                <default>false</default>
+                <label>Senior Youth - Digital</label>
+            </value>
+            <value>
+                <fullName>Staff</fullName>
+                <default>false</default>
+                <label>Staff</label>
+            </value>
+            <value>
+                <fullName>Technical</fullName>
+                <default>false</default>
+                <label>Technical</label>
+            </value>
+            <value>
+                <fullName>Temporary Overseas Membership</fullName>
+                <default>false</default>
+                <label>Temporary Overseas Membership</label>
+            </value>
+            <value>
+                <fullName>Veteran - Digital</fullName>
+                <default>false</default>
+                <label>Veteran - Digital</label>
+            </value>
+            <value>
+                <fullName>Veteran Paper</fullName>
+                <default>false</default>
+                <label>Veteran Paper</label>
+            </value>
+            <value>
+                <fullName>Vice President</fullName>
+                <default>false</default>
+                <label>Vice President</label>
+            </value>
+            <value>
+                <fullName>Youth - Digital</fullName>
+                <default>false</default>
+                <label>Youth - Digital</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,52 @@
+<apex:page standardController="Account" extensions="ChangeDetailsController" tabStyle="Account" lightningStylesheets="true">
+ <apex:form >
+        <apex:pageMessages id="msgs" />
+ 
+ <apex:sectionHeader title="Change Details" />
+ 
+    <apex:pageblock title="Change Details Options">
+    
+        
+        <apex:pageBlockSection title="Change Payment Details:" columns="2">
+            <apex:commandButton value="Change Payment Details" action="{!ChangePaymentDetails}"/>
+            <apex:outputLabel value="Change Payment Method and/or Bank Details" for="button"/>
+
+        </apex:pageBlockSection>
+            
+        <apex:pageBlockSection title="Change Membership Details:" columns="2">
+            <apex:commandButton value="Change Membership" action="{!ChangeMem}"/>
+            <apex:outputLabel value="Amend Membership Package, inc. Membership Type, Associate Member and Sections" for="button"/>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Change Renewal Details:" columns="2">
+            <apex:commandButton value="Change At Renewal" action="{!ChangeAtRenewal}"/>
+            <apex:outputLabel value="Change Membership Type at next Renewal" for="button"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Change Address Details:" columns="2">
+            <apex:commandButton value="Change Address" action="{!ChangeAddress}"/>
+            <apex:outputLabel value="Change Membership Address" for="button"/>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Add New Child Member Details:" columns="2" rendered="{!cp.Children_Allowed__c}">
+            <apex:commandButton value="New Child Member" action="{!NewChildMember}"/>
+            <apex:outputLabel value="Add a Child Member to the Membership" for="button"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Add New Secondary Member Details:" columns="2" rendered="{!cp.PartnerAllowed__c}">
+            <apex:commandButton value="New Secondary Member" action="{!NewSecondarymember}"/>
+            <apex:outputLabel value="Add a Secondary Member to the Membership" for="button"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Add New Access Member Details:" columns="2" rendered="{!$Permission.Create_Access_Member && cp.Access_Member_Allowed__c}">
+            <apex:commandButton value="New Access Member" action="{!NewAccessMember}"/>
+            <apex:outputLabel value="Add an Access Member to the Membership" for="button"/>
+        </apex:pageBlockSection>
+    
+    
+    
+    </apex:pageBlock>
+    
+    </apex:form>
+                    
+</apex:page>

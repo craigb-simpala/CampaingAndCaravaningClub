@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Referral Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+                <label>Magazine</label>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+                <label>Internet</label>
+            </value>
+            <value>
+                <fullName>National Show or Exhibition</fullName>
+                <default>false</default>
+                <label>National Show or Exhibition</label>
+            </value>
+            <value>
+                <fullName>Local Show</fullName>
+                <default>false</default>
+                <label>Local Show</label>
+            </value>
+            <value>
+                <fullName>Travel Services Brochure</fullName>
+                <default>false</default>
+                <label>Travel Services Brochure</label>
+            </value>
+            <value>
+                <fullName>Recommended by a retailer dealer certificated site</fullName>
+                <default>false</default>
+                <label>Recommended by a retailer dealer certificated site</label>
+            </value>
+            <value>
+                <fullName>Introduce a Friend</fullName>
+                <default>false</default>
+                <label>Introduce a Friend</label>
+            </value>
+            <value>
+                <fullName>Recommended by a friend or relative</fullName>
+                <default>false</default>
+                <label>Recommended by a friend or relative</label>
+            </value>
+            <value>
+                <fullName>Used to be a member</fullName>
+                <default>false</default>
+                <label>Used to be a member</label>
+            </value>
+            <value>
+                <fullName>Freedom to Go</fullName>
+                <default>false</default>
+                <label>Freedom to Go</label>
+            </value>
+            <value>
+                <fullName>Insert received with a Site booking</fullName>
+                <default>false</default>
+                <label>Insert received with a Site booking</label>
+            </value>
+            <value>
+                <fullName>Visit Scotland Promotion</fullName>
+                <default>false</default>
+                <label>Visit Scotland Promotion</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Guides</fullName>
+                <default>false</default>
+                <label>Guides</label>
+            </value>
+            <value>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+                <label>Newspaper</label>
+            </value>
+            <value>
+                <fullName>District Association</fullName>
+                <default>false</default>
+                <label>District Association</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

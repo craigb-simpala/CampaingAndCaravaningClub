@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Always populate this field, for reporting purposes</inlineHelpText>
+    <label>Reason</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>BusinessArea__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amend Personal Details</fullName>
+                <default>false</default>
+                <label>Amend Personal Details</label>
+            </value>
+            <value>
+                <fullName>Benefits</fullName>
+                <default>false</default>
+                <label>Benefits</label>
+            </value>
+            <value>
+                <fullName>Breakdown</fullName>
+                <default>false</default>
+                <label>Breakdown</label>
+            </value>
+            <value>
+                <fullName>Brittany Ferries</fullName>
+                <default>false</default>
+                <label>Brittany Ferries</label>
+            </value>
+            <value>
+                <fullName>Cancel</fullName>
+                <default>false</default>
+                <label>Cancel</label>
+            </value>
+            <value>
+                <fullName>CHH</fullName>
+                <default>false</default>
+                <label>CHH</label>
+            </value>
+            <value>
+                <fullName>Claim</fullName>
+                <default>false</default>
+                <label>Claim</label>
+            </value>
+            <value>
+                <fullName>Dirty Facilities</fullName>
+                <default>false</default>
+                <label>Cleanliness</label>
+            </value>
+            <value>
+                <fullName>Club Action</fullName>
+                <default>false</default>
+                <label>Club Action</label>
+            </value>
+            <value>
+                <fullName>Condor Ferries</fullName>
+                <default>false</default>
+                <label>Condor Ferries</label>
+            </value>
+            <value>
+                <fullName>DFDS</fullName>
+                <default>false</default>
+                <label>DFDS</label>
+            </value>
+            <value>
+                <fullName>Eurotunnel</fullName>
+                <default>false</default>
+                <label>Eurotunnel</label>
+            </value>
+            <value>
+                <fullName>General Dissatisfaction</fullName>
+                <default>false</default>
+                <label>General Dissatisfaction</label>
+            </value>
+            <value>
+                <fullName>General Enquiry</fullName>
+                <default>false</default>
+                <label>General Enquiry</label>
+            </value>
+            <value>
+                <fullName>Irish Ferries</fullName>
+                <default>false</default>
+                <label>Irish Ferries</label>
+            </value>
+            <value>
+                <fullName>Join</fullName>
+                <default>false</default>
+                <label>Join</label>
+            </value>
+            <value>
+                <fullName>Log-in</fullName>
+                <default>false</default>
+                <label>Log-in</label>
+            </value>
+            <value>
+                <fullName>Long Stay</fullName>
+                <default>false</default>
+                <label>Long Stay</label>
+            </value>
+            <value>
+                <fullName>Membership</fullName>
+                <default>false</default>
+                <label>Membership</label>
+            </value>
+            <value>
+                <fullName>P &amp; O Ferries</fullName>
+                <default>false</default>
+                <label>P &amp; O Ferries</label>
+            </value>
+            <value>
+                <fullName>Policy</fullName>
+                <default>false</default>
+                <label>Policy</label>
+            </value>
+            <value>
+                <fullName>Positive Feedback</fullName>
+                <default>false</default>
+                <label>Positive Feedback</label>
+            </value>
+            <value>
+                <fullName>Quote</fullName>
+                <default>false</default>
+                <label>Quote</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Seasonal</fullName>
+                <default>false</default>
+                <label>Seasonal</label>
+            </value>
+            <value>
+                <fullName>Stenna Line</fullName>
+                <default>false</default>
+                <label>Stenna Line</label>
+            </value>
+            <value>
+                <fullName>Storage</fullName>
+                <default>false</default>
+                <label>Storage</label>
+            </value>
+            <value>
+                <fullName>Switch</fullName>
+                <default>false</default>
+                <label>Switch</label>
+            </value>
+            <value>
+                <fullName>Technical Enquiry</fullName>
+                <default>false</default>
+                <label>Technical Enquiry</label>
+            </value>
+            <value>
+                <fullName>Tired Facilities</fullName>
+                <default>false</default>
+                <label>Tiredness</label>
+            </value>
+            <value>
+                <fullName>Vouchers</fullName>
+                <default>false</default>
+                <label>Vouchers</label>
+            </value>
+            <value>
+                <fullName>Website Error</fullName>
+                <default>false</default>
+                <label>Website Error</label>
+            </value>
+            <value>
+                <fullName>Wight Link</fullName>
+                <default>false</default>
+                <label>Wight Link</label>
+            </value>
+            <value>
+                <fullName>Work On Site</fullName>
+                <default>false</default>
+                <label>Work On Site</label>
+            </value>
+            <value>
+                <fullName>COVID - Staying On-Site</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>COVID - Staying On-Site</label>
+            </value>
+            <value>
+                <fullName>Cancellation - staffing issues</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cancellation - staffing issues</label>
+            </value>
+            <value>
+                <fullName>Club Care</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Club Care</label>
+            </value>
+            <value>
+                <fullName>New Problem</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Problem</label>
+            </value>
+            <value>
+                <fullName>RAC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>RAC</label>
+            </value>
+            <value>
+                <fullName>Site</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Site</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <valueName>CHH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <controllingFieldValue>Ready Camp</controllingFieldValue>
+            <controllingFieldValue>Self Catering</controllingFieldValue>
+            <valueName>Dirty Facilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <valueName>Club Action</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <controllingFieldValue>Holiday Homes</controllingFieldValue>
+            <valueName>Long Stay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <valueName>Seasonal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <valueName>Storage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <controllingFieldValue>Ready Camp</controllingFieldValue>
+            <controllingFieldValue>Self Catering</controllingFieldValue>
+            <valueName>Tired Facilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <valueName>Vouchers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK Sites</controllingFieldValue>
+            <controllingFieldValue>Ready Camp</controllingFieldValue>
+            <controllingFieldValue>Self Catering</controllingFieldValue>
+            <valueName>Work On Site</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Website / App</controllingFieldValue>
+            <controllingFieldValue>Club Care</controllingFieldValue>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>General Dissatisfaction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Website / App</controllingFieldValue>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <valueName>Join</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Website / App</controllingFieldValue>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <valueName>Log-in</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Website / App</controllingFieldValue>
+            <controllingFieldValue>Club Care</controllingFieldValue>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Website / App</controllingFieldValue>
+            <valueName>Website Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <valueName>Brittany Ferries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <valueName>Condor Ferries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <valueName>DFDS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <valueName>Eurotunnel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <controllingFieldValue>Club Care</controllingFieldValue>
+            <controllingFieldValue>External Website - Pitch Availability</controllingFieldValue>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>General Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <valueName>Irish Ferries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <valueName>P &amp; O Ferries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <valueName>Stenna Line</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overseas</controllingFieldValue>
+            <valueName>Wight Link</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Holiday Homes</controllingFieldValue>
+            <controllingFieldValue>Club Care</controllingFieldValue>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>Amend Personal Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Holiday Homes</controllingFieldValue>
+            <controllingFieldValue>Club Care</controllingFieldValue>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>Policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Club Care</controllingFieldValue>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>Cancel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Club Care</controllingFieldValue>
+            <valueName>Claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Club Care</controllingFieldValue>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <valueName>Benefits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Membership</controllingFieldValue>
+            <valueName>Switch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>Breakdown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RAC</controllingFieldValue>
+            <valueName>Membership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technical Team</controllingFieldValue>
+            <valueName>Technical Enquiry</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

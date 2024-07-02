@@ -1,0 +1,44 @@
+<template>
+    <template if:true={displaySpinner}>
+        <lightning-spinner variant="brand" alternative-text="Loading"></lightning-spinner>
+    </template>
+    <div if:true={displayNegativeCostError}>
+        <lightning-card>
+            <p class="slds-align_absolute-center slds-p-around_small" style="font-size: 1rem"> No charge for the required changes</p>
+            <p slot="footer">
+                <lightning-button
+                        variant="brand"
+                        label="Submit"
+                        onclick={submit}
+                        class="slds-var-p-around_x-small brand-button"
+                ></lightning-button>
+                <lightning-button
+                        variant="neutral"
+                        label="Cancel"
+                        onclick={cancel}
+                        class="slds-var-p-around_x-small neutral-button"
+                ></lightning-button>
+            </p>
+        </lightning-card>
+
+    </div>
+    <div if:true={displayPaymentBlock} class="slds-m-bottom_medium">
+        <lightning-card>
+            <p slot="title" style="font-size: 14px; font-weight: bold">
+                Payment
+            </p>
+            <lightning-button
+                    variant="neutral"
+                    label="Cancel"
+                    slot="actions"
+                    onclick={cancel}
+                    class="slds-var-p-around_x-small neutral-button"
+            ></lightning-button>
+            <div class="slds-grid slds-grid_align-center slds-m-bottom_medium">
+                <div class="slds-col slds-size_2-of-4" style="border: 1px solid rgb(201, 201, 201); border-radius: 0.25rem; box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%)">
+                    <c-cmp-payment-processor record-id={accountId} source="ChangeAssociateMemberSectionsPayment" amount={totalCost} payment-methods={paymentMethods} onsuccessfulpayment={handleSuccessfulPayment}></c-cmp-payment-processor>
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+ </template>

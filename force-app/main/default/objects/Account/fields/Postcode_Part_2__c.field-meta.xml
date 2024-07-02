@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Postcode_Part_2__c</fullName>
+    <description>First digit of the Inward section of the Postcode i.e. 7FG - only includes the first digit and excludes the leading space and the final two letters. Used to determine the Region and DA allocation</description>
+    <externalId>false</externalId>
+    <label>Postcode Part 2</label>
+    <length>5</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

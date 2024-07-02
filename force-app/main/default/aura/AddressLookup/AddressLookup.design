@@ -1,0 +1,4 @@
+<design:component>
+	<design:attribute name="inputAddresses" label="addresses"/>
+	<design:attribute name="recordId" label="recordId"/>
+</design:component>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Detail__c</fullName>
+    <externalId>false</externalId>
+    <label>Referral Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Referral_Method__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Camping Magazine</fullName>
+                <default>false</default>
+                <label>Camping Magazine</label>
+            </value>
+            <value>
+                <fullName>MMM</fullName>
+                <default>false</default>
+                <label>MMM</label>
+            </value>
+            <value>
+                <fullName>Caravan Magazine</fullName>
+                <default>false</default>
+                <label>Caravan Magazine</label>
+            </value>
+            <value>
+                <fullName>Which Motorhome</fullName>
+                <default>false</default>
+                <label>Which Motorhome</label>
+            </value>
+            <value>
+                <fullName>Campervan Magazine</fullName>
+                <default>false</default>
+                <label>Campervan Magazine</label>
+            </value>
+            <value>
+                <fullName>Practical Caravan</fullName>
+                <default>false</default>
+                <label>Practical Caravan</label>
+            </value>
+            <value>
+                <fullName>Practical Motorhome</fullName>
+                <default>false</default>
+                <label>Practical Motorhome</label>
+            </value>
+            <value>
+                <fullName>Britain Magazine</fullName>
+                <default>false</default>
+                <label>Britain Magazine</label>
+            </value>
+            <value>
+                <fullName>BBC Countryfile Magazine</fullName>
+                <default>false</default>
+                <label>BBC Countryfile Magazine</label>
+            </value>
+            <value>
+                <fullName>Discover Touring</fullName>
+                <default>false</default>
+                <label>Discover Touring</label>
+            </value>
+            <value>
+                <fullName>Magazine Insert</fullName>
+                <default>false</default>
+                <label>Magazine Insert</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>UKCampsite Website</fullName>
+                <default>false</default>
+                <label>UKCampsite Website</label>
+            </value>
+            <value>
+                <fullName>Out and About Website</fullName>
+                <default>false</default>
+                <label>Out and About Website</label>
+            </value>
+            <value>
+                <fullName>Caravan Site Finder Website</fullName>
+                <default>false</default>
+                <label>Caravan Site Finder Website</label>
+            </value>
+            <value>
+                <fullName>Motorhome and Caravan Show NEC October</fullName>
+                <default>false</default>
+                <label>Motorhome and Caravan Show NEC October</label>
+            </value>
+            <value>
+                <fullName>Scottish Caravan and Outdoor Leisure Show SECC February</fullName>
+                <default>false</default>
+                <label>Scottish Caravan and Outdoor Leisure Show SECC February</label>
+            </value>
+            <value>
+                <fullName>The Motorhome Caravan and Camping Show NEC February</fullName>
+                <default>false</default>
+                <label>The Motorhome Caravan and Camping Show NEC February</label>
+            </value>
+            <value>
+                <fullName>BBC Gardeners World Show</fullName>
+                <default>false</default>
+                <label>BBC Gardeners World Show</label>
+            </value>
+            <value>
+                <fullName>The National Motorhome Show Peterborough</fullName>
+                <default>false</default>
+                <label>The National Motorhome Show Peterborough</label>
+            </value>
+            <value>
+                <fullName>The South Coast Caravan and Motorhome Show Romsey</fullName>
+                <default>false</default>
+                <label>The South Coast Caravan and Motorhome Show Romsey</label>
+            </value>
+            <value>
+                <fullName>Great Yorkshire Motorhome and Caravan Show</fullName>
+                <default>false</default>
+                <label>Great Yorkshire Motorhome and Caravan Show</label>
+            </value>
+            <value>
+                <fullName>Caravan and Motorhome Show Newark</fullName>
+                <default>false</default>
+                <label>Caravan and Motorhome Show Newark</label>
+            </value>
+            <value>
+                <fullName>The Southern Motorhome Show Newbury</fullName>
+                <default>false</default>
+                <label>The Southern Motorhome Show Newbury</label>
+            </value>
+            <value>
+                <fullName>UK Summer Motorhome Show</fullName>
+                <default>false</default>
+                <label>UK Summer Motorhome Show</label>
+            </value>
+            <value>
+                <fullName>The MMM Midlands Motorhome Sale</fullName>
+                <default>false</default>
+                <label>The MMM Midlands Motorhome Sale</label>
+            </value>
+            <value>
+                <fullName>Western Motorhome Show</fullName>
+                <default>false</default>
+                <label>Western Motorhome Show</label>
+            </value>
+            <value>
+                <fullName>Lawns Show</fullName>
+                <default>false</default>
+                <label>Lawns Show</label>
+            </value>
+            <value>
+                <fullName>Motorhome and RV Show Shepton</fullName>
+                <default>false</default>
+                <label>Motorhome and RV Show Shepton</label>
+            </value>
+            <value>
+                <fullName>The Motorhome Show Season Finale</fullName>
+                <default>false</default>
+                <label>The Motorhome Show Season Finale</label>
+            </value>
+            <value>
+                <fullName>Holiday World Show Belfast</fullName>
+                <default>false</default>
+                <label>Holiday World Show Belfast</label>
+            </value>
+            <value>
+                <fullName>Warners Email</fullName>
+                <default>false</default>
+                <label>Warners Email</label>
+            </value>
+            <value>
+                <fullName>Britains Best Caravan Parks Guide</fullName>
+                <default>false</default>
+                <label>Britains Best Caravan Parks Guide</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <valueName>Warners Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guides</controllingFieldValue>
+            <valueName>Britains Best Caravan Parks Guide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Camping Magazine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>MMM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Caravan Magazine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Which Motorhome</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Campervan Magazine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Practical Caravan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Practical Motorhome</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Britain Magazine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>BBC Countryfile Magazine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Discover Touring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Magazine Insert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internet</controllingFieldValue>
+            <valueName>Google</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internet</controllingFieldValue>
+            <valueName>UKCampsite Website</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internet</controllingFieldValue>
+            <valueName>Out and About Website</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internet</controllingFieldValue>
+            <valueName>Caravan Site Finder Website</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Show or Exhibition</controllingFieldValue>
+            <valueName>Motorhome and Caravan Show NEC October</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Show or Exhibition</controllingFieldValue>
+            <valueName>Scottish Caravan and Outdoor Leisure Show SECC February</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Show or Exhibition</controllingFieldValue>
+            <valueName>The Motorhome Caravan and Camping Show NEC February</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>BBC Gardeners World Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>The National Motorhome Show Peterborough</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>The South Coast Caravan and Motorhome Show Romsey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>Great Yorkshire Motorhome and Caravan Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>Caravan and Motorhome Show Newark</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>The Southern Motorhome Show Newbury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>UK Summer Motorhome Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>The MMM Midlands Motorhome Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>Western Motorhome Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>Lawns Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>Motorhome and RV Show Shepton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>The Motorhome Show Season Finale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Show</controllingFieldValue>
+            <valueName>Holiday World Show Belfast</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Member_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE( 
+	IF(Status__c = &quot;Inactive&quot;, 
+		CASE( RecordType.DeveloperName , 
+		&quot;Secondary&quot;, &quot;/resource/0000000000000/f_ccc_second_inactive&quot;, /* 2_Secondary */ 
+		&quot;Associate&quot;, &quot;/resource/0000000000000/g_ccc_assoc_inactive&quot;, /* 4_Associate */ 
+		&quot;/resource/0000000000000/trans_circle&quot;), 
+
+		CASE( RecordType.DeveloperName , 
+		&quot;Lead&quot;, &quot;/resource/0000000000000/a_first_member&quot;, /* 1_Lead */ 
+		&quot;Secondary&quot;, &quot;/resource/0000000000000/b_second_member&quot;, /* 2_Secondary */ 
+		&quot;Associate&quot;, &quot;/resource/0000000000000/c_ccc_assoc2&quot;, /* 4_Associate */ 
+		&quot;Child&quot;, &quot;/resource/0000000000000/d_ccc_child2&quot;, /* 3_Child */ 
+		&quot;Access&quot;, &quot;/resource/0000000000000/e_ccc_access&quot;, /* 5_Access */ 
+		&quot;/resource/0000000000000/trans_circle&quot;)
+	),
+&quot;Member Type&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Member Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

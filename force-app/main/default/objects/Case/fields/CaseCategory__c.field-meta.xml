@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseCategory__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Always populate with a value - for reporting</inlineHelpText>
+    <label>Case Category</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Systems</fullName>
+                <default>true</default>
+                <label>Systems</label>
+            </value>
+            <value>
+                <fullName>Facilities</fullName>
+                <default>false</default>
+                <label>Facilities</label>
+            </value>
+            <value>
+                <fullName>Policies</fullName>
+                <default>false</default>
+                <label>Policies</label>
+            </value>
+            <value>
+                <fullName>Process</fullName>
+                <default>false</default>
+                <label>Process</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
+            </value>
+            <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+                <label>Communication</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Staff</fullName>
+                <default>false</default>
+                <label>Staff</label>
+            </value>
+            <value>
+                <fullName>Request for Info</fullName>
+                <default>false</default>
+                <label>Request for Info</label>
+            </value>
+            <value>
+                <fullName>Positive Feedback</fullName>
+                <default>false</default>
+                <label>Positive Feedback</label>
+            </value>
+            <value>
+                <fullName>Service Level</fullName>
+                <default>false</default>
+                <label>Service Level</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

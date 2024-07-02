@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Camping_Unit_Not_Blank</fullName>
+    <active>false</active>
+    <description>If the camping unit is not blank or equal to no unit owed then require a length and width</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(Camping_Unit__c,&apos;No Unit Owned&apos;)),
+NOT(ISBLANK(TEXT(Camping_Unit__c))),
+OR(
+ISBLANK( Length__c ),
+ISBLANK( Width__c )
+)
+)</errorConditionFormula>
+    <errorMessage>Please enter a width and length for the camping unit</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="ChangeDetailsController" lightningStylesheets="true">
+    <apex:form >
+    <apex:sectionHeader title="Change Membership" />
+ 
+    <apex:pageblock title="Change Membership Options">
+        <apex:pageBlockSection title="Change Membership Details:" columns="2">
+                <apex:commandButton value="Change Membership" action="{!ChangeMembership}"/>
+                <apex:outputLabel value="Amend Membership Package, inc. Membership Type, Associate Member and Sections via Direct Debit" for="button"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Change Associate Member and Sections:" columns="2">
+           <apex:commandButton value="Change Associate Member and Sections" action="{!AddAssocSections}"/>
+           <apex:outputLabel value="Change Associates and Sections through Cash/Cheque and Debit/Credit Card" for="button"/>
+        </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

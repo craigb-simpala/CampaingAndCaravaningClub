@@ -1,0 +1,54 @@
+<template>
+  <c-cmp-toast></c-cmp-toast>
+  <div class="slds-grid slds-wrap">
+    <!-- Account Holder Name -->
+    <div class="slds-size_1-of-1 slds-var-p-horizontal_xxx-small">
+      <lightning-input
+        data-name="txtHolder"
+        label="Account Holder Name"
+        required
+        type="text"
+        value={account.holder}
+        onchange={handleChange_Holder}
+      ></lightning-input>
+    </div>
+    <!-- Account Holder Name -->
+    <div class="slds-size_1-of-2 slds-var-p-horizontal_xxx-small">
+      <lightning-input
+        data-name="txtNumber"
+        label="Account Number"
+        max-length="9"
+        required
+        type="text"
+        value={account.number}
+        onchange={handleChange_Number}
+        onkeydown={handleKeyDown_NumbersOnly}
+      ></lightning-input>
+    </div>
+    <!-- Account Sort Code -->
+    <div class="slds-size_1-of-2 slds-var-p-horizontal_xxx-small">
+      <lightning-input
+        data-name="txtSortCode"
+        label="Account Sort Code"
+        max-length="8"
+        required
+        type="text"
+        value={account.sortCode}
+        onchange={handleChange_SortCode}
+        onkeydown={handleKeyDown_NumbersOnly}
+      ></lightning-input>
+    </div>
+    <template if:true={displayValidateButton}>
+      <!-- Button -->
+      <div class="slds-clearfix slds-var-m-top_small">
+        <lightning-button
+          class="slds-button slds-button_brand slds-float_right"
+          icon-name="utility:check"
+          label="Validate"
+          variant="brand"
+          onclick={handleClick_Validate}
+        ></lightning-button>
+      </div>
+    </template>
+  </div>
+</template>

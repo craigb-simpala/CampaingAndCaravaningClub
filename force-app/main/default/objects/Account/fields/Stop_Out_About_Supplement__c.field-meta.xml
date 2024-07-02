@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stop_Out_About_Supplement__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Records contact preference for the &quot;Out &amp; About Supplement&quot;</description>
+    <externalId>false</externalId>
+    <label>Stop Out &amp; About Supplement</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

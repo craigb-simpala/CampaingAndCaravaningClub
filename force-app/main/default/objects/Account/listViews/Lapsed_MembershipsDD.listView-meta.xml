@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lapsed_MembershipsDD</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Hybrid_Membership_Number__c</columns>
+    <columns>Date_Joined__c</columns>
+    <columns>Renewal_Date__c</columns>
+    <columns>Membership_Type__c</columns>
+    <columns>Payment_Method2__c</columns>
+    <columns>Tenure2__c</columns>
+    <columns>Status_Indicator__c</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Membership_Status__c</field>
+        <operation>equals</operation>
+        <value>Lapsed</value>
+    </filters>
+    <filters>
+        <field>Payment_Method2__c</field>
+        <operation>equals</operation>
+        <value>Direct Debit</value>
+    </filters>
+    <filters>
+        <field>Renewal_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2022</value>
+    </filters>
+    <label>Lapsed Memberships - Direct Debit</label>
+</ListView>

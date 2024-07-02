@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Benefits</fullName>
+        <default>false</default>
+        <label>Benefits</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Breakdown</fullName>
+        <default>false</default>
+        <label>Breakdown</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Claim</fullName>
+        <default>false</default>
+        <label>Claim</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Club Care</fullName>
+        <default>false</default>
+        <label>Club Care</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>General Dissatisfaction</fullName>
+        <default>false</default>
+        <label>General Dissatisfaction</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Join</fullName>
+        <default>false</default>
+        <label>Join</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Log-in</fullName>
+        <default>false</default>
+        <label>Log-in</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Membership</fullName>
+        <default>false</default>
+        <label>Membership</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>New Problem</fullName>
+        <default>false</default>
+        <label>New Problem</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Policy</fullName>
+        <default>false</default>
+        <label>Policy</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Positive Feedback</fullName>
+        <default>false</default>
+        <label>Positive Feedback</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Quote</fullName>
+        <default>false</default>
+        <label>Quote</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>RAC</fullName>
+        <default>false</default>
+        <label>RAC</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Renew</fullName>
+        <default>false</default>
+        <label>Renew</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Site</fullName>
+        <default>false</default>
+        <label>Site</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Switch</fullName>
+        <default>false</default>
+        <label>Switch</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Technical Enquiry</fullName>
+        <default>false</default>
+        <label>Technical Enquiry</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancel</fullName>
+        <default>false</default>
+        <label>Cancel</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Amend Personal Details</fullName>
+        <default>false</default>
+        <label>Amend Personal Details</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Long Stay</fullName>
+        <default>false</default>
+        <label>Long Stay</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Type_Explained__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  Transaction_Type__c = &apos;0N&apos;, &apos;New Instruction&apos;,
+IF(  Transaction_Type__c = &apos;01&apos;, &apos;First Payment&apos;,
+IF(  Transaction_Type__c = &apos;17&apos;, &apos;Renewal Payment&apos;,
+IF(  Transaction_Type__c = &apos;0C&apos;, &apos;Cancelled Instruction&apos;, &apos;&apos;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Transaction Type Explained</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

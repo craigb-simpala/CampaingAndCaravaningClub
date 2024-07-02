@@ -1,0 +1,71 @@
+<template>
+    <div if:true={displayErrorBlock}>
+        <lightning-card>
+            <p class="slds-align_absolute-center slds-p-around_small" style="font-size: 1rem">{errorMessage}</p>
+            <p slot="footer">
+                <lightning-button
+                        variant="brand"
+                        label="Cancel"
+                        onclick={closeModal}
+                        class="slds-var-p-around_x-small"
+                ></lightning-button>
+            </p>
+        </lightning-card>
+
+    </div>
+    <div if:false={displayErrorBlock} class="slds-m-around_medium">
+        <template if:true={displayInitSpinner}>
+            <div style="min-height: 288px">
+                <lightning-spinner variant="brand" alternative-text="Loading"></lightning-spinner>
+            </div>
+        </template>
+        <template if:true={displaySpinner}>
+            <div>
+                <lightning-spinner  variant="brand" alternative-text="Loading"></lightning-spinner>
+            </div>
+        </template>
+        <div class="slds-box" if:true={membershipInfo}>
+            <c-cmp-payment-processor record-id={recordId} source="Reinstate" amount={membershipInfo.totalCost} onsuccessfulpayment={handleSuccessfulPayment}></c-cmp-payment-processor>
+        </div>
+        <div if:true={membershipInfo} class="slds-box slds-m-top_small">
+            <div class="slds-text-heading_medium" style="font-size: 18px">Costs</div>
+
+            <div class="divTable">
+                <div class="divTableBody">
+                    <div class="divTableRow">
+                        <div class="divTableCellLabel">Membership</div>
+                        <div class="divTableCellValue">
+                            £<lightning-formatted-number value={membershipInfo.membershipCost} maximum-fraction-digits="2"></lightning-formatted-number>
+                        </div>
+                    </div>
+                    <div class="divTableRow" if:true={membershipInfo.associateMemberCost}>
+                        <div class="divTableCellLabel">Associate Member</div>
+                        <div class="divTableCellValue">
+                            £<lightning-formatted-number value={membershipInfo.associateMemberCost} maximum-fraction-digits="2"></lightning-formatted-number>
+                        </div>
+                    </div>
+                    <template for:each={membershipInfo.selectedSections} for:item="section" for:index="index">
+                        <div key={section.name} class="divTableRow">
+                            <div class="divTableCellLabel">{section.productDetail}</div>
+                            <div class="divTableCellValue">
+                                £<lightning-formatted-number value={section.price} maximum-fraction-digits="2"></lightning-formatted-number>
+                            </div>
+                        </div>
+                    </template>
+                    <div class="divTableRow">
+                        <div class="divTableCellLabel">&nbsp;</div>
+                    <div class="divTableCellValue">&nbsp;</div>
+                    </div>
+
+                    <div class="divTableRow">
+                        <div class="divTableCellLabel"><b>Total Cost</b></div>
+                        <div class="divTableCellValue">
+                            £<lightning-formatted-number value={membershipInfo.totalCost} maximum-fraction-digits="2"></lightning-formatted-number>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>

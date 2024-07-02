@@ -1,0 +1,37 @@
+<apex:page standardcontroller="Account" extensions="ValidateBankDetails" lightningStylesheets="true">
+<apex:sectionHeader title="Validate Postcode" />
+    <apex:form >
+        <apex:pagemessages />
+        <apex:outputPanel rendered="{!(wizardStep==1)}">
+            <apex:pageblock >
+                <apex:pageblockbuttons >
+                    <apex:commandbutton action="{!Validate}" value="Validate" />
+                    <apex:commandbutton action="{!cancel}" value="Cancel" />
+                </apex:pageblockbuttons>
+                <apex:pageblocksection >
+                    <apex:inputtext value="{!BankAccount}" />
+                    <apex:inputtext value="{!SortCode}" />  
+                </apex:pageblocksection>
+            </apex:pageblock>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!(wizardStep==2)}">
+            <apex:pageblock >
+                <apex:pageblockbuttons >
+                    <apex:commandbutton action="{!updateAddress}" value="Update Address" />
+                    <apex:commandbutton action="{!cancel}" value="Cancel" />
+                </apex:pageblockbuttons>
+                <apex:pageblocksection >
+                    <apex:outputtext value="{!Account.BillingPostalCode}" />
+                </apex:pageblocksection>
+                <apex:pageblocksection >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel for="addr" value="Address" />
+                        <apex:selectList id="addr" value="{!selAddr}" size="1" >
+                            <apex:selectOptions value="{!addressOptions}"/>
+                        </apex:selectList>              
+                    </apex:pageBlockSectionItem>
+                </apex:pageblocksection>
+            </apex:pageblock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

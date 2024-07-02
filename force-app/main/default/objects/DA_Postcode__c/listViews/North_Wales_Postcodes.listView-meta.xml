@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>North_Wales_Postcodes</fullName>
+    <columns>NAME</columns>
+    <columns>Association_Name__c</columns>
+    <columns>Postcode_Part_1__c</columns>
+    <columns>Postcode_Part_2__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Association_Name__c</field>
+        <operation>equals</operation>
+        <value>North Wales D A</value>
+    </filters>
+    <label>North Wales Postcodes</label>
+</ListView>

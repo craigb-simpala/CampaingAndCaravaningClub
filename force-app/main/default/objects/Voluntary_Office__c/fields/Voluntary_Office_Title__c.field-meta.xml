@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voluntary_Office_Title__c</fullName>
+    <externalId>false</externalId>
+    <label>Voluntary Office Title</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Appointed Councillor</fullName>
+                <default>false</default>
+                <label>Appointed Councillor</label>
+            </value>
+            <value>
+                <fullName>Assistant Camping Club Junior (CCJ) Leader</fullName>
+                <default>false</default>
+                <label>Assistant Camping Club Junior (CCJ) Leader</label>
+            </value>
+            <value>
+                <fullName>Assistant Youth Leader</fullName>
+                <default>false</default>
+                <label>Assistant Youth Leader</label>
+            </value>
+            <value>
+                <fullName>Auditor</fullName>
+                <default>false</default>
+                <label>Auditor</label>
+            </value>
+            <value>
+                <fullName>Camping Club Junior (CCJ) Leader</fullName>
+                <default>false</default>
+                <label>Camping Club Junior (CCJ) Leader</label>
+            </value>
+            <value>
+                <fullName>Camping Club Youth (CCY) Contact</fullName>
+                <default>false</default>
+                <label>Camping Club Youth (CCY) Contact</label>
+            </value>
+            <value>
+                <fullName>Chairman</fullName>
+                <default>false</default>
+                <label>Chairman</label>
+            </value>
+            <value>
+                <fullName>Club President</fullName>
+                <default>false</default>
+                <label>Club President</label>
+            </value>
+            <value>
+                <fullName>Countryside Care Officer</fullName>
+                <default>false</default>
+                <label>Countryside Care Officer</label>
+            </value>
+            <value>
+                <fullName>DA Contact</fullName>
+                <default>false</default>
+                <label>DA Contact</label>
+            </value>
+            <value>
+                <fullName>Deputy Appointed Councillor to National Council</fullName>
+                <default>false</default>
+                <label>Deputy Appointed Councillor to National Council</label>
+            </value>
+            <value>
+                <fullName>Honorary (VP)</fullName>
+                <default>false</default>
+                <label>Honorary (VP)</label>
+            </value>
+            <value>
+                <fullName>Honorary Member</fullName>
+                <default>false</default>
+                <label>Honorary Member</label>
+            </value>
+            <value>
+                <fullName>HQ Committee Member</fullName>
+                <default>false</default>
+                <label>HQ Committee Member</label>
+            </value>
+            <value>
+                <fullName>Management Committee</fullName>
+                <default>false</default>
+                <label>Management Committee</label>
+            </value>
+            <value>
+                <fullName>National Council</fullName>
+                <default>false</default>
+                <label>National Council</label>
+            </value>
+            <value>
+                <fullName>National Parks Sites Officer</fullName>
+                <default>false</default>
+                <label>National Parks Sites Officer</label>
+            </value>
+            <value>
+                <fullName>National Youth Committee Chairman</fullName>
+                <default>false</default>
+                <label>National Youth Committee Chairman</label>
+            </value>
+            <value>
+                <fullName>Patron</fullName>
+                <default>false</default>
+                <label>Patron</label>
+            </value>
+            <value>
+                <fullName>Public Relations Officer (PRO)</fullName>
+                <default>false</default>
+                <label>Public Relations Officer (PRO)</label>
+            </value>
+            <value>
+                <fullName>Regional Youth Liaison Officer (RYLO)</fullName>
+                <default>false</default>
+                <label>Regional Youth Liaison Officer (RYLO)</label>
+            </value>
+            <value>
+                <fullName>Secretary</fullName>
+                <default>false</default>
+                <label>Secretary</label>
+            </value>
+            <value>
+                <fullName>Section Youth Liaison Officer (SYLO)</fullName>
+                <default>false</default>
+                <label>Section Youth Liaison Officer (SYLO)</label>
+            </value>
+            <value>
+                <fullName>Sites Co-ordinator</fullName>
+                <default>false</default>
+                <label>Sites Co-ordinator</label>
+            </value>
+            <value>
+                <fullName>Sites Secretary</fullName>
+                <default>false</default>
+                <label>Sites Secretary</label>
+            </value>
+            <value>
+                <fullName>Treasurer</fullName>
+                <default>false</default>
+                <label>Treasurer</label>
+            </value>
+            <value>
+                <fullName>Vice Chairman</fullName>
+                <default>false</default>
+                <label>Vice Chairman</label>
+            </value>
+            <value>
+                <fullName>Club Vice President</fullName>
+                <default>false</default>
+                <label>Vice President</label>
+            </value>
+            <value>
+                <fullName>Web Co-ordinator</fullName>
+                <default>false</default>
+                <label>Web Co-ordinator</label>
+            </value>
+            <value>
+                <fullName>Webmaster</fullName>
+                <default>false</default>
+                <label>Webmaster</label>
+            </value>
+            <value>
+                <fullName>Youth Liaison Officer (YLO)</fullName>
+                <default>false</default>
+                <label>Youth Liaison Officer (YLO)</label>
+            </value>
+            <value>
+                <fullName>Youth Tester</fullName>
+                <default>false</default>
+                <label>Youth Tester</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

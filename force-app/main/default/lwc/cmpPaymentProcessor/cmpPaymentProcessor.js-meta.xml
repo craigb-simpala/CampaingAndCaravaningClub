@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Payment Processor</masterLabel>
+    <description
+  >Allows the user to process a payment from a customer.</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__UtilityBar</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage, lightning__UtilityBar">
+            <property name='recordId' type='String' />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

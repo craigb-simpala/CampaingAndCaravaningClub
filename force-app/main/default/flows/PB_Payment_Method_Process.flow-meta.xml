@@ -1,0 +1,3116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>[Flow] DDI Email Flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_13_A2</name>
+        <label>Email Flow</label>
+        <locationX>1300</locationX>
+        <locationY>300</locationY>
+        <actionName>DDI_Email_Flow</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varMembershipNumber</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varMembershipNumber</name>
+            <value>
+                <elementReference>myVariable_current.Membership_Number__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>templateSelection</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>templateSelection</name>
+            <value>
+                <numberValue>3.0</numberValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varAccountID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varAccountID</name>
+            <value>
+                <elementReference>myVariable_current.Membership__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>recordId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>recordId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>DDI_Email_Flow</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Update_Paid</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_18_A2</name>
+        <label>Update - Paid</label>
+        <locationX>1800</locationX>
+        <locationY>300</locationY>
+        <actionName>Payment_Method__c.DDI_Update_Paid</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Payment_Method__c.DDI_Update_Paid</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Update_Not_Paid</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_23_A2</name>
+        <label>Update - Not Paid</label>
+        <locationX>2300</locationX>
+        <locationY>300</locationY>
+        <actionName>Payment_Method__c.DDI_Update_Not_Paid</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Payment_Method__c.DDI_Update_Not_Paid</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>[Flow] DDI Email Flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A2</name>
+        <label>Email Flow</label>
+        <locationX>300</locationX>
+        <locationY>300</locationY>
+        <actionName>DDI_Email_Flow</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varMembershipNumber</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varMembershipNumber</name>
+            <value>
+                <elementReference>myVariable_current.Membership_Number__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varAccountID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varAccountID</name>
+            <value>
+                <elementReference>myVariable_current.Membership__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>recordId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>recordId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>templateSelection</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>templateSelection</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </inputParameters>
+        <nameSegment>DDI_Email_Flow</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>[Flow] DDI Email Flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_8_A2</name>
+        <label>Email Flow</label>
+        <locationX>800</locationX>
+        <locationY>300</locationY>
+        <actionName>DDI_Email_Flow</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>recordId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>recordId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varMembershipNumber</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varMembershipNumber</name>
+            <value>
+                <elementReference>myVariable_current.Membership_Number__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>varAccountID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>varAccountID</name>
+            <value>
+                <elementReference>myVariable_current.Membership__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>templateSelection</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>templateSelection</name>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </inputParameters>
+        <nameSegment>DDI_Email_Flow</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Allow_DDI_Alert__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Allow DDI Alert is False</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>3.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision12</name>
+        <label>myDecision12</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision17</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_13</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_13</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_13_pmetdec</targetReference>
+            </connector>
+            <label>New DD Out of Renewal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>4.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision17</name>
+        <label>myDecision17</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision22</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_18</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_18</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_18_pmetdec</targetReference>
+            </connector>
+            <label>Update - Paid</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision2</name>
+        <label>myDecision2</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision7</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_pmetdec</targetReference>
+            </connector>
+            <label>New Joiner with DD</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>5.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision22</name>
+        <label>myDecision22</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_23</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_23</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_23_pmetdec</targetReference>
+            </connector>
+            <label>Update - Not Paid</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision7</name>
+        <label>myDecision7</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision12</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_8</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_8</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_8_pmetdec</targetReference>
+            </connector>
+            <label>New DD Within Renewal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_13_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>1300</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_13_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_13_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_13_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_13_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_13_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_18_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>1800</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_18_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_18_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_18_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_18_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_18_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_23_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>2300</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_23_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_23_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_23_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_23_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_23_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_3_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>300</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_3_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_3_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_8_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>800</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_8_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_8_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_8_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_8_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_8_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <description>Process for actions triggered off of the Payment Method object.</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Bank Account Name: &quot; + [Payment_Method__c].Bank_Account_Name__c &amp; 
+SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+&quot;Bank Account Number: &quot; + [Payment_Method__c].Bank_Account_Number__c &amp; 
+SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+&quot;Sort Code: &quot; + [Payment_Method__c].Sort_Code__c &amp; 
+SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+&quot;Mandate Amount: &quot; + TEXT([Payment_Method__c].Mandate_Amount__c )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_10_myRule_8_A1_5061991596</name>
+        <dataType>String</dataType>
+        <expression>&quot;Bank Account Name: &quot; + {!myVariable_current.Bank_Account_Name__c} &amp; 
+SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+&quot;Bank Account Number: &quot; + {!myVariable_current.Bank_Account_Number__c} &amp; 
+SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+&quot;Sort Code: &quot; + {!myVariable_current.Sort_Code__c} &amp; 
+SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+&quot;Mandate Amount: &quot; + TEXT({!myVariable_current.Mandate_Amount__c} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>$User.Id </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_11_myRule_8_A1_0127292611</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>Today()</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_14_myRule_13_A1_1859735630</name>
+        <dataType>Date</dataType>
+        <expression>Today()</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Bank Account Name: &quot; + [Payment_Method__c].Bank_Account_Name__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Bank Account Number: &quot; + [Payment_Method__c].Bank_Account_Number__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Sort Code: &quot; + [Payment_Method__c].Sort_Code__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Mandate Amount: &quot; + TEXT([Payment_Method__c].Mandate_Amount__c )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_15_myRule_13_A1_0031437431</name>
+        <dataType>String</dataType>
+        <expression>&quot;Bank Account Name: &quot; + {!myVariable_current.Bank_Account_Name__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Bank Account Number: &quot; + {!myVariable_current.Bank_Account_Number__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Sort Code: &quot; + {!myVariable_current.Sort_Code__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Mandate Amount: &quot; + TEXT({!myVariable_current.Mandate_Amount__c} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>$User.Id</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_16_myRule_13_A1_1600982552</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>TODAY()</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_19_myRule_18_A1_9283701280</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Bank Account Name: &quot; + [Payment_Method__c].Bank_Account_Name__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Bank Account Number: &quot; + [Payment_Method__c].Bank_Account_Number__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Sort Code: &quot; + [Payment_Method__c].Sort_Code__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Mandate Amount Difference: &quot; + TEXT([Payment_Method__c].MandateAmountDifference__c )
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_20_myRule_18_A1_6261204797</name>
+        <dataType>String</dataType>
+        <expression>&quot;Bank Account Name: &quot; + {!myVariable_current.Bank_Account_Name__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Bank Account Number: &quot; + {!myVariable_current.Bank_Account_Number__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Sort Code: &quot; + {!myVariable_current.Sort_Code__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Mandate Amount Difference: &quot; + TEXT({!myVariable_current.MandateAmountDifference__c} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>$User.Id</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_21_myRule_18_A1_2742430263</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>TODAY()</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_24_myRule_23_A1_1714156933</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>    &quot;Bank Account Name: &quot; + [Payment_Method__c].Bank_Account_Name__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Bank Account Number: &quot; + [Payment_Method__c].Bank_Account_Number__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Sort Code: &quot; + [Payment_Method__c].Sort_Code__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Mandate Amount: &quot; + TEXT([Payment_Method__c].Mandate_Amount__c )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_25_myRule_23_A1_8424357869</name>
+        <dataType>String</dataType>
+        <expression>    &quot;Bank Account Name: &quot; + {!myVariable_current.Bank_Account_Name__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Bank Account Number: &quot; + {!myVariable_current.Bank_Account_Number__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Sort Code: &quot; + {!myVariable_current.Sort_Code__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Mandate Amount: &quot; + TEXT({!myVariable_current.Mandate_Amount__c} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>$User.Id</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_26_myRule_23_A1_2701230302</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>Today()</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_4_myRule_3_A1_0735679465</name>
+        <dataType>Date</dataType>
+        <expression>Today()</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Bank Account Name: &quot; + [Payment_Method__c].Bank_Account_Name__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Bank Account Number: &quot; + [Payment_Method__c].Bank_Account_Number__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Sort Code: &quot; + [Payment_Method__c].Sort_Code__c &amp;
+    SUBSTITUTE($Label.LineBreak,&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Mandate Amount: &quot; + TEXT([Payment_Method__c].Mandate_Amount__c )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_5_myRule_3_A1_1877903478</name>
+        <dataType>String</dataType>
+        <expression>&quot;Bank Account Name: &quot; + {!myVariable_current.Bank_Account_Name__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Bank Account Number: &quot; + {!myVariable_current.Bank_Account_Number__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Sort Code: &quot; + {!myVariable_current.Sort_Code__c} &amp;
+    SUBSTITUTE({!$Label.LineBreak},&quot;-&quot;,&quot;&quot;)  &amp;
+    &quot;Mandate Amount: &quot; + TEXT({!myVariable_current.Mandate_Amount__c} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>$User.Id</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_6_myRule_3_A1_7569056846</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>TODAY()</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_9_myRule_8_A1_3047261387</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+&amp;&amp;
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+&amp;&amp;
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+&amp;&amp;
+([Payment_Method__c].Membership_Email__c != null &amp;&amp; [Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+&amp;&amp;
+ISNEW()
+&amp;&amp;
+[Payment_Method__c].DaystoRenewal__c &gt;=  57</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_13</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_current.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+&amp;&amp;
+ISPICKVAL({!myVariable_current.Status__c}, &apos;Active&apos;)
+&amp;&amp;
+{!myVariable_current.Allow_DDI_Alert__c}  = TRUE
+&amp;&amp;
+({!myVariable_current.Membership_Email__c} != null &amp;&amp; {!myVariable_current.Membership_Email__c}  != &quot;example@example.com&quot;)
+&amp;&amp;
+ISNEW()
+&amp;&amp;
+{!myVariable_current.DaystoRenewal__c} &gt;=  57</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+&amp;&amp;
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+&amp;&amp;
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+&amp;&amp;
+([Payment_Method__c].Membership_Email__c != null &amp;&amp; [Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+&amp;&amp;
+ISNEW()
+&amp;&amp;
+[Payment_Method__c].DaystoRenewal__c &gt;=  57</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_13_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_old.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+&amp;&amp;
+ISPICKVAL({!myVariable_old.Status__c}, &apos;Active&apos;)
+&amp;&amp;
+{!myVariable_old.Allow_DDI_Alert__c}  = TRUE
+&amp;&amp;
+({!myVariable_old.Membership_Email__c} != null &amp;&amp; {!myVariable_old.Membership_Email__c}  != &quot;example@example.com&quot;)
+&amp;&amp;
+ISNEW()
+&amp;&amp;
+{!myVariable_old.DaystoRenewal__c} &gt;=  57</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+
+&amp;&amp;
+
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+
+&amp;&amp;
+
+([Payment_Method__c].Membership_Email__c != null 
+
+&amp;&amp; 
+
+[Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+NOT (ISNEW())
+
+&amp;&amp;
+
+ISCHANGED([Payment_Method__c].Mandate_Amount__c) 
+
+&amp;&amp; 
+
+[Payment_Method__c].Mandate_Amount__c != 0
+
+&amp;&amp;
+
+ISPICKVAL([Payment_Method__c].Membership__c.Membership_Status__c, &quot;Paid&quot;)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_18</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_current.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL({!myVariable_current.Status__c}, &apos;Active&apos;)
+
+&amp;&amp;
+
+{!myVariable_current.Allow_DDI_Alert__c}  = TRUE
+
+&amp;&amp;
+
+({!myVariable_current.Membership_Email__c} != null 
+
+&amp;&amp; 
+
+{!myVariable_current.Membership_Email__c}  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+NOT (ISNEW())
+
+&amp;&amp;
+
+ISCHANGED({!myVariable_current.Mandate_Amount__c}) 
+
+&amp;&amp; 
+
+{!myVariable_current.Mandate_Amount__c} != 0
+
+&amp;&amp;
+
+ISPICKVAL({!myVariable_current.Membership__r.Membership_Status__c}, &quot;Paid&quot;)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+
+&amp;&amp;
+
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+
+&amp;&amp;
+
+([Payment_Method__c].Membership_Email__c != null 
+
+&amp;&amp; 
+
+[Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+NOT (ISNEW())
+
+&amp;&amp;
+
+ISCHANGED([Payment_Method__c].Mandate_Amount__c) 
+
+&amp;&amp; 
+
+[Payment_Method__c].Mandate_Amount__c != 0
+
+&amp;&amp;
+
+ISPICKVAL([Payment_Method__c].Membership__c.Membership_Status__c, &quot;Paid&quot;)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_18_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_old.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL({!myVariable_old.Status__c}, &apos;Active&apos;)
+
+&amp;&amp;
+
+{!myVariable_old.Allow_DDI_Alert__c}  = TRUE
+
+&amp;&amp;
+
+({!myVariable_old.Membership_Email__c} != null 
+
+&amp;&amp; 
+
+{!myVariable_old.Membership_Email__c}  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+NOT (ISNEW())
+
+&amp;&amp;
+
+ISCHANGED({!myVariable_old.Mandate_Amount__c}) 
+
+&amp;&amp; 
+
+{!myVariable_old.Mandate_Amount__c} != 0
+
+&amp;&amp;
+
+ISPICKVAL({!myVariable_old.Membership__r.Membership_Status__c}, &quot;Paid&quot;)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+
+&amp;&amp;
+
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+
+&amp;&amp;
+
+([Payment_Method__c].Membership_Email__c != null 
+
+&amp;&amp; 
+
+[Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+NOT (ISNEW())
+
+&amp;&amp;
+
+ISCHANGED([Payment_Method__c].Mandate_Amount__c) 
+
+&amp;&amp; 
+
+[Payment_Method__c].Mandate_Amount__c != 0
+
+&amp;&amp;
+
+NOT (ISPICKVAL([Payment_Method__c].Membership__c.Membership_Status__c, &quot;Paid&quot;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_23</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_current.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL({!myVariable_current.Status__c}, &apos;Active&apos;)
+
+&amp;&amp;
+
+{!myVariable_current.Allow_DDI_Alert__c}  = TRUE
+
+&amp;&amp;
+
+({!myVariable_current.Membership_Email__c} != null 
+
+&amp;&amp; 
+
+{!myVariable_current.Membership_Email__c}  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+NOT (ISNEW())
+
+&amp;&amp;
+
+ISCHANGED({!myVariable_current.Mandate_Amount__c}) 
+
+&amp;&amp; 
+
+{!myVariable_current.Mandate_Amount__c} != 0
+
+&amp;&amp;
+
+NOT (ISPICKVAL({!myVariable_current.Membership__r.Membership_Status__c}, &quot;Paid&quot;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+
+&amp;&amp;
+
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+
+&amp;&amp;
+
+([Payment_Method__c].Membership_Email__c != null 
+
+&amp;&amp; 
+
+[Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+NOT (ISNEW())
+
+&amp;&amp;
+
+ISCHANGED([Payment_Method__c].Mandate_Amount__c) 
+
+&amp;&amp; 
+
+[Payment_Method__c].Mandate_Amount__c != 0
+
+&amp;&amp;
+
+NOT (ISPICKVAL([Payment_Method__c].Membership__c.Membership_Status__c, &quot;Paid&quot;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_23_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_old.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL({!myVariable_old.Status__c}, &apos;Active&apos;)
+
+&amp;&amp;
+
+{!myVariable_old.Allow_DDI_Alert__c}  = TRUE
+
+&amp;&amp;
+
+({!myVariable_old.Membership_Email__c} != null 
+
+&amp;&amp; 
+
+{!myVariable_old.Membership_Email__c}  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+NOT (ISNEW())
+
+&amp;&amp;
+
+ISCHANGED({!myVariable_old.Mandate_Amount__c}) 
+
+&amp;&amp; 
+
+{!myVariable_old.Mandate_Amount__c} != 0
+
+&amp;&amp;
+
+NOT (ISPICKVAL({!myVariable_old.Membership__r.Membership_Status__c}, &quot;Paid&quot;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+&amp;&amp;
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+&amp;&amp;
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+&amp;&amp;
+([Payment_Method__c].Membership_Email__c != null &amp;&amp; [Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+&amp;&amp;
+ISNEW()
+&amp;&amp;
+[Payment_Method__c].Start_Date__c = [Payment_Method__c].Membership__c.Date_Joined__c 
+
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_current.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+&amp;&amp;
+ISPICKVAL({!myVariable_current.Status__c}, &apos;Active&apos;)
+&amp;&amp;
+{!myVariable_current.Allow_DDI_Alert__c}  = TRUE
+&amp;&amp;
+({!myVariable_current.Membership_Email__c} != null &amp;&amp; {!myVariable_current.Membership_Email__c}  != &quot;example@example.com&quot;)
+&amp;&amp;
+ISNEW()
+&amp;&amp;
+{!myVariable_current.Start_Date__c} = {!myVariable_current.Membership__r.Date_Joined__c}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+&amp;&amp;
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+&amp;&amp;
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+&amp;&amp;
+([Payment_Method__c].Membership_Email__c != null &amp;&amp; [Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+&amp;&amp;
+ISNEW()
+&amp;&amp;
+[Payment_Method__c].Start_Date__c = [Payment_Method__c].Membership__c.Date_Joined__c 
+
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_old.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+&amp;&amp;
+ISPICKVAL({!myVariable_old.Status__c}, &apos;Active&apos;)
+&amp;&amp;
+{!myVariable_old.Allow_DDI_Alert__c}  = TRUE
+&amp;&amp;
+({!myVariable_old.Membership_Email__c} != null &amp;&amp; {!myVariable_old.Membership_Email__c}  != &quot;example@example.com&quot;)
+&amp;&amp;
+ISNEW()
+&amp;&amp;
+{!myVariable_old.Start_Date__c} = {!myVariable_old.Membership__r.Date_Joined__c}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+
+&amp;&amp;
+
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+
+&amp;&amp;
+
+([Payment_Method__c].Membership_Email__c != null &amp;&amp; [Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+ISNEW()
+
+&amp;&amp;
+
+[Payment_Method__c].DaystoRenewal__c &lt; 57</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_8</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_current.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL({!myVariable_current.Status__c}, &apos;Active&apos;)
+
+&amp;&amp;
+
+{!myVariable_current.Allow_DDI_Alert__c}  = TRUE
+
+&amp;&amp;
+
+({!myVariable_current.Membership_Email__c} != null &amp;&amp; {!myVariable_current.Membership_Email__c}  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+ISNEW()
+
+&amp;&amp;
+
+{!myVariable_current.DaystoRenewal__c} &lt; 57</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Payment_Method__c].RecordType.DeveloperName = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL([Payment_Method__c].Status__c, &apos;Active&apos;)
+
+&amp;&amp;
+
+[Payment_Method__c].Allow_DDI_Alert__c  = TRUE
+
+&amp;&amp;
+
+([Payment_Method__c].Membership_Email__c != null &amp;&amp; [Payment_Method__c].Membership_Email__c  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+ISNEW()
+
+&amp;&amp;
+
+[Payment_Method__c].DaystoRenewal__c &lt; 57</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_8_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_old.RecordType.DeveloperName} = &apos;Direct_Debit&apos;
+
+&amp;&amp;
+
+ISPICKVAL({!myVariable_old.Status__c}, &apos;Active&apos;)
+
+&amp;&amp;
+
+{!myVariable_old.Allow_DDI_Alert__c}  = TRUE
+
+&amp;&amp;
+
+({!myVariable_old.Membership_Email__c} != null &amp;&amp; {!myVariable_old.Membership_Email__c}  != &quot;example@example.com&quot;)
+
+&amp;&amp;
+
+ISNEW()
+
+&amp;&amp;
+
+{!myVariable_old.DaystoRenewal__c} &lt; 57</expression>
+    </formulas>
+    <interviewLabel>PB_Payment_Method_Process-33_InterviewLabel</interviewLabel>
+    <label>[PB] Payment Method Process</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Payment_Method__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <recordCreates>
+        <name>myRule_13_A1</name>
+        <label>Create Task</label>
+        <locationX>1300</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_13_A2</targetReference>
+        </connector>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Due Date Only</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>formula_14_myRule_13_A1_1859735630</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Description</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Description</field>
+            <value>
+                <elementReference>formula_15_myRule_13_A1_0031437431</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Assigned To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>formula_16_myRule_13_A1_1600982552</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Priority</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Subject</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Subject</field>
+            <value>
+                <stringValue>DDI Sent - Out of Renewal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Related To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Account;Asset;AssetRelationship;Association__c;BACS_Report__c;Booking__c;Campaign;Campsite__c;Cancellation__c;Case;Club_Opportunity_Product__c;Club_Product__c;ContactRequest;Contract;ContractLineItem;Correspondence__c;DA_Postcode__c;Dealer_Advert__c;Dealer_Commission__c;Entitlement;ListEmail;Member_Get_Member__c;Member_Section__c;Membership_Code__c;Opportunity;Order;PartyConsent;Payment_Method__c;Price__c;Product2;Promotional_Code__c;Section__c;ServiceContract;Solution;Transaction__c;Voluntary_Office__c;Voucher__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>WhatId</field>
+            <value>
+                <elementReference>myVariable_current.Membership__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <recordCreates>
+        <name>myRule_18_A1</name>
+        <label>Create Task</label>
+        <locationX>1800</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_18_A2</targetReference>
+        </connector>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Due Date Only</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>formula_19_myRule_18_A1_9283701280</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Description</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Description</field>
+            <value>
+                <elementReference>formula_20_myRule_18_A1_6261204797</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Assigned To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>formula_21_myRule_18_A1_2742430263</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Priority</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Subject</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Subject</field>
+            <value>
+                <stringValue>DDI Sent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Related To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Account;Asset;AssetRelationship;Association__c;BACS_Report__c;Booking__c;Campaign;Campsite__c;Cancellation__c;Case;Club_Opportunity_Product__c;Club_Product__c;ContactRequest;Contract;ContractLineItem;Correspondence__c;DA_Postcode__c;Dealer_Advert__c;Dealer_Commission__c;Entitlement;ListEmail;Member_Get_Member__c;Member_Section__c;Membership_Code__c;Opportunity;Order;PartyConsent;Payment_Method__c;Price__c;Product2;Promotional_Code__c;Section__c;ServiceContract;Solution;Transaction__c;Voluntary_Office__c;Voucher__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>WhatId</field>
+            <value>
+                <elementReference>myVariable_current.Membership__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <recordCreates>
+        <name>myRule_23_A1</name>
+        <label>Create Task</label>
+        <locationX>2300</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_23_A2</targetReference>
+        </connector>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Due Date Only</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>formula_24_myRule_23_A1_1714156933</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Description</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Description</field>
+            <value>
+                <elementReference>formula_25_myRule_23_A1_8424357869</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Assigned To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>formula_26_myRule_23_A1_2701230302</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Priority</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Subject</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Subject</field>
+            <value>
+                <stringValue>DDI Sent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Related To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Account;Asset;AssetRelationship;Association__c;BACS_Report__c;Booking__c;Campaign;Campsite__c;Cancellation__c;Case;Club_Opportunity_Product__c;Club_Product__c;ContactRequest;Contract;ContractLineItem;Correspondence__c;DA_Postcode__c;Dealer_Advert__c;Dealer_Commission__c;Entitlement;ListEmail;Member_Get_Member__c;Member_Section__c;Membership_Code__c;Opportunity;Order;PartyConsent;Payment_Method__c;Price__c;Product2;Promotional_Code__c;Section__c;ServiceContract;Solution;Transaction__c;Voluntary_Office__c;Voucher__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>WhatId</field>
+            <value>
+                <elementReference>myVariable_current.Membership__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <recordCreates>
+        <name>myRule_3_A1</name>
+        <label>Create Task</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_3_A2</targetReference>
+        </connector>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Due Date Only</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>formula_4_myRule_3_A1_0735679465</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Description</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Description</field>
+            <value>
+                <elementReference>formula_5_myRule_3_A1_1877903478</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Assigned To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>formula_6_myRule_3_A1_7569056846</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Priority</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Subject</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Subject</field>
+            <value>
+                <stringValue>DDI Sent - New Joiner</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Related To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Account;Asset;AssetRelationship;Association__c;BACS_Report__c;Booking__c;Campaign;Campsite__c;Cancellation__c;Case;Club_Opportunity_Product__c;Club_Product__c;ContactRequest;Contract;ContractLineItem;Correspondence__c;DA_Postcode__c;Dealer_Advert__c;Dealer_Commission__c;Entitlement;ListEmail;Member_Get_Member__c;Member_Section__c;Membership_Code__c;Opportunity;Order;PartyConsent;Payment_Method__c;Price__c;Product2;Promotional_Code__c;Section__c;ServiceContract;Solution;Transaction__c;Voluntary_Office__c;Voucher__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>WhatId</field>
+            <value>
+                <elementReference>myVariable_current.Membership__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <recordCreates>
+        <name>myRule_8_A1</name>
+        <label>Create Task</label>
+        <locationX>800</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_8_A2</targetReference>
+        </connector>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Due Date Only</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>formula_9_myRule_8_A1_3047261387</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Description</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Description</field>
+            <value>
+                <elementReference>formula_10_myRule_8_A1_5061991596</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Assigned To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>formula_11_myRule_8_A1_0127292611</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Priority</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Subject</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Subject</field>
+            <value>
+                <stringValue>DDI Sent - Within Renewal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Related To ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Account;Asset;AssetRelationship;Association__c;BACS_Report__c;Booking__c;Campaign;Campsite__c;Cancellation__c;Case;Club_Opportunity_Product__c;Club_Product__c;ContactRequest;Contract;ContractLineItem;Correspondence__c;DA_Postcode__c;Dealer_Advert__c;Dealer_Commission__c;Entitlement;ListEmail;Member_Get_Member__c;Member_Section__c;Membership_Code__c;Opportunity;Order;PartyConsent;Payment_Method__c;Price__c;Product2;Promotional_Code__c;Section__c;ServiceContract;Solution;Transaction__c;Voluntary_Office__c;Voucher__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>WhatId</field>
+            <value>
+                <elementReference>myVariable_current.Membership__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Payment_Method__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Set Allow DDI Alert to True</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myDecision2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Allow DDI Alert</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Allow_DDI_Alert__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Payment_Method__c</object>
+    </recordUpdates>
+    <startElementReference>myDecision</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Payment_Method__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Payment_Method__c</objectType>
+    </variables>
+</Flow>

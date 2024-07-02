@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Memberships</fullName>
+    <active>true</active>
+    <label>Memberships</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ad_Code__c</picklist>
+        <values>
+            <fullName>0000 - Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001 - A Class Exhibitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0002 - THS and DA Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0003 - General Membership Codes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0004 - Certificated Sites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0005 - 5-Van Site enquiry packs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0006 - DA Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0007 - Pro Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0008 - Pro Shows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0009 - Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0010 - Dealers %28Millers Shops%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0011 - Partnerships%2FOffer Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0013 - Sites Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0014 - Dealers %28Outdoor Ltd%2FScout Shops%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0015 - Dealers %28YHA Shops%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0018 - Uncoded Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0030 - Gift Memberships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0031 - Enquirer Follow-ups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0032 - UK Old Sites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0033 - TIC%E2%80%99s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0049 - Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0054 - Employee Members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0055 - Journalists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0062 - Club Enquiries %E2%80%93 Recruitment Book3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0064 - Overseas Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0070 - Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0079 - NCCW Archive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0080 - Special dealer Schemes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0088 - Club Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100 - 2006 Membership Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0101 - 2006 Sites advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0102 - Club Sites Literature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0103 - Franchise Member Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0104 - Retention and Development Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0106 - Media Advertising 2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0107 - New to camping 2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0108 - Yeomans stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0109 - Brand Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1002 - Membership Advertising %E2%80%93 Old</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1003 - Sites Advertising - Old</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1005 - Pro%E2%80%99s Current</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1006 - Miscellaneous Archive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Application_Source__c</picklist>
+        <values>
+            <fullName>Exhibition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Camping_Unit__c</picklist>
+        <values>
+            <fullName>Camper Van</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caravan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fifth Wheeler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folding Caravan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motorhome</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Unit Owned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roof Top Tent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trailer Tent %2F Folding Camper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twin Axle Caravan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Method__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Letter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kit_Issued__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mail_Stop_Reason__c</picklist>
+        <values>
+            <fullName>Deceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Member Mailstop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail Returned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press Card Holder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Joined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refer to Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested %27Right to Erasure%27 - GDPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Membership_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DD Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DD Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex-Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lapsed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Renewer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refer to Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpaid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Method2__c</picklist>
+        <values>
+            <fullName>Cash%2FCheque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debit%2FCredit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No payment method</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Staff_membership_type__c</picklist>
+        <values>
+            <fullName>Club</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HQ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reseller</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

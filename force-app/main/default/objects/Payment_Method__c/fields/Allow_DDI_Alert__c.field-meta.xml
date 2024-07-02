@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_DDI_Alert__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>When True, Direct Debit Instruction email alerts will be sent on creation or update to direct debit details. Used to filter out alerts on renewal.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When True, Direct Debit Instruction email alerts will be sent on creation or update to direct debit details.</inlineHelpText>
+    <label>Allow DDI Alert</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

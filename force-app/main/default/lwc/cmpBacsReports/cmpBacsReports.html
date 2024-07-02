@@ -1,0 +1,67 @@
+<!-- sldsValidatorIgnore -->
+<!--
+  @description       : The base component for processing the BACS reports.
+  @author            : Kev Cadger (Wipro)
+  @group             : 
+  @last modified on  : 17-06-2022
+  @last modified by  : Kev Cadger (Wipro)
+  Modifications Log
+  Ver       Date           Request                 Author                          Modification
+  01.00.00  19-05-2022     REQ-000109682           Kev Cadger (Wipro)              Initial Version
+-->
+<template>
+  <div class="slds-card slds-var-p-around_small">
+    <!-- Is Loading -->
+    <template if:true={_showLoading}>
+      <div class="slds-var-m-around_small">
+        <!-- Spinner -->
+        <lightning-spinner
+          alternative-text="Loading"
+          size="medium"
+        ></lightning-spinner>
+      </div>
+    </template>
+    <!-- Done Loading -->
+    <template if:false={_showLoading}>
+      <div class="slds-var-p-around_small">
+        <!-- Report Type Selection -->
+        <c-cmp-bacs-reports-selection
+          report={_report}
+          onreportupdated={handleReportUpdated}
+        ></c-cmp-bacs-reports-selection>
+        <template if:true={_report.type}>
+          <!-- Do we give the option of selecting previous reports? -->
+        </template>
+        <template if:true={_report.data}>
+          <div class="slds-var-p-around_small">
+            <lightning-datatable
+              columns={_report.columns}
+              column-widths-mode="auto"
+              data={_report.data}
+              hide-checkbox-column
+              key-field="id"
+              show-row-number-column
+              onrowaction={handleRowAction}
+            ></lightning-datatable>
+          </div>
+          <lightning-button
+            data-name="btnReportGetData"
+            class="slds-button slds-button_brand"
+            icon-name="utility:process"
+            label="Fetch Report Data"
+            variant="brand"
+            onclick={handleClick_btnReportGetData}
+          ></lightning-button>
+          <lightning-button
+            data-name="btnReportProcessData"
+            class="slds-button slds-button_brand"
+            icon-name="utility:process"
+            label="Process Report Data"
+            variant="brand"
+            onclick={handleClick_btnReportProcessData}
+          ></lightning-button>
+        </template>
+      </div>
+    </template>
+  </div>
+</template>

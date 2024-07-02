@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Run_Renewals</name>
+        <label>Run Renewals</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <actionName>RerunBatchRenewalsLaunch</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Result</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <nameSegment>RerunBatchRenewalsLaunch</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <interviewLabel>[SCREEN FLOW] - Rerun Batch Renewals Class {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[SCREEN FLOW] - Rerun Batch Renewals Class</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Result</name>
+        <label>Result</label>
+        <locationX>176</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>EndDisplay</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(22, 6, 237);&quot;&gt;Batch Class initiated.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: rgb(22, 6, 237);&quot;&gt;Check Membership records for updates in a few minutes.&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Run_Batch</name>
+        <label>Run Batch</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Run_Renewals</targetReference>
+        </connector>
+        <fields>
+            <name>Information</name>
+            <fieldText>&lt;p&gt;Please press run to launch to renewal process for marked records&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Run</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Run_Batch</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

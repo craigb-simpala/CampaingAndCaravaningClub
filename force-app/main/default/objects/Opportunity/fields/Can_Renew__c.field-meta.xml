@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Renew__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   OR(Account.Membership_Code__r.Name = &apos;CHH&apos;,
+      Account.Membership_Code__r.Name = &apos;Staff Membership&apos;,
+      Account.Membership_Code__r.Name = &apos;50 Year Membership&apos;, 
+      Account.Membership_Code__r.Name = &apos;Press Card Holder&apos;, 
+      Account.Membership_Code__r.Name = &apos;Special Membership&apos;), FALSE,
+TRUE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Can Renew?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

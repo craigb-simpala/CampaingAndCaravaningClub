@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift__c</fullName>
+    <description>The picklist field values should only represent the current gifts that are available for selection. However, the field will retain previous gift values that have been updated via data import, or from picklist values that are no longer available for selection.</description>
+    <externalId>false</externalId>
+    <label>Gift</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Club Site Voucher</fullName>
+                <default>false</default>
+                <label>Club Site Voucher</label>
+            </value>
+            <value>
+                <fullName>Foldable Camping Chair</fullName>
+                <default>false</default>
+                <label>RAF - Camping Chair</label>
+            </value>
+            <value>
+                <fullName>Golf Umbrella</fullName>
+                <default>false</default>
+                <label>RAF - Umbrella</label>
+            </value>
+            <value>
+                <fullName>Insulated Picnic Bag</fullName>
+                <default>false</default>
+                <label>RAF - Cooler Bags</label>
+            </value>
+            <value>
+                <fullName>1 - Small Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1 - Small Fleece</label>
+            </value>
+            <value>
+                <fullName>2 - Medium Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2 - Medium Fleece</label>
+            </value>
+            <value>
+                <fullName>3 - Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3 - Large Fleece</label>
+            </value>
+            <value>
+                <fullName>4 - X Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4 - X Large Fleece</label>
+            </value>
+            <value>
+                <fullName>5 - XX Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5 - XX Large Fleece</label>
+            </value>
+            <value>
+                <fullName>6 - XXX Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6 - XXX Large Fleece</label>
+            </value>
+            <value>
+                <fullName>Adventure Bottle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Adventure Bottle</label>
+            </value>
+            <value>
+                <fullName>Badge</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Badge</label>
+            </value>
+            <value>
+                <fullName>CCC1-13324-Camper Hamper (Caravan)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camper Hamper (Caravan)</label>
+            </value>
+            <value>
+                <fullName>CCC1-13325-Camper Hamper (Motorhome)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camper Hamper (Motorhome)</label>
+            </value>
+            <value>
+                <fullName>CCC1-13326-Camper Hamper (Tent)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camper Hamper (Tent)</label>
+            </value>
+            <value>
+                <fullName>Camping in the Forest Voucher</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camping in the Forest Voucher</label>
+            </value>
+            <value>
+                <fullName>Club Care Key Protection Policy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Club Care Key Protection Policy</label>
+            </value>
+            <value>
+                <fullName>Coin</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Coin</label>
+            </value>
+            <value>
+                <fullName>European Drivers&apos; Handbook</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>European Drivers&apos; Handbook</label>
+            </value>
+            <value>
+                <fullName>F - CITF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>F - CITF</label>
+            </value>
+            <value>
+                <fullName>F - CITF Voucher</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>F - CITF Voucher</label>
+            </value>
+            <value>
+                <fullName>Five Pound Club Site Voucher</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Five Pound Club Site Voucher</label>
+            </value>
+            <value>
+                <fullName>Games Cards Club Sites</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Games Cards Club Sites</label>
+            </value>
+            <value>
+                <fullName>Gelert Camping Essentials Bottle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gelert Camping Essentials Bottle</label>
+            </value>
+            <value>
+                <fullName>Indy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Indy</label>
+            </value>
+            <value>
+                <fullName>Lantern</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lantern</label>
+            </value>
+            <value>
+                <fullName>Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Large Fleece</label>
+            </value>
+            <value>
+                <fullName>Medium Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Medium Fleece</label>
+            </value>
+            <value>
+                <fullName>Phillips Club Atlas</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Phillips Club Atlas</label>
+            </value>
+            <value>
+                <fullName>Pitch Up, Eat Local Book</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pitch Up, Eat Local Book</label>
+            </value>
+            <value>
+                <fullName>Reader&apos;s Digest Magazine Subscription</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reader&apos;s Digest Magazine Subscription</label>
+            </value>
+            <value>
+                <fullName>Reader&apos;s Digest Walking Book</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reader&apos;s Digest Walking Book</label>
+            </value>
+            <value>
+                <fullName>Rucksack</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rucksack</label>
+            </value>
+            <value>
+                <fullName>Small Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Small Fleece</label>
+            </value>
+            <value>
+                <fullName>Survival Kit Bottle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Survival Kit Bottle</label>
+            </value>
+            <value>
+                <fullName>Travel Blanket</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Travel Blanket</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>X Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>X Large Fleece</label>
+            </value>
+            <value>
+                <fullName>XX Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>XX Large Fleece</label>
+            </value>
+            <value>
+                <fullName>XXX Large Fleece</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>XXX Large Fleece</label>
+            </value>
+            <value>
+                <fullName>£10 Decathlon Voucher - CCY Members only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>£10 Decathlon Voucher - CCY Members only</label>
+            </value>
+            <value>
+                <fullName>£10 Decathlon Voucher - Youth members only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>£10 Decathlon Voucher - Youth members only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

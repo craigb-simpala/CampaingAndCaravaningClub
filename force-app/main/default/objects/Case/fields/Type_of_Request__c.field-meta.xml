@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Request__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Always populate this field, for reporting purposes</inlineHelpText>
+    <label>Type of Request</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Enquiry</fullName>
+                <default>false</default>
+                <label>General Enquiry</label>
+            </value>
+            <value>
+                <fullName>Booking</fullName>
+                <default>false</default>
+                <label>Booking</label>
+            </value>
+            <value>
+                <fullName>Amend</fullName>
+                <default>false</default>
+                <label>Amend</label>
+            </value>
+            <value>
+                <fullName>Cancel</fullName>
+                <default>false</default>
+                <label>Cancel</label>
+            </value>
+            <value>
+                <fullName>ACSI</fullName>
+                <default>false</default>
+                <label>ACSI</label>
+            </value>
+            <value>
+                <fullName>CCI</fullName>
+                <default>false</default>
+                <label>CCI</label>
+            </value>
+            <value>
+                <fullName>Credit / Voucher</fullName>
+                <default>false</default>
+                <label>Credit / Voucher</label>
+            </value>
+            <value>
+                <fullName>Holiday Extras</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Holiday Extras</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Brittany Ferries</controllingFieldValue>
+            <controllingFieldValue>Condor Ferries</controllingFieldValue>
+            <controllingFieldValue>DFDS</controllingFieldValue>
+            <controllingFieldValue>Eurotunnel</controllingFieldValue>
+            <controllingFieldValue>Irish Ferries</controllingFieldValue>
+            <controllingFieldValue>Stenna Line</controllingFieldValue>
+            <controllingFieldValue>Wight Link</controllingFieldValue>
+            <controllingFieldValue>P &amp; O Ferries</controllingFieldValue>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>General Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brittany Ferries</controllingFieldValue>
+            <controllingFieldValue>Condor Ferries</controllingFieldValue>
+            <controllingFieldValue>DFDS</controllingFieldValue>
+            <controllingFieldValue>Eurotunnel</controllingFieldValue>
+            <controllingFieldValue>Irish Ferries</controllingFieldValue>
+            <controllingFieldValue>Stenna Line</controllingFieldValue>
+            <controllingFieldValue>Wight Link</controllingFieldValue>
+            <controllingFieldValue>P &amp; O Ferries</controllingFieldValue>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>Booking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brittany Ferries</controllingFieldValue>
+            <controllingFieldValue>Condor Ferries</controllingFieldValue>
+            <controllingFieldValue>DFDS</controllingFieldValue>
+            <controllingFieldValue>Eurotunnel</controllingFieldValue>
+            <controllingFieldValue>Irish Ferries</controllingFieldValue>
+            <controllingFieldValue>Stenna Line</controllingFieldValue>
+            <controllingFieldValue>Wight Link</controllingFieldValue>
+            <controllingFieldValue>P &amp; O Ferries</controllingFieldValue>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>Amend</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brittany Ferries</controllingFieldValue>
+            <controllingFieldValue>Condor Ferries</controllingFieldValue>
+            <controllingFieldValue>DFDS</controllingFieldValue>
+            <controllingFieldValue>Eurotunnel</controllingFieldValue>
+            <controllingFieldValue>Irish Ferries</controllingFieldValue>
+            <controllingFieldValue>Stenna Line</controllingFieldValue>
+            <controllingFieldValue>Wight Link</controllingFieldValue>
+            <controllingFieldValue>P &amp; O Ferries</controllingFieldValue>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>Cancel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brittany Ferries</controllingFieldValue>
+            <controllingFieldValue>Condor Ferries</controllingFieldValue>
+            <controllingFieldValue>DFDS</controllingFieldValue>
+            <controllingFieldValue>Eurotunnel</controllingFieldValue>
+            <controllingFieldValue>Irish Ferries</controllingFieldValue>
+            <controllingFieldValue>Stenna Line</controllingFieldValue>
+            <controllingFieldValue>Wight Link</controllingFieldValue>
+            <controllingFieldValue>P &amp; O Ferries</controllingFieldValue>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>ACSI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brittany Ferries</controllingFieldValue>
+            <controllingFieldValue>Condor Ferries</controllingFieldValue>
+            <controllingFieldValue>DFDS</controllingFieldValue>
+            <controllingFieldValue>Eurotunnel</controllingFieldValue>
+            <controllingFieldValue>Irish Ferries</controllingFieldValue>
+            <controllingFieldValue>Stenna Line</controllingFieldValue>
+            <controllingFieldValue>Wight Link</controllingFieldValue>
+            <controllingFieldValue>P &amp; O Ferries</controllingFieldValue>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>CCI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brittany Ferries</controllingFieldValue>
+            <controllingFieldValue>Condor Ferries</controllingFieldValue>
+            <controllingFieldValue>DFDS</controllingFieldValue>
+            <controllingFieldValue>Eurotunnel</controllingFieldValue>
+            <controllingFieldValue>Irish Ferries</controllingFieldValue>
+            <controllingFieldValue>Stenna Line</controllingFieldValue>
+            <controllingFieldValue>Wight Link</controllingFieldValue>
+            <controllingFieldValue>P &amp; O Ferries</controllingFieldValue>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>Credit / Voucher</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

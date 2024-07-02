@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cash_Payments</fullName>
+    <columns>Membership__c</columns>
+    <columns>Membership_Number__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>One_off_payment_date__c</columns>
+    <columns>Type__c</columns>
+    <columns>Status2__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Payment_Method__c.Cash_Cheque</value>
+    </filters>
+    <label>Cash Payments</label>
+</ListView>

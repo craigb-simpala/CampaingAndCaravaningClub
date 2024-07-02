@@ -1,0 +1,44 @@
+<apex:page controller="hwAddressSearch">
+    <apex:form >
+        <apex:pageMessages id="msgs" />
+        <apex:pageblock >
+            <apex:pageblockbuttons >
+                <apex:commandbutton action="{!validate}" value="Search" />
+            </apex:pageblockbuttons>
+            <apex:pageblocksection > 
+                <apex:inputtext value="{!Input1}" />
+                <apex:inputtext value="{!Input2}" />
+                <apex:inputtext value="{!Input3}" />
+                <apex:inputtext value="{!Input4}" />
+                <apex:inputtext value="{!Input5}" />
+                <apex:inputtext value="{!Input6}" />
+                <apex:inputtext value="{!Input7}" />
+                <apex:inputtext value="{!Input8}" />
+                <apex:inputtext value="{!Input9}" />
+                <apex:inputtext value="{!Input10}" />
+                <apex:selectList id="addr1" value="{!addr1}" size="1" >
+                        <apex:selectOptions value="{!dispoptions}"/>
+                        <apex:actionSupport event="onchange" action="{!filladdress}"  rerender="addr2,address"/>
+                </apex:selectList>  
+                <apex:pageblocksectionitem />            
+                <apex:selectList id="addr2" value="{!addr2}" size="1" >
+                        <apex:selectOptions value="{!dispoptions2}"/>
+                        <apex:actionSupport event="onchange" action="{!filladdress2}"  rerender="address"/>
+                </apex:selectList>               
+                
+            </apex:pageblocksection>
+        </apex:pageblock>
+        <apex:pageblock id="address">
+            <apex:pageblocksection columns="1">
+                <apex:outputtext value="{!aline1}" />
+                <apex:outputtext value="{!aline2}" />
+                <apex:outputtext value="{!aline3}" />
+                <apex:outputtext value="{!aline4}" />
+                <apex:outputtext value="{!aline5}" />
+                <apex:outputtext value="{!atown}" />
+                <apex:outputtext value="{!acounty}" />
+                <apex:outputtext value="{!apostcode}" />
+            </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

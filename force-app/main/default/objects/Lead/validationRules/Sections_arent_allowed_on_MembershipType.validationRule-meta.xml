@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sections_arent_allowed_on_MembershipType</fullName>
+    <active>false</active>
+    <description>Used to check if sections aren&apos;t allowed with the current membership type</description>
+    <errorConditionFormula>AND(
+ Membership_Type__r.Sections_Allowed__c =FALSE,
+ NOT(ISBLANK(sections__c )))</errorConditionFormula>
+    <errorMessage>Sections cannot be added to the selected membership type.</errorMessage>
+</ValidationRule>

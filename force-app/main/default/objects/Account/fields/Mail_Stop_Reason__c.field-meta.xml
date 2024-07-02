@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mail_Stop_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Mail Stop Reason</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>cust. serv. issue</fullName>
+                <default>false</default>
+                <label>cust. serv. issue</label>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+                <label>Deceased</label>
+            </value>
+            <value>
+                <fullName>Employee Member Mailstop</fullName>
+                <default>false</default>
+                <label>Employee Member Mailstop</label>
+            </value>
+            <value>
+                <fullName>Mail Returned</fullName>
+                <default>false</default>
+                <label>Mail Returned</label>
+            </value>
+            <value>
+                <fullName>Press Card Holder</fullName>
+                <default>false</default>
+                <label>Press Card Holder</label>
+            </value>
+            <value>
+                <fullName>Refer to Manager</fullName>
+                <default>false</default>
+                <label>Refer to Manager</label>
+            </value>
+            <value>
+                <fullName>Re-Joined</fullName>
+                <default>false</default>
+                <label>Re-Joined</label>
+            </value>
+            <value>
+                <fullName>Requested &apos;Right to Erasure&apos; - GDPR</fullName>
+                <default>false</default>
+                <label>Requested &apos;Right to Erasure&apos; - GDPR</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advert</fullName>
+    <active>true</active>
+    <label>Advert</label>
+    <picklistValues>
+        <picklist>Dealer_Ad_Category__c</picklist>
+        <values>
+            <fullName>Certificated Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Club Sites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Camping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level_One__c</picklist>
+        <values>
+            <fullName>Archive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billboards or Service Stations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CS Adverts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CS Free Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campsite Listing on Internet %28Not CCC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Club Care Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Centre Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DA %2F Region %2F Section</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealer Generic %2F Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail - Generic %2F Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directories - Generic %2F Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email or Leaflet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enquiry Follow-Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>European Campsites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibitions - Generic %2F Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ferry Crossing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franchise Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holiday Home Owners Free Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insert in a magazine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Large Caravan %2F Motorhome Dealership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manoeuvring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Get Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEC and Event City - Tier 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newspapers or Non-Camping Magazine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %2F Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other shows - Tier 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overseas Rally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partners or Caravan %2F Motorhome Manufacturer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printed Campsite Guides</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Privilege Customers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saw a Club Site on our website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saw a Member Only site on our website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shops %2F Retailers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small %2F Local Caravan or Motorhome Dealership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialist Press - Magazines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary Campsite %2F Event - Tier 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Service Adverts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Services  - Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Used to be a member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visited a Club Site in person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visited a Member Only Site in person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Was with Caravan Club</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websites %28not CCC%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

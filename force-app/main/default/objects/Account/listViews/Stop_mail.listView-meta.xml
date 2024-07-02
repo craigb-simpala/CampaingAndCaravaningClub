@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stop_mail</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Membership_Type_Name__c</columns>
+    <columns>Hybrid_Membership_Number__c</columns>
+    <columns>Mag_Stop__c</columns>
+    <columns>Promotional_Mailstop__c</columns>
+    <columns>Mail_Stop_Reason__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Mag_Stop__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Stop Mail</label>
+</ListView>

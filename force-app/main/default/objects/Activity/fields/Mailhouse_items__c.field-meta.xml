@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailhouse_items__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>requested items for fulfilment by Paragon - choose item code</inlineHelpText>
+    <label>Mailhouse items</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bookmark</fullName>
+                <default>false</default>
+                <label>Bookmark</label>
+            </value>
+            <value>
+                <fullName>Enquiry Pack</fullName>
+                <default>false</default>
+                <label>Enquiry Pack</label>
+            </value>
+            <value>
+                <fullName>Out &amp; About</fullName>
+                <default>false</default>
+                <label>Out &amp; About</label>
+            </value>
+            <value>
+                <fullName>Price Guide</fullName>
+                <default>false</default>
+                <label>Price Guide</label>
+            </value>
+            <value>
+                <fullName>Replacement Magazine</fullName>
+                <default>false</default>
+                <label>Replacement Magazine</label>
+            </value>
+            <value>
+                <fullName>Self Catering Brochure</fullName>
+                <default>false</default>
+                <label>Self Catering Brochure</label>
+            </value>
+            <value>
+                <fullName>SS Directory</fullName>
+                <default>false</default>
+                <label>SS Directory</label>
+            </value>
+            <value>
+                <fullName>SS Map</fullName>
+                <default>false</default>
+                <label>SS Map</label>
+            </value>
+            <value>
+                <fullName>SS Update</fullName>
+                <default>false</default>
+                <label>SS Update</label>
+            </value>
+            <value>
+                <fullName>Window Sticker</fullName>
+                <default>false</default>
+                <label>Window Sticker</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

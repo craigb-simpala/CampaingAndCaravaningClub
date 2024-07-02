@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_is_older_than_17</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(
+AND(
+NOT(ISBLANK(Child_1_Date_of_Birth__c)),
+OR(
+YEAR(TODAY()) - YEAR(Child_1_Date_of_Birth__c)&gt; 18,
+AND(
+YEAR(TODAY()) - YEAR(Child_1_Date_of_Birth__c)= 18,
+MONTH(TODAY())&gt; MONTH (Child_1_Date_of_Birth__c)),
+AND(
+YEAR(TODAY()) - YEAR(Child_1_Date_of_Birth__c)= 18,
+MONTH(TODAY())= MONTH (Child_1_Date_of_Birth__c),
+DAY(TODAY())&gt;= DAY(Child_1_Date_of_Birth__c))
+)
+),
+
+AND(
+NOT(ISBLANK(Child_2_Date_of_Birth__c)),
+OR(
+YEAR(TODAY()) - YEAR(Child_2_Date_of_Birth__c)&gt; 18,
+AND(
+YEAR(TODAY()) - YEAR(Child_2_Date_of_Birth__c)= 18,
+MONTH(TODAY())&gt; MONTH (Child_2_Date_of_Birth__c)),
+AND(
+YEAR(TODAY()) - YEAR(Child_2_Date_of_Birth__c)= 18,
+MONTH(TODAY())= MONTH (Child_2_Date_of_Birth__c),
+DAY(TODAY())&gt;= DAY(Child_2_Date_of_Birth__c))
+)
+),
+
+AND(
+NOT(ISBLANK(Child_3_Date_of_Birth__c)),
+OR(
+YEAR(TODAY()) - YEAR(Child_3_Date_of_Birth__c)&gt; 18,
+AND(
+YEAR(TODAY()) - YEAR(Child_3_Date_of_Birth__c)= 18,
+MONTH(TODAY())&gt; MONTH (Child_3_Date_of_Birth__c)),
+AND(
+YEAR(TODAY()) - YEAR(Child_3_Date_of_Birth__c)= 18,
+MONTH(TODAY())= MONTH (Child_3_Date_of_Birth__c),
+DAY(TODAY())&gt;= DAY(Child_3_Date_of_Birth__c))
+)
+),
+
+AND(
+NOT(ISBLANK(Child_4_Date_of_Birth__c)),
+OR(
+YEAR(TODAY()) - YEAR(Child_4_Date_of_Birth__c)&gt; 18,
+AND(
+YEAR(TODAY()) - YEAR(Child_4_Date_of_Birth__c)= 18,
+MONTH(TODAY())&gt; MONTH (Child_4_Date_of_Birth__c)),
+AND(
+YEAR(TODAY()) - YEAR(Child_4_Date_of_Birth__c)= 18,
+MONTH(TODAY())= MONTH (Child_4_Date_of_Birth__c),
+DAY(TODAY())&gt;= DAY(Child_4_Date_of_Birth__c))
+)
+),
+
+AND(
+NOT(ISBLANK(Child_5_Date_of_Birth__c)),
+OR(
+YEAR(TODAY()) - YEAR(Child_5_Date_of_Birth__c)&gt; 18,
+AND(
+YEAR(TODAY()) - YEAR(Child_5_Date_of_Birth__c)= 18,
+MONTH(TODAY())&gt; MONTH (Child_5_Date_of_Birth__c)),
+AND(
+YEAR(TODAY()) - YEAR(Child_5_Date_of_Birth__c)= 18,
+MONTH(TODAY())= MONTH (Child_5_Date_of_Birth__c),
+DAY(TODAY())&gt;= DAY(Child_5_Date_of_Birth__c))
+)
+),
+
+AND(
+NOT(ISBLANK(Child_6_Date_of_Birth__c)),
+OR(
+YEAR(TODAY()) - YEAR(Child_6_Date_of_Birth__c)&gt; 18,
+AND(
+YEAR(TODAY()) - YEAR(Child_6_Date_of_Birth__c)= 18,
+MONTH(TODAY())&gt; MONTH (Child_6_Date_of_Birth__c)),
+AND(
+YEAR(TODAY()) - YEAR(Child_6_Date_of_Birth__c)= 18,
+MONTH(TODAY())= MONTH (Child_6_Date_of_Birth__c),
+DAY(TODAY())&gt;= DAY(Child_6_Date_of_Birth__c))
+)
+)
+)</errorConditionFormula>
+    <errorMessage>You have added a child who is older than 17</errorMessage>
+</ValidationRule>

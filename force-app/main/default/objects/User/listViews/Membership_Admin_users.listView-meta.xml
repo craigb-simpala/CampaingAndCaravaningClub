@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_Admin_users</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CORE.USERS.LAST_LOGIN</columns>
+    <columns>CORE.PROFILE.NAME</columns>
+    <columns>CORE.USERS.DEPARTMENT</columns>
+    <columns>CORE.USERS.SAML_SUBJECT</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.PROFILE.NAME</field>
+        <operation>equals</operation>
+        <value>Membership Admin</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Membership Admin users</label>
+</ListView>

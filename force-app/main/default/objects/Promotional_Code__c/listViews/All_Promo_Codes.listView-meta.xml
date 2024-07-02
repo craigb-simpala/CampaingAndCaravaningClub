@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Promo_Codes</fullName>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Expiry_Date__c</columns>
+    <columns>Number_Allowed__c</columns>
+    <columns>Number_Used__c</columns>
+    <columns>Number_of_Valid_Codes__c</columns>
+    <columns>Valid_for_Memberships__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Promo Codes</label>
+</ListView>

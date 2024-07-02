@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_type_codes</fullName>
+    <columns>NAME</columns>
+    <columns>Membership__c</columns>
+    <columns>Product_Detail__c</columns>
+    <columns>Show_in_New_Membership_Picklist__c</columns>
+    <columns>Visible_to_Admin_Users_Only__c</columns>
+    <columns>Price_for_Initial_Picklist__c</columns>
+    <columns>Membership_Length__c</columns>
+    <columns>Renewable__c</columns>
+    <columns>Auto_Renew__c</columns>
+    <columns>SectionsAreFree__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Club_Product__c.Membership_Code</value>
+    </filters>
+    <label>Membership type codes</label>
+</ListView>

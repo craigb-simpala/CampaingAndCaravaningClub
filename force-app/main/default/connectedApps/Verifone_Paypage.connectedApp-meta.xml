@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canvasConfig>
+        <accessMethod>Post</accessMethod>
+        <canvasUrl>https://pp2.cxmlpg.com/paypage2templatebuilder/</canvasUrl>
+        <locations>Chatter</locations>
+        <locations>Visualforce</locations>
+        <locations>Aura</locations>
+        <locations>Publisher</locations>
+        <locations>ChatterFeed</locations>
+        <locations>ServiceDesk</locations>
+        <locations>OpenCTI</locations>
+        <locations>MobileNav</locations>
+        <locations>PageLayout</locations>
+        <options>PersonalEnabled</options>
+        <samlInitiationMethod>None</samlInitiationMethod>
+    </canvasConfig>
+    <contactEmail>arezou.eghbali@wipro.com</contactEmail>
+    <label>Verifone Paypage</label>
+    <oauthConfig>
+        <callbackUrl>https://campingandcaravanningclub.my.salesforce.com/</callbackUrl>
+        <consumerKey>3MVG9LlLrkcRhGHZ75_1zzxBX1h2SgoDNn1wlniC3AC85JpqwxCqdlJsnq8Su4srx2ycBzoJcqAoD5tf3H5m4</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

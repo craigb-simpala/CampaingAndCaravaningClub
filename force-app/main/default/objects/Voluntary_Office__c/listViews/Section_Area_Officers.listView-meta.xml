@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section_Area_Officers</fullName>
+    <columns>NAME</columns>
+    <columns>Voluntary_Office_Title__c</columns>
+    <columns>Member__c</columns>
+    <columns>Membership_Number__c</columns>
+    <columns>Phone__c</columns>
+    <columns>Association_Type__c</columns>
+    <columns>Association__c</columns>
+    <columns>Section__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Voluntary_Office__c.Section_Office_Holder</value>
+    </filters>
+    <filters>
+        <field>Section_Area_Parent_Name__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>End_date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Section Area Officers</label>
+</ListView>

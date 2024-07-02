@@ -1,0 +1,3 @@
+<apex:page tabstyle="Lead" standardController="Lead" recordSetVar="leads" extensions="NewMembershipController">
+    <apex:include pageName="NewMembership" />
+</apex:page>

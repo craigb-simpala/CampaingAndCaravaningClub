@@ -1,0 +1,70 @@
+<!--
+  @description       : 
+  @author            : Kev Cadger (Wipro)
+  @group             : 
+  @last modified on  : 12-07-2022
+  @last modified by  : Kev Cadger (Wipro)
+  Modifications Log
+  Ver   Date         Author               Modification
+  1.0   11-07-2022   Kev Cadger (Wipro)   Initial Version
+-->
+<template>
+  <div class="slds-grid slds-wrap">
+    <!-- Card Number -->
+    <div class="slds-size_1-of-1 slds-var-p-horizontal_xxx-small">
+      <lightning-input
+              data-name="txtNumber"
+              label="Card Number"
+              max-length="19"
+              placeholder="XXXX-XXXX-XXXX-XXXX"
+              required
+              type="text"
+              value={card.card_number}
+              onchange={handleChange_Number}
+              onkeydown={handleKeyDown_NumbersOnly}
+      ></lightning-input>
+    </div>
+    <div class="slds-grid slds-size_1-of-1">
+      <!-- Expiry Month -->
+      <div class="slds-size_1-of-3 slds-var-p-horizontal_xxx-small">
+        <lightning-combobox
+                data-name="cmbMonth"
+                label="Expiry Month"
+                options={getMonths}
+                placeholder="MM"
+                required
+                value={card.expiry_month}
+                onchange={handleChange_Month}
+                dropdown-alignment="auto"
+        ></lightning-combobox>
+      </div>
+      <!-- Expiry Year -->
+      <div class="slds-size_1-of-3 slds-var-p-horizontal_xxx-small">
+        <lightning-combobox
+                data-name="cmbYear"
+                label="Expiry Year"
+                options={getYears}
+                placeholder="YYYY"
+                required
+                value={card.expiry_year}
+                onchange={handleChange_Year}
+                dropdown-alignment="auto"
+        ></lightning-combobox>
+      </div>
+      <!-- CVV -->
+      <div class="slds-size_1-of-3 slds-var-p-horizontal_xxx-small">
+        <lightning-input
+                data-name="txtCVV"
+                label="CVV"
+                max-length="3"
+                placeholder="***"
+                required
+                type="text"
+                value={card.cvv}
+                onchange={handleChange_CVV}
+                onkeydown={handleKeyDown_NumbersOnly}
+        ></lightning-input>
+      </div>
+    </div>
+  </div>
+</template>

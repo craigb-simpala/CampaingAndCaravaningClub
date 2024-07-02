@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Upd_trans_type_for_resubs</fullName>
+        <field>Transaction_Type__c</field>
+        <formula>&apos;18&apos;</formula>
+        <name>Upd trans type for resubs</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update resubmissions</fullName>
+        <actions>
+            <name>Upd_trans_type_for_resubs</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Transaction__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Resubmit</value>
+        </criteriaItems>
+        <description>Transaction: Status = Resubmit - Transaction: Transaction Type = 18</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

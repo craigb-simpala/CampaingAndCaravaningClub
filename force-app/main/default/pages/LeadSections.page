@@ -1,0 +1,20 @@
+<apex:page standardcontroller="Lead"  extensions="LeadSections">
+    <apex:pageblock mode="maindetail" >
+        <apex:pageblocksection columns="2" >
+        <apex:repeat value="{!sections}" var="s" >
+            <apex:pageblocksectionitem rendered="{!s.selected}">
+                <apex:outputLabel value="{!s.s.Product_Detail__c}" for="theCheckbox"/>
+                <apex:outputPanel layout="block">
+                    <input type="checkbox" disabled="disabled" checked="checked"/>
+                </apex:outputPanel>
+            </apex:pageblocksectionitem>
+            <apex:pageblocksectionitem rendered="{!NOT(s.selected)}">
+                <apex:outputLabel value="{!s.s.Product_Detail__c}" for="theCheckbox"/>
+                <apex:outputPanel layout="block">
+                    <input type="checkbox" disabled="disabled" />
+                </apex:outputPanel>
+            </apex:pageblocksectionitem>
+        </apex:repeat>
+        </apex:pageblocksection>
+    </apex:pageblock>
+</apex:page>

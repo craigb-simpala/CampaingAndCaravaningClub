@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>API_Setting_CLayout</fullName>
+    <fields>Name__c</fields>
+    <fields>Base_URL__c</fields>
+    <label>API Setting CLayout</label>
+</CompactLayout>

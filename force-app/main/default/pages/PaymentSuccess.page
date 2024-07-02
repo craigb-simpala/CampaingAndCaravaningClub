@@ -1,0 +1,5 @@
+<apex:page controller="PaymentSuccessController" lightningStylesheets="true" action="{!convertlead}">
+    <apex:outputtext >Ref: {!ref}</apex:outputtext><br/>
+    <apex:outputtext >authcode: {!acode}</apex:outputtext><br/>
+    <apex:outputtext >token: {!tokenid}</apex:outputtext><br/>
+</apex:page>

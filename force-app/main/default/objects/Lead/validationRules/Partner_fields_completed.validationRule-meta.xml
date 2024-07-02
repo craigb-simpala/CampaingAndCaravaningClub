@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_fields_completed</fullName>
+    <active>false</active>
+    <description>Checks to see a Partners details have been added when the partner checkbox is ticked</description>
+    <errorConditionFormula>AND(
+hasPartner__c = TRUE,
+OR(
+ISBLANK( Secondary_Member_First_Name__c ),
+ISBLANK( Secondary_Member_Surname__c ),
+ISBLANK( TEXT(Secondary_Member_Title__c ))
+)
+)</errorConditionFormula>
+    <errorMessage>Partner details are missing, please fill in their full name and title before continuing</errorMessage>
+</ValidationRule>

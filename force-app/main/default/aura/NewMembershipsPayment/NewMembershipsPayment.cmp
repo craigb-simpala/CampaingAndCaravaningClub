@@ -1,0 +1,70 @@
+<!-- 
+ @Who	Daniel Edwards (4C)
+ @What   Aura component to take online payments through Verifone
+ @When	22/08/19
+ -->
+
+<aura:component controller="NewMembershipsPayment" implements="force:hasRecordId,flexipage:availableForRecordHome,force:lightningQuickAction" >
+    
+    <!-- Attributes -->
+    <aura:attribute name="selectedPaymentType" type="String" default="Direct Debit"/>
+    <aura:attribute name="paymentTypeOptions" type="List" default="[
+                                                                   {'label': 'Direct Debit', 'value': 'Direct Debit'},
+                                                                   {'label': 'Cash/Cheque', 'value': 'Cash/Cheque'},
+                                                                   {'label': 'Debit/Credit Card', 'value': 'Debit/Credit Card'}]" 
+                    />
+    <aura:attribute name="convertStatus" type="String" />
+    <aura:attribute name="salesWrapper" type="VerifoneCalloutUtility" />
+    
+    <!-- Includes -->
+    <ltng:require scripts="{!$Resource.jQuery}" afterScriptsLoaded="{!c.afterScriptsLoaded_c}"/>
+    
+    <!-- Handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.init_c}" />
+    
+    <!-- Body -->
+    <div class="slds-align_absolute-center">
+        <div class="slds-text-heading_large">Payment type</div>
+    </div>
+    <br />
+    <div class="slds-align_absolute-center">
+        <lightning:radioGroup name="radioGroup" label="" options="{! v.paymentTypeOptions }" value="{! v.selectedPaymentType }" type="radio"/>
+    </div>
+    <br />
+    <br />
+    
+    <!-- show inputs for bank account details if Direct Debit payment method selected -->
+    <div class="account-details-form">
+        <aura:if isTrue="{!v.selectedPaymentType == 'Direct Debit'}">
+            <div class="slds-text-heading_medium">Enter bank account details</div>
+            <lightning:input type="text" label="Account Name" aura:id="accountName" class="slds-form-element"/>
+            <lightning:input type="text" label="Account Number" aura:id="accountNumber" class="slds-form-element" maxlength="8"/>
+            <lightning:input type="text" label="Sort Code" aura:id="sortCode" class="slds-form-element" maxlength="6"/>
+            
+            <div class="slds-align_absolute-center slds-m-top_large">
+                <lightning:button variant="brand" label="Select" title="Select" aura:id="directDebitSelect" onclick="{!c.handleDirectDebitClick_c}" />
+            </div>
+        </aura:if>
+    </div>
+    
+    <aura:if isTrue="{!v.selectedPaymentType == 'Cash/Cheque'}">
+        <div class="slds-align_absolute-center slds-m-top_large">
+            <lightning:button variant="brand" label="Select" title="Select" aura:id="cashChequeSelect" onclick="{!c.handleCashChequeClick_c}" />
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.selectedPaymentType == 'Debit/Credit Card'}">
+        <span id="plainFormData" style="display:none;"><aura:unescapedHtml value="{!v.salesWrapper.plainFormData}"></aura:unescapedHtml></span>
+        <form id="nonjava" name="nonjava" method="post" action="{!v.salesWrapper.verifoneCustomSetting.Endpoint__c}" target="formContainer">
+            <input name="postdata" id="nonjavapostdata" type="hidden" value="{!v.salesWrapper.formData}"/>
+        </form>
+        
+        <div class="slds-align_absolute-center">
+            <iframe id="formContainer" name="formContainer" width="100%" height="400px;" hidden="true" />
+        </div>
+        
+        <div class="slds-align_absolute-center">
+            <input id="formSubmitButton" class="slds-button slds-button--brand" type="button" value="Select" onclick="{!c.submitForm_c}" />
+        </div>
+    </aura:if>
+</aura:component>

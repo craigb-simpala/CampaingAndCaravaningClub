@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YouthLeaders</fullName>
+    <columns>NAME</columns>
+    <columns>Voluntary_Office_Title__c</columns>
+    <columns>Member__c</columns>
+    <columns>Membership_Number__c</columns>
+    <columns>Phone__c</columns>
+    <columns>Association_Type__c</columns>
+    <columns>Association__c</columns>
+    <columns>Section__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_date__c</columns>
+    <columns>DBS_Complete__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Voluntary_Office_Title__c</field>
+        <operation>contains</operation>
+        <value>Assistant Camping Club Junior (CCJ) Leader,Assistant Youth Leader,Camping Club</value>
+    </filters>
+    <filters>
+        <field>End_date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Youth Leaders</label>
+</ListView>

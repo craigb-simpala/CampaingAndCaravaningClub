@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Correspondence_Type_MailingHouse__c</fullName>
+    <externalId>false</externalId>
+    <label>Correspondence Type (MH)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Replacement Renewal</fullName>
+                <default>false</default>
+                <label>Replacement Renewal</label>
+            </value>
+            <value>
+                <fullName>New Second Member</fullName>
+                <default>false</default>
+                <label>New Second Member</label>
+            </value>
+            <value>
+                <fullName>Replacement Card</fullName>
+                <default>false</default>
+                <label>Replacement Card</label>
+            </value>
+            <value>
+                <fullName>New Access Member</fullName>
+                <default>false</default>
+                <label>New Access Member</label>
+            </value>
+            <value>
+                <fullName>Replacement AM</fullName>
+                <default>false</default>
+                <label>Replacement AM</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Member Get Member</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Member Get Member</label>
+            </value>
+            <value>
+                <fullName>Monthly Magazine</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Monthly Magazine</label>
+            </value>
+            <value>
+                <fullName>New Associate Member</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Associate Member</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Site Directory</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Site Directory</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

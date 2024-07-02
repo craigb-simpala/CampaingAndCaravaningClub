@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campsite_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Campsite Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Camping in the Forest</fullName>
+                <default>false</default>
+                <label>Camping in the Forest</label>
+            </value>
+            <value>
+                <fullName>UK Club Site</fullName>
+                <default>false</default>
+                <label>UK Club Site</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

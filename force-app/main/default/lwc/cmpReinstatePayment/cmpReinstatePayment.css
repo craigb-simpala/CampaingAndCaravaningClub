@@ -1,0 +1,29 @@
+.divTable {
+    display: table; width: 100%;
+}
+
+.divTableBody {
+    display: table-row-group;
+}
+
+.divTableRow {
+    display: table-row;
+}
+
+.divTableCellLabel {
+    display: table-cell;
+    text-align: right;
+    padding-right: 13px;
+    color: var(--lwc-colorTextLabel,rgb(68, 68, 68));
+}
+
+.divTableCellValue {
+    display: table-cell;
+    width: 50%;
+    color: rgb(3, 45, 96);
+    font-size: 14px;
+}
+
+.slds-spinner_container {
+    background-color: transparent;
+}

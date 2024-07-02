@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_null_values_allowed_in_Amount</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISNULL(Amount__c  )</errorConditionFormula>
+    <errorDisplayField>Amount__c</errorDisplayField>
+    <errorMessage>Amount on transaction cannot be null</errorMessage>
+</ValidationRule>

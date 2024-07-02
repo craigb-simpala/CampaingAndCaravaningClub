@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Process BACS Reports</masterLabel>
+    <description
+  >Allows for the BACS reports to be uploaded and processed.</description>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <!-- <targetConfigs>
+        <targetConfig targets="lightning__AppPage"></targetConfig>
+    </targetConfigs> -->
+</LightningComponentBundle>

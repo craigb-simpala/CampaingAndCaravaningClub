@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ex_Members_with_email_address</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Date_Joined__c</columns>
+    <columns>Account.Renewal_Date__c</columns>
+    <columns>Hybrid_Membership_Number__c</columns>
+    <columns>Account.Membership_Type__c</columns>
+    <columns>Status_Indicator__c</columns>
+    <columns>CONTACT.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account.Membership_Status__c</field>
+        <operation>equals</operation>
+        <value>Ex-Member</value>
+    </filters>
+    <filters>
+        <field>Account.Renewal_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2019</value>
+    </filters>
+    <filters>
+        <field>CONTACT.EMAIL</field>
+        <operation>notEqual</operation>
+        <value>example@example.com</value>
+    </filters>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.Lead,Contact.Secondary</value>
+    </filters>
+    <filters>
+        <field>CONTACT.EMAIL</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Ex-Members with email address</label>
+</ListView>

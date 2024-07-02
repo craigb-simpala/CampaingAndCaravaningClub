@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BusinessArea__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Always populate with a value - for reporting</inlineHelpText>
+    <label>Business Area</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>UK Sites</fullName>
+                <default>false</default>
+                <label>UK Sites</label>
+            </value>
+            <value>
+                <fullName>Membership</fullName>
+                <default>false</default>
+                <label>Membership</label>
+            </value>
+            <value>
+                <fullName>External Website - Pitch Availability</fullName>
+                <default>false</default>
+                <label>External Website - Pitch Availability</label>
+            </value>
+            <value>
+                <fullName>Club Care</fullName>
+                <default>false</default>
+                <label>Club Care</label>
+            </value>
+            <value>
+                <fullName>RAC</fullName>
+                <default>false</default>
+                <label>RAC</label>
+            </value>
+            <value>
+                <fullName>Ready Camp</fullName>
+                <default>false</default>
+                <label>Ready Camp</label>
+            </value>
+            <value>
+                <fullName>Self Catering</fullName>
+                <default>false</default>
+                <label>Self Catering</label>
+            </value>
+            <value>
+                <fullName>Overseas</fullName>
+                <default>false</default>
+                <label>Overseas</label>
+            </value>
+            <value>
+                <fullName>GDPR</fullName>
+                <default>false</default>
+                <label>GDPR</label>
+            </value>
+            <value>
+                <fullName>Website / App</fullName>
+                <default>false</default>
+                <label>Website / App</label>
+            </value>
+            <value>
+                <fullName>Holiday Homes</fullName>
+                <default>false</default>
+                <label>Holiday Homes</label>
+            </value>
+            <value>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+                <label>Magazine</label>
+            </value>
+            <value>
+                <fullName>Marketing / Comms</fullName>
+                <default>false</default>
+                <label>Marketing / Comms</label>
+            </value>
+            <value>
+                <fullName>Exempted</fullName>
+                <default>false</default>
+                <label>Exempted</label>
+            </value>
+            <value>
+                <fullName>Spam/Out of Office</fullName>
+                <default>false</default>
+                <label>Spam/Out of Office</label>
+            </value>
+            <value>
+                <fullName>Technical Team</fullName>
+                <default>false</default>
+                <label>Technical Team</label>
+            </value>
+            <value>
+                <fullName>Club Unit Event</fullName>
+                <default>false</default>
+                <label>Club Unit Event</label>
+            </value>
+            <value>
+                <fullName>Certificated Site</fullName>
+                <default>false</default>
+                <label>Certificated Site</label>
+            </value>
+            <value>
+                <fullName>CiTF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CiTF</label>
+            </value>
+            <value>
+                <fullName>Travel Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Travel Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

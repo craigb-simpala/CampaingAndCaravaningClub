@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Camping_Unit__c</fullName>
+    <externalId>false</externalId>
+    <label>Camping Unit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Caravan</fullName>
+                <default>false</default>
+                <label>Caravan</label>
+            </value>
+            <value>
+                <fullName>Camper Van</fullName>
+                <default>false</default>
+                <label>Camper Van</label>
+            </value>
+            <value>
+                <fullName>Motorhome</fullName>
+                <default>false</default>
+                <label>Motorhome</label>
+            </value>
+            <value>
+                <fullName>Tent</fullName>
+                <default>false</default>
+                <label>Tent</label>
+            </value>
+            <value>
+                <fullName>Trailer Tent / Folding Camper</fullName>
+                <default>false</default>
+                <label>Trailer Tent / Folding Camper</label>
+            </value>
+            <value>
+                <fullName>Folding Caravan</fullName>
+                <default>false</default>
+                <label>Folding Caravan</label>
+            </value>
+            <value>
+                <fullName>Twin Axle Caravan</fullName>
+                <default>false</default>
+                <label>Twin Axle Caravan</label>
+            </value>
+            <value>
+                <fullName>Fifth Wheeler</fullName>
+                <default>false</default>
+                <label>Fifth Wheeler</label>
+            </value>
+            <value>
+                <fullName>RV</fullName>
+                <default>false</default>
+                <label>RV Motorhome</label>
+            </value>
+            <value>
+                <fullName>Roof Top Tent</fullName>
+                <default>false</default>
+                <label>Roof Top Tent</label>
+            </value>
+            <value>
+                <fullName>No Unit Owned</fullName>
+                <default>false</default>
+                <label>No Unit Owned</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

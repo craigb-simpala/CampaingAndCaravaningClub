@@ -1,0 +1,924 @@
+<apex:page standardController="Lead" extensions="NewMembershipController" lightningStylesheets="true">
+    <apex:stylesheet value="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"  />
+    <apex:includeScript value="//code.jquery.com/jquery-1.9.1.js" />
+    <apex:includeScript value="//code.jquery.com/ui/1.10.3/jquery-ui.js" />
+    <script type="text/javascript">
+        function selectAllCheckboxes(obj,receivedInputID){
+            var inputCheckBox = document.getElementsByTagName("input");                  
+            for(var i=0; i<inputCheckBox.length; i++){          
+                if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){                                     
+                    inputCheckBox[i].checked = obj.checked;
+                }
+            }
+        }
+        
+        function hideButton(button){
+            console.log(button);
+            button.style.visibility = "hidden";
+
+        }
+    </script>
+
+    <script type="text/javascript"> 
+    
+        j$ = jQuery.noConflict();
+    
+        j$(document).ready(function() {
+            setCalendars();
+            if(j$('[id$=movieTextBox]').length)setAutoCom();
+            if(j$('[id$=dealerTextBox]').length)setAutoComDealer();
+        });
+
+        function setAutoCom(){
+
+            var movieObjects;
+            var queryTerm;
+    
+            j$('[id$=movieTextBox]').autocomplete({
+                minLength: 2,
+                source: function(request, response) {
+                    queryTerm = request.term;
+                    NewMembershipController.searchMemberNumber(request.term, function(result, event){
+                        if(event.type == 'exception') {
+                            alert(event.message);
+                        } else {
+                            movieObjects = result;
+                            response(movieObjects);
+                        }
+                    });
+                },
+                focus: function( event, ui ) {
+                    j$('[id$=movieTextBox]').val( ui.item.Hybrid_Membership_Number__c );
+                    return false;
+                },
+                select: function( event, ui ) {
+                    j$('[id$=movieTextBox]').val( ui.item.Hybrid_Membership_Number__c );
+                    return false;
+                },
+            })
+            .attr('placeholder','type to search').data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                var entry = "<a>" + item.Name + ' - '+item.Hybrid_Membership_Number__c;
+           
+                entry = entry + "</a>";
+                entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+                return j$( "<li></li>" )
+                .data( "item.autocomplete", item )
+                .append( entry )
+                .appendTo( ul );
+            };
+        }
+
+        var decodeEntities = (function() {
+            // this prevents any overhead from creating the object each time
+            var element = document.createElement('div');
+        
+            function decodeHTMLEntities (str) {
+                if(str && typeof str === 'string') {
+                // strip script/html tags
+                    str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+                    str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+                    element.innerHTML = str;
+                    str = element.textContent;
+                    element.textContent = '';
+                }
+        
+                return str;
+            }
+        
+            return decodeHTMLEntities;
+        })();
+    
+        function setAutoComDealer(){
+
+            var dealerObjects;
+            var queryTerm;
+    
+            j$('[id$=dealerTextBox]').autocomplete({
+                    minLength: 2,
+                source: function(request, response) {
+                    queryTerm = request.term;
+                    NewMembershipController.searchDealers(request.term, function(result, event){
+                        if(event.type == 'exception') {
+                            alert(event.message);
+                        } else {
+                            dealerObjects = result;
+                            response(dealerObjects);
+                        }
+                    });
+                },
+                focus: function( event, ui ) {
+                    j$('[id$=dealerTextBox]').val(decodeEntities(ui.item.Name) );
+                    j$('[id$=dealerIdTextBox]').val( ui.item.Id );
+                    return false;
+                },
+                select: function( event, ui ) {
+                    console.log(ui.item.Name.replace(/&amp;/g, '&'));
+                    console.log(ui.item.Id);
+                    j$('[id$=dealerTextBox]').val( decodeEntities(ui.item.Name) );
+                    j$('[id$=dealerIdTextBox]').val( ui.item.Id );
+                    return false;
+                },
+            })
+            .attr('placeholder','type to search').data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                var entry = "<a>" + item.Name + "</a>";
+                entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+                return j$( "<li></li>" )
+                .data( "item.autocomplete", item )
+                .append( entry )
+                .appendTo( ul );
+            };
+        }
+
+        function setCalendars(){
+            console.log('{!minMembershipAge}-------- {!maxMembershipAge}');
+            var maxd='"-18y"'; mind='"-100y"';
+            if('{!minMembershipAge}' != '') maxd='"-{!minMembershipAge}y"';
+            if('{!maxMembershipAge}' != '') mind='"-{!maxMembershipAge}y"';
+            j$('[id$=doba]').attr('readOnly','true'); 
+            j$('[id$=dateall]').attr('readOnly','true'); 
+            j$('[id$=dob1]').attr('readOnly','true'); 
+            j$('[id$=dobc1]').attr('readOnly','true'); 
+            j$('[id$=dobc2]').attr('readOnly','true'); 
+            j$('[id$=dobc3]').attr('readOnly','true'); 
+            j$('[id$=dobc4]').attr('readOnly','true'); 
+            j$('[id$=dobc5]').attr('readOnly','true'); 
+            j$('[id$=dobc6]').attr('readOnly','true'); 
+            j$('[id$=dateall]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "0d",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "0d",
+                showAnim: "slide"
+            })
+            j$('[id$=dob1]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: maxd,
+                minDate: mind,
+                showAnim: "slide"
+            })
+            j$('[id$=dobc1]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "0d",
+                minDate: "-18y +1d",
+                showAnim: "slide"
+            })
+            j$('[id$=dobc2]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "0d",
+                minDate: "-18y +1d",
+                showAnim: "slide"
+            })
+            j$('[id$=dobc3]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "0d",
+                minDate: "-18y +1d",
+                showAnim: "slide"
+            })
+            j$('[id$=dobc4]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "0d",
+                minDate: "-18y +1d",
+                showAnim: "slide"
+            })
+            j$('[id$=dobc5]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "0d",
+                minDate: "-18y +1d",
+                showAnim: "slide"
+            })
+            j$('[id$=dobc6]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "0d",
+                minDate: "-18y +1d",
+                showAnim: "slide"
+            })
+            j$('[id$=doba]').datepicker({
+                showButtonPanel: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                numberOfMonths: 1,
+                dateFormat:"dd/mm/yy",
+                yearRange: "-100:+1",
+                maxDate: "-18y",
+                showAnim: "slide"
+            })
+        };
+        
+        
+    </script> 
+
+    <style>
+        .displayNone { 
+            display:none; 
+        }
+        .displayBlock {
+            display:block;
+        }
+        .ui-autocomplete-loading { 
+            background: white url(/img/loading32.gif) right center no-repeat;
+            background-size:15px 15px; 
+        }
+        .placeHolder {
+            font-style: italic;
+        }
+    </style>
+    
+    <apex:sectionHeader title="New Membership" />
+    <apex:form >
+        <apex:pageMessages id="msgs" />
+       
+        <apex:outputPanel rendered="{!(wizardStep==1)}">
+            <apex:pageblock title="Check for Existing Membership" >
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!step2}" value="Next"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Check for existing Membership" columns="1">
+                    <apex:pageblocksectionitem >
+                        <apex:outputLabel for="ssurname">Surname</apex:outputLabel>
+                        <apex:inputtext id="ssurname" value="{!searchSurname}" ></apex:inputtext>
+                    </apex:pageblocksectionitem>
+                    <!-- <apex:pageblocksectionitem >
+                     <apex:outputLabel for="shno">House Number</apex:outputLabel>
+                        <apex:inputtext id="shno" value="{!searchHouseNumber}"></apex:inputtext>
+                    </apex:pageblocksectionitem> --> 
+                    <apex:pageblocksectionitem >
+                        <apex:outputLabel for="spostcode">Postcode</apex:outputLabel>
+                        <apex:inputtext id="spostcode" value="{!searchPostcode}"></apex:inputtext>
+                    </apex:pageblocksectionitem>
+                    <apex:pageblocksectionitem >
+                        <apex:commandButton Id="btnSearch" action="{!search}" rerender="leadresults,accresults" status="status" title="Search" value="Search"/>
+                        <apex:actionStatus id="status" startText="Searching... please wait..."/>
+                    </apex:pageblocksectionitem>
+                </apex:pageBlockSection>
+                <apex:outputpanel id="leadresults">
+                    <apex:pageblocksection title="No Incomplete Memberships Found" columns="1" rendered="{!AND(searchLeadResults.size=0,OR(searchPostcode!='',searchHouseNumber!='',searchSurname!=''))}" collapsible="false">
+                    </apex:pageblocksection>
+                    <apex:pageblocksection title="Incomplete Memberships" columns="1" rendered="{!searchLeadResults.size>0}" collapsible="false">
+                        <apex:pageblocktable value="{!searchLeadResults}" var="o"  >
+                            <apex:column >
+                                <apex:facet name="header" >Surname</apex:facet>
+                                <apex:outputlink value="{!URLFOR($Action.Lead.Edit, o.id)}" >{!o.name}</apex:outputlink>
+                            </apex:column>
+                            <apex:column value="{!o.street}"/>
+                            <apex:column value="{!o.city}"/>
+                            <apex:column value="{!o.postalcode}"/>
+                            <apex:column value="{!o.lastmodifieddate}"/>
+                        </apex:pageblocktable> 
+                    </apex:pageblocksection>
+                </apex:outputpanel>
+                <apex:outputpanel id="accresults" >       
+                    <apex:pageblocksection title="No Existing Memberships Found" columns="1" rendered="{!AND(searchaccResults.size=0,OR(searchPostcode!='',searchHouseNumber!='',searchSurname!=''))}" collapsible="false">
+                    </apex:pageblocksection>
+                    <apex:pageblocksection title="Existing Memberships" columns="1" rendered="{!searchaccResults.size>0}" collapsible="false">
+                        <apex:pageblocktable value="{!searchAccResults}" var="o" rendered="{!searchaccresults.size>0}" >
+                            <apex:column >
+                                <apex:facet name="header" >Membership Name</apex:facet>
+                                <apex:outputlink value="/{!o.id}"  >{!o.name}</apex:outputlink>
+                            </apex:column>
+                            <apex:column value="{!o.Billingstreet}"/>
+                            <apex:column value="{!o.BillingCity}"/>
+                            <apex:column value="{!o.BillingPostalcode}"/>
+                            <apex:column value="{!o.Membership_Number__c}"/>
+                            <apex:column value="{!o.Membership_Status__c}"/>
+                        </apex:pageblocktable>
+                    </apex:pageblocksection>
+                </apex:outputpanel>       
+            </apex:pageblock>
+        </apex:outputPanel>
+    
+        <apex:outputPanel rendered="{!(wizardStep==2)}">
+            <apex:pageblock title="New Membership">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!step1}" value="Back" rendered="{!lea.id==null}" immediate="true"/>
+                    <apex:commandButton action="{!step2}" value="Membership" rendered="{!(lea.Max_LeadStep__c>1 && lea.id!=null)}"/>
+                    <apex:commandButton action="{!step3}" value="Member Details" rendered="{!(lea.Max_LeadStep__c>2)}"/>
+                    <apex:commandButton action="{!step4}" value="Camping Unit" rendered="{!(lea.Max_LeadStep__c>3)}"/>
+                    <apex:commandButton action="{!step5}" value="Sections" rendered="{!(lea.Max_LeadStep__c>4 && sectionsallowed)}"/>
+                    <apex:commandButton action="{!step6}" value="MGM" rendered="{!(lea.Max_LeadStep__c>5)}"/>
+                    <apex:commandButton action="{!step7}" value="Payment" rendered="{!(lea.Max_LeadStep__c>6)}"/>
+                    <apex:commandButton action="{!step3}" value="Next"/>
+                </apex:pageBlockButtons>
+<!-- 
+                <apex:pageBlockSection title="Voucher" columns="1">
+                    <apex:inputField value="{!lea.Voucher_Code__c}" />
+                </apex:pageBlockSection>
+ -->        
+                <apex:pageBlockSection title="New Membership" columns="2">
+                    <apex:inputField value="{!lea.Company}"  />
+                    <apex:inputField required="true" id="dealerTextBox" value="{!lea.Dealer_Code__c}" />
+                    <apex:inputHidden id="dealerIdTextBox" value="{!dealerCodeId}" /> 
+                    <apex:outputText value="" /> 
+                    <!--   <apex:inputField value="{!lea.Ad_Code__c}" /> -->
+                    <apex:inputField required="true" value="{!lea.Application_Source__c}" />
+                    <apex:inputField value="{!lea.Kit_Issued__c}" />
+<!--
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel value="Joining Date"/>
+                        <apex:outputText value="{0,date,dd/MM/yyyy}">
+                            <apex:param value="{!lea.Joining_Date__c}" />
+                        </apex:outputText>
+                    </apex:pageblocksectionitem>
+ -->                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel for="om" value="Overseas Membership" />
+                    <apex:ActionRegion > 
+                        <apex:inputcheckbox id="om" value="{!lea.Overseas_Membership__c}" >
+                            <apex:actionSupport event="onchange" rerender="leadaddruk,pclookup,mslookup,msgs" action="{!changeLocation}" /> 
+                        </apex:inputcheckbox>
+                    </apex:ActionRegion>
+                    </apex:pageBlockSectionItem> 
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel for="mt" value="Membership Type" />
+                        <apex:selectList id="mt" value="{!lea.Membership_Code__c}" size="1" >
+                            <apex:selectOptions value="{!membershipTypeOptions}"/>
+                            <apex:actionSupport event="onchange" rerender="msgs" action="{!changemt}" />
+                        </apex:selectList>              
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                
+                <apex:pageblocksection title="Voucher Details"  >
+                    <apex:pageblocksectionitem >
+                     <apex:outputLabel for="promocode">Promo Code</apex:outputLabel>
+                            <apex:outputpanel >
+                                <apex:inputText id="promocode" value="{!lea.Voucher_Code__c}">
+                                    <apex:actionSupport event="onchange" rerender="promocode" action="{!changePromoCode}" /> 
+                                </apex:inputText>
+                                <apex:commandButton Id="pcValidate" rerender="msgs" action="{!promoValidation}" title="Validate" value="Validate"/>
+                            </apex:outputpanel> 
+                    </apex:pageblocksectionitem>
+                
+                   <!--  <apex:inputField value="{!lea.Voucher_Code__c}" />                    
+                    <apex:commandButton action="{!step1}" value="Back" rendered="{!lea.id==null}" immediate="true"/> -->
+                </apex:pageblocksection>
+                <apex:ActionRegion >
+                <apex:outputpanel id="pclookup" >
+                    <apex:pageBlockSection title="Postcode Lookup" columns="2" rendered="{!!lea.Overseas_Membership__c}">
+                        <apex:pageblocksectionitem >
+                            <apex:outputLabel for="mhno">House Number</apex:outputLabel>
+                            <apex:inputText id="mhno" value="{!housenumber}" />
+                        </apex:pageblocksectionitem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel for="addr" value="Select Address" />
+                            <apex:outputpanel id="addropts">
+                                <apex:selectList id="addr" value="{!selAddr}" size="1"  >
+                                    <apex:selectOptions value="{!addressOptions}"/>
+                                    <apex:actionSupport event="onchange" action="{!filladdress}" rerender="leadaddr,leadaddruk"  />
+                                </apex:selectList>              
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageblocksectionitem >
+                            <apex:outputLabel for="mpco">Postcode</apex:outputLabel>
+                            <apex:outputpanel >
+                                <apex:inputText id="mpco" value="{!pcode}" />
+                                <apex:commandButton Id="pcSearch" rerender="addropts,msgs" action="{!addrsearch}" title="Search" value="Search"/>
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel for="mt" value="Manual Entry" />
+                            <apex:inputcheckbox id="mt" value="{!showmanual}" >
+                                <apex:actionSupport event="onchange" rerender="mslookup,leadaddruk" action="{!changems}" /> 
+                            </apex:inputcheckbox>
+                        </apex:pageBlockSectionItem> 
+                    </apex:pageBlockSection>
+                </apex:outputpanel>
+                </apex:ActionRegion>
+                <apex:outputpanel id="mslookup">
+                    <apex:ActionRegion > 
+                        <apex:pageBlockSection title="Manual Lookup" columns="2" rendered="{!showmanual && !lea.Overseas_Membership__c}" >
+                            <apex:pageblocksectionitem >
+                                <apex:outputLabel for="mhno">House Number</apex:outputLabel>
+                                <apex:inputText id="mhno" value="{!mhousenumber}" />
+                            </apex:pageblocksectionitem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="maddr" value="Select Address" />
+                                <apex:outputpanel id="maddropts">
+                                    <apex:selectList id="maddr" value="{!mselAddr}" size="1"  >
+                                        <apex:selectOptions value="{!maddressOptions}"/>
+                                        <apex:actionSupport event="onchange" action="{!mfilladdress}" rerender="maddr2,leadaddruk"  />
+                                    </apex:selectList>              
+                                </apex:outputpanel>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageblocksectionitem >
+                                <apex:outputLabel for="mst">Street</apex:outputLabel>
+                                <apex:inputText id="mst" value="{!mstreet}" />
+                            </apex:pageblocksectionitem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="maddr" value="" />
+                                <apex:outputpanel id="maddropts2">
+                                    <apex:selectList id="maddr2" value="{!mseladdr2}" size="1" >
+                                        <apex:selectOptions value="{!maddressOptions2}" />
+                                        <apex:actionSupport event="onchange" action="{!mfilladdress2}"  rerender="leadaddruk"/>
+                                    </apex:selectList>               
+                                </apex:outputpanel>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageblocksectionitem >
+                                <apex:outputLabel for="mcity">City</apex:outputLabel>
+                                <apex:outputpanel >
+                                    <apex:inputText id="mst" value="{!mcity}" />
+                                    <apex:commandButton Id="mSearch" rerender="maddropts,maddropts2,msgs" action="{!maddrsearch}" title="Search" value="Search"/>
+                                </apex:outputpanel> 
+                            </apex:pageblocksectionitem>
+                        </apex:pageBlockSection>
+                    </apex:ActionRegion>
+                </apex:outputpanel>
+
+                <apex:pageBlockSection title="Address" columns="1" id="leadaddruk" >
+                    <apex:inputField id="orginput" value="{!lea.Organisation__c}" />
+                    <apex:inputField id="streetinput" value="{!lea.street}" />
+                    <apex:inputField id="cityinput" value="{!lea.city}" />
+                    <apex:inputField id="stateinput" value="{!lea.state}" />
+                    <apex:inputField id="PostalCodeinput" value="{!lea.PostalCode}" />
+                    <apex:inputField id="countryinput" value="{!lea.country}" />
+                    <script>
+                        document.getElementById('{!$Component.orginput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.streetinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.cityinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.stateinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.PostalCodeinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                        document.getElementById('{!$Component.countryinput}').disabled = {!not(or(lea.Overseas_Membership__c,showmanual))}; 
+                    </script>
+                </apex:pageBlockSection>
+            </apex:pageblock>
+        </apex:outputPanel>
+    
+        <apex:outputPanel rendered="{!(wizardStep==3)}">
+            <apex:pageblock id="MemberBlock" title="Member Details">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!step2}" value="Membership" rendered="{!(lea.Max_LeadStep__c>1)}"/>
+                    <apex:commandButton action="{!step3}" value="Member Details" rendered="{!(lea.Max_LeadStep__c>2)}"/>
+                    <apex:commandButton action="{!step4}" value="Camping Unit" rendered="{!(lea.Max_LeadStep__c>3)}"/>
+                    <apex:commandButton action="{!step5}" value="Sections" rendered="{!(lea.Max_LeadStep__c>4 && sectionsallowed)}"/>
+                    <apex:commandButton action="{!step6}" value="MGM" rendered="{!(lea.Max_LeadStep__c>5)}"/>
+                    <apex:commandButton action="{!step7}" value="Payment" rendered="{!(lea.Max_LeadStep__c>6)}"/>
+                    <apex:commandButton action="{!step4}" value="Next"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Member Details" columns="2">
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel value="First Name"/>
+                        <apex:outputpanel >
+                            <apex:inputfield value="{!lea.Salutation}" />
+                            &nbsp;
+                            <apex:inputfield value="{!lea.FirstName}" />
+                        </apex:outputpanel> 
+                    </apex:pageblocksectionitem>
+                    <apex:inputField value="{!lea.lastname}" />
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel for="dob1" value="Date of Birth"/>
+                        <apex:inputText id="dob1" value="{!MemberBday}"  />
+                    </apex:pageblocksectionitem>
+                    <apex:pageblocksectionitem >
+                        <apex:outputLabel value="Email" for="leademail" />                        
+                        <apex:outputPanel >
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputField id="leademail" value="{!lea.Email}" />
+                        </div>
+                        </apex:outputPanel>
+                    </apex:pageblocksectionitem>
+                    <apex:inputField value="{!lea.Phone}" />
+                    <apex:pageblocksectionitem />
+                    <apex:inputField value="{!lea.MobilePhone}" />
+                    <apex:pageblocksectionitem />
+                    <apex:pageBlockSectionItem rendered="{!partnerAllowed}">
+                        <apex:outputLabel for="mt" value="Add Partner Member" />
+                        <apex:actionregion >
+                            <apex:inputcheckbox value="{!lea.hasPartner__c}" >
+                                <apex:actionSupport event="onchange" rerender="ps" oncomplete="setCalendars();"/>
+                            </apex:inputcheckbox>
+                        </apex:actionregion>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageblocksectionitem />
+                    <apex:pageBlockSectionItem rendered="{!childrenAllowed}">
+                        <apex:outputLabel for="mt" value="Add Children" />
+                        <apex:actionregion >
+                            <apex:inputfield id="mt" value="{!lea.Number_of_Children__c}" >
+                                <apex:actionSupport event="onchange" rerender="children" action="{!changeChildren}" oncomplete="setCalendars();"/> 
+                            </apex:inputfield>
+                        </apex:actionregion>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageblocksectionitem rendered="{!childrenAllowed}"/>
+                    <apex:pageBlockSectionItem rendered="{!associateAllowed}">
+                        <apex:outputLabel for="mt" value="Add Associate Member" />
+                        <apex:actionregion >
+                            <apex:inputcheckbox value="{!lea.hasAssociate__c}" >
+                                <apex:actionSupport event="onchange" rerender="assoc" oncomplete="setCalendars();"/>
+                            </apex:inputcheckbox>
+                        </apex:actionregion>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:outputpanel id="ps">
+                    <apex:pageBlockSection id="psection" title="Partner Details" columns="2" rendered="{!lea.hasPartner__c}">
+                        <apex:pageblocksectionitem >
+                            <apex:outputlabel value="First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Secondary_Member_Title__c}" />
+                                &nbsp;
+                                <apex:inputfield value="{!lea.Secondary_Member_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:inputField value="{!lea.Secondary_Member_Surname__c}" />
+                        <apex:pageblocksectionitem >
+                            <apex:outputlabel for="dob1" value="Date of Birth"/>
+                            <apex:inputText id="dob1" value="{!Member2Bday}"  />
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem />
+                        <apex:inputField value="{!lea.Secondary_Member_Mobile_Number__c}" />
+                        <apex:pageblocksectionitem >
+                            <apex:outputLabel value="Secondary Member Email " for="secemail" />                        
+                            <apex:outputPanel >
+                            <div class="requiredInput">
+                                <div class="requiredBlock"></div>
+                                <apex:inputField id="secemail" value="{!lea.Secondary_Member_Email__c}" />
+                            </div>
+                            </apex:outputPanel>
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem />
+                    </apex:pageBlockSection>
+                </apex:outputpanel>          
+                <a name="chil" />
+                <apex:outputpanel id="children">
+                    <apex:pageBlockSection id="csection" title="Child Details" columns="2" rendered="{!lea.Number_of_Children__c !=''}">
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=1}">
+                            <apex:outputlabel value="Child 1 First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Child_1_Title__c}" />
+                                &nbsp;
+                                <apex:inputfield value="{!lea.Child_1_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:inputField value="{!lea.Child_1_Surname__c}"  rendered="{!value(lea.Number_of_Children__c )>=1}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=1}">
+                            <apex:outputlabel for="dobc1" value="Date of Birth"/>
+                            <apex:inputText id="dobc1" value="{!Child1Bday}"  />
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=1}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=2}">
+                            <apex:outputlabel value="Child 2 First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Child_2_Title__c}" />
+                                &nbsp;
+                                <apex:inputfield value="{!lea.Child_2_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:inputField value="{!lea.Child_2_Surname__c}"  rendered="{!value(lea.Number_of_Children__c )>=2}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=2}">
+                            <apex:outputlabel for="dobc2" value="Date of Birth"/>
+                            <apex:inputText id="dobc2" value="{!Child2Bday}"  />
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=2}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=3}">
+                            <apex:outputlabel value="Child 3 First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Child_3_Title__c}" />
+                                &nbsp;
+                                <apex:inputfield value="{!lea.Child_3_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:inputField value="{!lea.Child_3_Surname__c}"  rendered="{!value(lea.Number_of_Children__c )>=3}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=3}">
+                            <apex:outputlabel for="dobc3" value="Date of Birth"/>
+                            <apex:inputText id="dobc3" value="{!Child3Bday}"  />
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=3}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=4}">
+                            <apex:outputlabel value="Child 4 First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Child_4_Title__c}" />
+                                &nbsp;
+                                <apex:inputfield value="{!lea.Child_4_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:inputField value="{!lea.Child_4_Surname__c}"  rendered="{!value(lea.Number_of_Children__c )>=4}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=4}">
+                            <apex:outputlabel for="dobc4" value="Date of Birth"/>
+                            <apex:inputText id="dobc4" value="{!Child4Bday}"  />
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=4}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=5}">
+                            <apex:outputlabel value="Child 5 First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Child_5_Title__c}" />
+                                &nbsp;
+                                <apex:inputfield value="{!lea.Child_5_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:inputField value="{!lea.Child_5_Surname__c}"  rendered="{!value(lea.Number_of_Children__c )>=5}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=5}">
+                            <apex:outputlabel for="dobc5" value="Date of Birth"/>
+                            <apex:inputText id="dobc5" value="{!Child5Bday}"  />
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=5}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=6}">
+                            <apex:outputlabel value="Child 6 First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Child_6_Title__c}" />
+                                &nbsp;
+                                <apex:inputfield value="{!lea.Child_6_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:inputField value="{!lea.Child_6_Surname__c}"  rendered="{!value(lea.Number_of_Children__c )>=6}"/>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=6}">
+                            <apex:outputlabel for="dobc6" value="Date of Birth"/>
+                            <apex:inputText id="dobc6" value="{!Child6Bday}"  />
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem rendered="{!value(lea.Number_of_Children__c )>=6}"/>
+                    </apex:pageBlockSection>
+                </apex:outputpanel>
+                <a name="assc" />
+                <apex:outputpanel id="assoc">
+                    <apex:pageBlockSection id="asection" title="Associate Details" columns="2" rendered="{!lea.hasAssociate__c}">
+                        <apex:pageblocksectionitem >
+                            <apex:outputlabel value="First Name"/>
+                            <apex:outputpanel >
+                                <apex:inputfield value="{!lea.Associate_Member_Title__c}" />
+                                &nbsp;
+                                <apex:inputfield value="{!lea.Associate_Member_First_Name__c}" />
+                            </apex:outputpanel> 
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem >
+                            <apex:outputlabel for="asur" value="Associate Member Surname"/>
+                            <apex:outputPanel >
+                                <div class="requiredInput">
+                                    <div class="requiredBlock"></div>
+                                    <apex:inputField id="asur" value="{!lea.Associate_Member_Surname__c}" />
+                                </div>
+                            </apex:outputPanel>
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem >
+                            <apex:outputlabel for="doba" value="Date of Birth"/>
+                            <apex:outputPanel >
+                                <div class="requiredInput">
+                                    <div class="requiredBlock"></div>
+                                    <apex:inputText id="doba" value="{!MemberABday}"  />
+                                </div>
+                            </apex:outputPanel>
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem />
+                    </apex:pageBlockSection>
+                </apex:outputpanel>
+            </apex:pageblock>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!(wizardStep==4)}">
+            <apex:pageblock title="Camping Unit">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!step2}" value="Membership" rendered="{!(lea.Max_LeadStep__c>1)}"/>
+                    <apex:commandButton action="{!step3}" value="Member Details" rendered="{!(lea.Max_LeadStep__c>2)}"/>
+                    <apex:commandButton action="{!step4}" value="Camping Unit" rendered="{!(lea.Max_LeadStep__c>3)}"/>
+                    <apex:commandButton action="{!step5}" value="Sections" rendered="{!(lea.Max_LeadStep__c>4 && sectionsallowed)}"/>
+                    <apex:commandButton action="{!step6}" value="MGM" rendered="{!(lea.Max_LeadStep__c>5)}"/>
+                    <apex:commandButton action="{!step7}" value="Payment" rendered="{!(lea.Max_LeadStep__c>6)}"/>
+                    <apex:commandButton action="{!step5}" value="Next"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Camping Unit" columns="1" id="cufields">
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel value="Camping Unit" />        
+                        <apex:actionRegion >
+                            <div class="requiredInput">
+                               <div class="requiredBlock"></div>
+                               <apex:inputField value="{!lea.Camping_Unit__c}">
+                                   <apex:actionSupport event="onchange" reRender="cufields"/>
+                               </apex:inputField>
+                            </div>   
+                        </apex:actionRegion>
+                    </apex:pageblocksectionitem>
+                    <apex:inputField id="lengthinput" value="{!lea.Length__c}" required="{!IF(lea.Camping_Unit__c !='' && lea.Camping_Unit__c !='No Unit Owned',true,false)}"/>
+                    <apex:inputField id="widthinput" value="{!lea.Width__c}" required="{!IF(lea.Camping_Unit__c !='' && lea.Camping_Unit__c !='No Unit Owned',true,false)}"/>
+                    <apex:inputField id="heightinput" value="{!lea.Height__c}" />
+                    <script>document.getElementById('{!$Component.lengthinput}').disabled = {!IF(lea.Camping_Unit__c ='' ,true,false)}; </script>
+                    <script>document.getElementById('{!$Component.widthinput}').disabled = {!IF(lea.Camping_Unit__c ='' ,true,false)}; </script>
+                    <script>document.getElementById('{!$Component.heightinput}').disabled = {!IF(lea.Camping_Unit__c ='' ,true,false)}; </script>
+                </apex:pageBlockSection>
+            </apex:pageblock>
+        </apex:outputPanel>
+    
+        <apex:outputPanel rendered="{!(wizardStep==5)}">
+            <apex:pageblock title="Add Sections to Membership">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!step2}" value="Membership" rendered="{!(lea.Max_LeadStep__c>1)}"/>
+                    <apex:commandButton action="{!step3}" value="Member Details" rendered="{!(lea.Max_LeadStep__c>2)}"/>
+                    <apex:commandButton action="{!step4}" value="Camping Unit" rendered="{!(lea.Max_LeadStep__c>3)}"/>
+                    <apex:commandButton action="{!step5}" value="Sections" rendered="{!(lea.Max_LeadStep__c>4 && sectionsallowed)}"/>
+                    <apex:commandButton action="{!step6}" value="MGM" rendered="{!(lea.Max_LeadStep__c>5)}"/>
+                    <apex:commandButton action="{!step7}" value="Payment" rendered="{!(lea.Max_LeadStep__c>6)}"/>
+                    <apex:commandButton action="{!step6}" value="Next" />
+                </apex:pageBlockButtons>  
+                <apex:pageBlockSection title="Sections" columns="1">
+                    <apex:pageblocktable value="{!sections}" var="s" >
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:inputCheckbox onclick="selectAllCheckboxes(this,'selid')" />
+                            </apex:facet>
+                            <apex:inputcheckbox value="{!s.selected}" id="selid"/>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                Section
+                            </apex:facet>
+                            <apex:image value="/s.gif" styleClass="helpIcon" title="{!s.s.Product_Description__c}"/>
+                            <apex:outputtext value="{!s.s.Product_Detail__c}" title="{!s.s.Product_Description__c}" />
+                        </apex:column> 
+                         <apex:column >
+                            <apex:outputtext id="pr" value="£{0, number, ###,###,##0.00}" >
+                        <apex:param value="{!s.Price}" />
+                        </apex:outputtext>
+                         </apex:column>
+                    </apex:pageblocktable>          
+<!--                <apex:inputField value="{!lea.Section_Assoc_Of_Lightweight_Campers__c}" />
+                    <apex:inputField value="{!lea.Section_Boating_Group__c}" />
+                    <apex:inputField value="{!lea.Section_British_Caravanners_Club__c}" />
+                    <apex:inputField value="{!lea.Section_Canoe_Camping_Club__c}" />
+                    <apex:inputField value="{!lea.Section_Folk_Dance_And_Song_Group__c}" />
+                    <apex:inputField value="{!lea.Section_Motor_Caravan_Section__c}" />
+                    <apex:inputField value="{!lea.Section_Mountain_Activity_Section__c}" />
+                    <apex:inputField value="{!lea.Section_Photographic_Group__c}" />
+                    <apex:inputField value="{!lea.Section_Trailer_Tent_Folding_Campers__c}" />
+-->                  
+                </apex:pageBlockSection>
+            </apex:pageblock>
+        </apex:outputPanel>
+    
+        <apex:outputPanel rendered="{!(wizardStep==6)}">
+            <apex:pageblock title="Member Get Member">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!step2}" value="Membership" rendered="{!(lea.Max_LeadStep__c>1)}"/>
+                    <apex:commandButton action="{!step3}" value="Member Details" rendered="{!(lea.Max_LeadStep__c>2)}"/>
+                    <apex:commandButton action="{!step4}" value="Camping Unit" rendered="{!(lea.Max_LeadStep__c>3)}"/>
+                    <apex:commandButton action="{!step5}" value="Sections" rendered="{!(lea.Max_LeadStep__c>4 && sectionsallowed)}"/>
+                    <apex:commandButton action="{!step6}" value="MGM" rendered="{!(lea.Max_LeadStep__c>5)}"/>
+                    <apex:commandButton action="{!step7}" value="Payment" rendered="{!(lea.Max_LeadStep__c>6)}"/>
+                    <apex:commandButton action="{!step7}" value="Next"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="MGM" columns="1">
+                    <style>
+                        .displayNone { 
+                            display:none; 
+                        }
+                        .displayBlock {
+                            display:block;
+                        }
+                        .ui-autocomplete-loading { 
+                            background: white url(/img/loading32.gif) right center no-repeat;
+                            background-size:15px 15px; 
+                        }
+                        .placeHolder {
+                            font-style: italic;
+                        }
+                    </style>
+                    <apex:inputField id="movieTextBox" value="{!lea.Existing_Members_Number__c}" /> 
+                    <apex:inputField value="{!lea.Gift__c}" />
+                </apex:pageBlockSection>
+            </apex:pageblock>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!(wizardStep==7)}">
+            <apex:pageblock title="Payment">
+                
+                <apex:pageBlockButtons >
+                <apex:outputPanel id="buttons">
+                    <apex:commandButton action="{!step2}" value="Membership" rendered="{!(lea.Max_LeadStep__c>1)}"/>
+                    <apex:commandButton action="{!step3}" value="Member Details" rendered="{!(lea.Max_LeadStep__c>2)}"/>
+                    <apex:commandButton action="{!step4}" value="Camping Unit" rendered="{!(lea.Max_LeadStep__c>3)}"/>
+                    <apex:commandButton action="{!step5}" value="Sections" rendered="{!(lea.Max_LeadStep__c>4 && sectionsallowed)}"/>
+                    <apex:commandButton action="{!step6}" value="MGM" rendered="{!(lea.Max_LeadStep__c>5)}"/>
+                    <apex:commandButton action="{!step7}" value="Payment" rendered="{!(lea.Max_LeadStep__c>6)}"/>
+                    <apex:commandButton onclick="nonjava.submit(); return false;" value="Submit Payment" rendered="{!lea.Payment_Method__c="Debit/Credit Card" && costtotal>0 }"/>
+                    <apex:commandButton action="{!confirm}" value="Submit Payment" onclick="hideButton(this);" rendered="{!lea.Payment_Method__c="Direct Debit" && costtotal>0 }"/>
+                    <apex:commandButton action="{!confirm}" value="Submit Payment" onclick="hideButton(this);" rendered="{!lea.Payment_Method__c="Cash/Cheque" && costtotal>0 }"/>
+                    <apex:commandButton action="{!confirm}" value="Submit" onclick="hideButton(this);" rendered="{!costtotal==0 && mtcost!=null && lea.Payment_Method__c!=null}" />
+                    </apex:outputPanel>
+                </apex:pageBlockButtons>
+                
+                <apex:pageblocksection columns="1" title="Payment Details" collapsible="false" >
+<!--
+                <apex:pageblocksection columns="1" title="Payment Details" collapsible="false" rendered="{!costtotal!=0 || mtcost==null}">
+-->
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel for="pt" value="Payment Method" />
+                        <apex:selectList id="pt" value="{!lea.Payment_Method__c}" size="1" >
+                            <apex:selectOptions value="{!PaymentOptions}"/>
+                            <apex:actionSupport event="onchange" action="{!changepayment}"  />
+                        </apex:selectList>              
+                    </apex:pageBlockSectionItem>
+                    <apex:pageMessage summary="Unable to find a price for {!lea.Payment_Method__c}, please contact an administrator" severity="Error" strength="3" rendered="{!mtCost==null}" />
+<!--  
+                    <apex:inputfield id="ptype" value="{!lea.Payment_Method__c}"  >
+                        <apex:actionSupport event="onchange" action="{!changepayment}"  />
+                    </apex:inputfield>
+ -->                    
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Payment Details" collapsible="false" rendered="{!costtotal==0 && mtCost!=null && lea.Payment_Method__c!=null}">
+                    <apex:outputtext >Total cost is £0. Click <b>Submit</b> to create membership</apex:outputtext>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Joining Fee" collapsible="false" rendered="{!lea.Payment_Method__c !=null && mtcost!=null && !promoCodeValidated}">
+                    <apex:inputfield id="JFwaive" value="{!lea.Joining_Fee_Waived__c}"  >
+                        <apex:actionSupport event="onchange" action="{!changepayment}"  />
+                    </apex:inputfield>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Bank Details" collapsible="false" rendered="{!lea.Payment_Method__c='Direct Debit'}">
+                    <apex:inputfield id="baname" value="{!lea.Bank_Account_Name__c}"  />
+                    <apex:inputfield id="bname" value="{!lea.Bank_Name__c}"  />
+                    <apex:inputfield id="banum" value="{!lea.Bank_Account_Number__c}"  />
+                    <apex:inputfield id="bsort" value="{!lea.Sort_Code__c}"  />
+                </apex:pageblocksection>
+            </apex:pageblock>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!(wizardStep>1 &&!isnull(wizardStep))}">
+            <apex:pageblock title="Costs" >
+                <apex:pageblocksection title="Costs" collapsible="false" columns="1">
+                     <apex:pageblocksectionitem >
+                        <apex:outputLabel for="mcost">Membership</apex:outputLabel>
+                        <apex:outputtext id="mcost" value="£ {!if(promoCodeValidated,0.00,mtCost)}">
+                        <apex:param value="{!mtCost}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                     <apex:pageblocksectionitem rendered="{!(wizardStep==7)}">
+                        <apex:outputLabel for="jcost">Joining Fee</apex:outputLabel>
+                        <apex:outputtext id="jcost" value="£{0, number, ###,###,##0.00}" >
+                        <apex:param value="{!joinCost}" />
+                         </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                    <apex:pageblocksectionitem rendered="{!lea.hasAssociate__c}">
+                           <apex:outputLabel for="amcost">Associate Member</apex:outputLabel>
+                            <apex:outputtext id="amcost" value="£{0, number, ###,###,##0.00}" >
+                            <apex:param value="{!amCost}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                    <apex:repeat value="{!sections}" var="s" >
+                        <apex:pageblocksectionitem rendered="{!s.selected}"> 
+                            <apex:outputLabel for="mcost">{!s.s.Product_Detail__c}</apex:outputLabel>
+                            <apex:outputtext id="mcost" value="£ {!if(dealercode.Valid_Show__c && dealercode.Show_Start_Date__c < today() && dealercode.Show_End_Date__c > today(),0.00,s.Price)}" >
+                                <apex:param value="{!s.Price}" />
+                        </apex:outputtext>
+                        </apex:pageblocksectionitem>
+                    </apex:repeat>
+                    <apex:pageblocksectionitem />
+                    <apex:pageblocksectionitem >
+                        <apex:outputLabel for="tcost" style="font-weight:bolder">Total Cost</apex:outputLabel>
+                        <apex:outputtext id="tcost" value="£{0, number, ###,###,##0.00}" >
+                        <apex:param value="{!costTotal}" />
+                        </apex:outputtext>
+                    </apex:pageblocksectionitem>
+                </apex:pageblocksection>
+            </apex:pageblock>
+        </apex:outputPanel>
+
+    </apex:form>
+
+    <apex:iframe >
+        <apex:outputtext escape="false" >
+            <form id="nonjava" name="nonjava" method="post" action="{!$Setup.Verifone__c.Endpoint__c}" >
+                <input name="postdata" id="nonjavapostdata" type="hidden" value="{!payform}"/>
+            </form>
+        </apex:outputtext>
+    </apex:iframe>
+
+</apex:page>

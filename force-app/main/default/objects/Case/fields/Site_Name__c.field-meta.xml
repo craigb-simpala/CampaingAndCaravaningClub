@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Site Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adgestone</fullName>
+                <default>false</default>
+                <label>Adgestone</label>
+            </value>
+            <value>
+                <fullName>Aldridge Hill</fullName>
+                <default>false</default>
+                <label>Aldridge Hill</label>
+            </value>
+            <value>
+                <fullName>Alton, The Star</fullName>
+                <default>false</default>
+                <label>Alton, The Star</label>
+            </value>
+            <value>
+                <fullName>Ashbourne</fullName>
+                <default>false</default>
+                <label>Ashbourne</label>
+            </value>
+            <value>
+                <fullName>Ashurst</fullName>
+                <default>false</default>
+                <label>Ashurst</label>
+            </value>
+            <value>
+                <fullName>Bakewell</fullName>
+                <default>false</default>
+                <label>Bakewell</label>
+            </value>
+            <value>
+                <fullName>Bala</fullName>
+                <default>false</default>
+                <label>Bala</label>
+            </value>
+            <value>
+                <fullName>Barnard Castle</fullName>
+                <default>false</default>
+                <label>Barnard Castle</label>
+            </value>
+            <value>
+                <fullName>Beadnell Bay</fullName>
+                <default>false</default>
+                <label>Beadnell Bay</label>
+            </value>
+            <value>
+                <fullName>Bellingham</fullName>
+                <default>false</default>
+                <label>Bellingham</label>
+            </value>
+            <value>
+                <fullName>Blackmore</fullName>
+                <default>false</default>
+                <label>Blackmore</label>
+            </value>
+            <value>
+                <fullName>Boroughbridge</fullName>
+                <default>false</default>
+                <label>Boroughbridge</label>
+            </value>
+            <value>
+                <fullName>Bowness in Windermere</fullName>
+                <default>false</default>
+                <label>Bowness in Windermere</label>
+            </value>
+            <value>
+                <fullName>Bracelands</fullName>
+                <default>false</default>
+                <label>Bracelands</label>
+            </value>
+            <value>
+                <fullName>Braithwaite Village</fullName>
+                <default>false</default>
+                <label>Braithwaite Village</label>
+            </value>
+            <value>
+                <fullName>Bude</fullName>
+                <default>false</default>
+                <label>Bude</label>
+            </value>
+            <value>
+                <fullName>California Cross</fullName>
+                <default>false</default>
+                <label>California Cross</label>
+            </value>
+            <value>
+                <fullName>Cambridge</fullName>
+                <default>false</default>
+                <label>Cambridge</label>
+            </value>
+            <value>
+                <fullName>Cannock Chase</fullName>
+                <default>false</default>
+                <label>Cannock Chase</label>
+            </value>
+            <value>
+                <fullName>Canterbury</fullName>
+                <default>false</default>
+                <label>Canterbury</label>
+            </value>
+            <value>
+                <fullName>Cardigan Bay</fullName>
+                <default>false</default>
+                <label>Cardigan Bay</label>
+            </value>
+            <value>
+                <fullName>Cashel</fullName>
+                <default>false</default>
+                <label>Cashel</label>
+            </value>
+            <value>
+                <fullName>Charmouth</fullName>
+                <default>false</default>
+                <label>Charmouth</label>
+            </value>
+            <value>
+                <fullName>Cheddar</fullName>
+                <default>false</default>
+                <label>Cheddar</label>
+            </value>
+            <value>
+                <fullName>Chertsey</fullName>
+                <default>false</default>
+                <label>Chertsey</label>
+            </value>
+            <value>
+                <fullName>Chichester</fullName>
+                <default>false</default>
+                <label>Chichester</label>
+            </value>
+            <value>
+                <fullName>Chipping Norton</fullName>
+                <default>false</default>
+                <label>Chipping Norton</label>
+            </value>
+            <value>
+                <fullName>Clent Hills</fullName>
+                <default>false</default>
+                <label>Clent Hills</label>
+            </value>
+            <value>
+                <fullName>Clitheroe</fullName>
+                <default>false</default>
+                <label>Clitheroe</label>
+            </value>
+            <value>
+                <fullName>Cobleland</fullName>
+                <default>false</default>
+                <label>Cobleland</label>
+            </value>
+            <value>
+                <fullName>Conkers</fullName>
+                <default>false</default>
+                <label>Conkers</label>
+            </value>
+            <value>
+                <fullName>Corfe Castle</fullName>
+                <default>false</default>
+                <label>Corfe Castle</label>
+            </value>
+            <value>
+                <fullName>Crowborough</fullName>
+                <default>false</default>
+                <label>Crowborough</label>
+            </value>
+            <value>
+                <fullName>Crowden</fullName>
+                <default>false</default>
+                <label>Crowden</label>
+            </value>
+            <value>
+                <fullName>Culzean Castle</fullName>
+                <default>false</default>
+                <label>Culzean Castle</label>
+            </value>
+            <value>
+                <fullName>Dartmouth</fullName>
+                <default>false</default>
+                <label>Dartmouth</label>
+            </value>
+            <value>
+                <fullName>Delamere F</fullName>
+                <default>false</default>
+                <label>Delamere F</label>
+            </value>
+            <value>
+                <fullName>Delamont CP</fullName>
+                <default>false</default>
+                <label>Delamont CP</label>
+            </value>
+            <value>
+                <fullName>Denny Wood</fullName>
+                <default>false</default>
+                <label>Denny Wood</label>
+            </value>
+            <value>
+                <fullName>Derwentwater</fullName>
+                <default>false</default>
+                <label>Derwentwater</label>
+            </value>
+            <value>
+                <fullName>Devizes</fullName>
+                <default>false</default>
+                <label>Devizes</label>
+            </value>
+            <value>
+                <fullName>Dingwall</fullName>
+                <default>false</default>
+                <label>Dingwall</label>
+            </value>
+            <value>
+                <fullName>Drayton Manor</fullName>
+                <default>false</default>
+                <label>Drayton Manor</label>
+            </value>
+            <value>
+                <fullName>Dunbar</fullName>
+                <default>false</default>
+                <label>Dunbar</label>
+            </value>
+            <value>
+                <fullName>Dunstan Hill</fullName>
+                <default>false</default>
+                <label>Dunstan Hill</label>
+            </value>
+            <value>
+                <fullName>Ebury Hill</fullName>
+                <default>false</default>
+                <label>Ebury Hill</label>
+            </value>
+            <value>
+                <fullName>Folkestone</fullName>
+                <default>false</default>
+                <label>Folkestone</label>
+            </value>
+            <value>
+                <fullName>Glencoe</fullName>
+                <default>false</default>
+                <label>Glencoe</label>
+            </value>
+            <value>
+                <fullName>Glenmore</fullName>
+                <default>false</default>
+                <label>Glenmore</label>
+            </value>
+            <value>
+                <fullName>Graffham</fullName>
+                <default>false</default>
+                <label>Graffham</label>
+            </value>
+            <value>
+                <fullName>Haltwhistle</fullName>
+                <default>false</default>
+                <label>Haltwhistle</label>
+            </value>
+            <value>
+                <fullName>Hayfield</fullName>
+                <default>false</default>
+                <label>Hayfield</label>
+            </value>
+            <value>
+                <fullName>Hereford</fullName>
+                <default>false</default>
+                <label>Hereford</label>
+            </value>
+            <value>
+                <fullName>Hertford</fullName>
+                <default>false</default>
+                <label>Hertford</label>
+            </value>
+            <value>
+                <fullName>Hollands Wood</fullName>
+                <default>false</default>
+                <label>Hollands Wood</label>
+            </value>
+            <value>
+                <fullName>Holmsley</fullName>
+                <default>false</default>
+                <label>Holmsley</label>
+            </value>
+            <value>
+                <fullName>Horsley</fullName>
+                <default>false</default>
+                <label>Horsley</label>
+            </value>
+            <value>
+                <fullName>Inverewe Gardens</fullName>
+                <default>false</default>
+                <label>Inverewe Gardens</label>
+            </value>
+            <value>
+                <fullName>Jedburgh</fullName>
+                <default>false</default>
+                <label>Jedburgh</label>
+            </value>
+            <value>
+                <fullName>Kelvedon Hatch</fullName>
+                <default>false</default>
+                <label>Kelvedon Hatch</label>
+            </value>
+            <value>
+                <fullName>Kendal</fullName>
+                <default>false</default>
+                <label>Kendal</label>
+            </value>
+            <value>
+                <fullName>Kessingland</fullName>
+                <default>false</default>
+                <label>Kessingland</label>
+            </value>
+            <value>
+                <fullName>Keswick</fullName>
+                <default>false</default>
+                <label>Keswick</label>
+            </value>
+            <value>
+                <fullName>Kingsbury WP</fullName>
+                <default>false</default>
+                <label>Kingsbury WP</label>
+            </value>
+            <value>
+                <fullName>Lakeside Caravan Park</fullName>
+                <default>false</default>
+                <label>Lakeside Caravan Park</label>
+            </value>
+            <value>
+                <fullName>Lauder</fullName>
+                <default>false</default>
+                <label>Lauder</label>
+            </value>
+            <value>
+                <fullName>Leek</fullName>
+                <default>false</default>
+                <label>Leek</label>
+            </value>
+            <value>
+                <fullName>Llanystumdwy</fullName>
+                <default>false</default>
+                <label>Llanystumdwy</label>
+            </value>
+            <value>
+                <fullName>Lochness Shores</fullName>
+                <default>false</default>
+                <label>Lochness Shores</label>
+            </value>
+            <value>
+                <fullName>Longbeech</fullName>
+                <default>false</default>
+                <label>Longbeech</label>
+            </value>
+            <value>
+                <fullName>Lynton</fullName>
+                <default>false</default>
+                <label>Lynton</label>
+            </value>
+            <value>
+                <fullName>Mablethorpe</fullName>
+                <default>false</default>
+                <label>Mablethorpe</label>
+            </value>
+            <value>
+                <fullName>Matley Wood</fullName>
+                <default>false</default>
+                <label>Matley Wood</label>
+            </value>
+            <value>
+                <fullName>Milarrochy Bay</fullName>
+                <default>false</default>
+                <label>Milarrochy Bay</label>
+            </value>
+            <value>
+                <fullName>Minehead</fullName>
+                <default>false</default>
+                <label>Minehead</label>
+            </value>
+            <value>
+                <fullName>Moffat</fullName>
+                <default>false</default>
+                <label>Moffat</label>
+            </value>
+            <value>
+                <fullName>Moreton</fullName>
+                <default>false</default>
+                <label>Moreton</label>
+            </value>
+            <value>
+                <fullName>Nairn</fullName>
+                <default>false</default>
+                <label>Nairn</label>
+            </value>
+            <value>
+                <fullName>Normans Bay</fullName>
+                <default>false</default>
+                <label>Normans Bay</label>
+            </value>
+            <value>
+                <fullName>Norwich</fullName>
+                <default>false</default>
+                <label>Norwich</label>
+            </value>
+            <value>
+                <fullName>Oban</fullName>
+                <default>false</default>
+                <label>Oban</label>
+            </value>
+            <value>
+                <fullName>Ocknall</fullName>
+                <default>false</default>
+                <label>Ocknall</label>
+            </value>
+            <value>
+                <fullName>Oldbury Hill</fullName>
+                <default>false</default>
+                <label>Oldbury Hill</label>
+            </value>
+            <value>
+                <fullName>Oxford</fullName>
+                <default>false</default>
+                <label>Oxford</label>
+            </value>
+            <value>
+                <fullName>Polstead</fullName>
+                <default>false</default>
+                <label>Polstead</label>
+            </value>
+            <value>
+                <fullName>Postern Hill</fullName>
+                <default>false</default>
+                <label>Postern Hill</label>
+            </value>
+            <value>
+                <fullName>Ravenglass</fullName>
+                <default>false</default>
+                <label>Ravenglass</label>
+            </value>
+            <value>
+                <fullName>Rhandirmwyn</fullName>
+                <default>false</default>
+                <label>Rhandirmwyn</label>
+            </value>
+            <value>
+                <fullName>Rosemarkie</fullName>
+                <default>false</default>
+                <label>Rosemarkie</label>
+            </value>
+            <value>
+                <fullName>Roundhill</fullName>
+                <default>false</default>
+                <label>Roundhill</label>
+            </value>
+            <value>
+                <fullName>Salisbury</fullName>
+                <default>false</default>
+                <label>Salisbury</label>
+            </value>
+            <value>
+                <fullName>Sandringham</fullName>
+                <default>false</default>
+                <label>Sandringham</label>
+            </value>
+            <value>
+                <fullName>Scarborough</fullName>
+                <default>false</default>
+                <label>Scarborough</label>
+            </value>
+            <value>
+                <fullName>Scone</fullName>
+                <default>false</default>
+                <label>Scone</label>
+            </value>
+            <value>
+                <fullName>Sennen Cove</fullName>
+                <default>false</default>
+                <label>Sennen Cove</label>
+            </value>
+            <value>
+                <fullName>Setthorns</fullName>
+                <default>false</default>
+                <label>Setthorns</label>
+            </value>
+            <value>
+                <fullName>Sherrif Hutton</fullName>
+                <default>false</default>
+                <label>Sherrif Hutton</label>
+            </value>
+            <value>
+                <fullName>Sherwood Pines</fullName>
+                <default>false</default>
+                <label>Sherwood Pines</label>
+            </value>
+            <value>
+                <fullName>Skye</fullName>
+                <default>false</default>
+                <label>Skye</label>
+            </value>
+            <value>
+                <fullName>Slapton Sands</fullName>
+                <default>false</default>
+                <label>Slapton Sands</label>
+            </value>
+            <value>
+                <fullName>Slindon</fullName>
+                <default>false</default>
+                <label>Slindon</label>
+            </value>
+            <value>
+                <fullName>Slingsby</fullName>
+                <default>false</default>
+                <label>Slingsby</label>
+            </value>
+            <value>
+                <fullName>Speyside</fullName>
+                <default>false</default>
+                <label>Speyside</label>
+            </value>
+            <value>
+                <fullName>St Davids</fullName>
+                <default>false</default>
+                <label>St Davids</label>
+            </value>
+            <value>
+                <fullName>St Neots</fullName>
+                <default>false</default>
+                <label>St Neots</label>
+            </value>
+            <value>
+                <fullName>Tarland</fullName>
+                <default>false</default>
+                <label>Tarland</label>
+            </value>
+            <value>
+                <fullName>Tavistock</fullName>
+                <default>false</default>
+                <label>Tavistock</label>
+            </value>
+            <value>
+                <fullName>Temporary Campsite</fullName>
+                <default>false</default>
+                <label>Temporary Campsite</label>
+            </value>
+            <value>
+                <fullName>Teversal</fullName>
+                <default>false</default>
+                <label>Teversal</label>
+            </value>
+            <value>
+                <fullName>Theobalds Park</fullName>
+                <default>false</default>
+                <label>Theobalds Park</label>
+            </value>
+            <value>
+                <fullName>Tregurrian</fullName>
+                <default>false</default>
+                <label>Tregurrian</label>
+            </value>
+            <value>
+                <fullName>Umberleigh</fullName>
+                <default>false</default>
+                <label>Umberleigh</label>
+            </value>
+            <value>
+                <fullName>Verwood</fullName>
+                <default>false</default>
+                <label>Verwood</label>
+            </value>
+            <value>
+                <fullName>Veryan</fullName>
+                <default>false</default>
+                <label>Veryan</label>
+            </value>
+            <value>
+                <fullName>Walton on Thames</fullName>
+                <default>false</default>
+                <label>Walton on Thames</label>
+            </value>
+            <value>
+                <fullName>West Runton</fullName>
+                <default>false</default>
+                <label>West Runton</label>
+            </value>
+            <value>
+                <fullName>Winchombe</fullName>
+                <default>false</default>
+                <label>Winchombe</label>
+            </value>
+            <value>
+                <fullName>Windermere</fullName>
+                <default>false</default>
+                <label>Windermere</label>
+            </value>
+            <value>
+                <fullName>Wolverley</fullName>
+                <default>false</default>
+                <label>Wolverley</label>
+            </value>
+            <value>
+                <fullName>Woodhall Spa</fullName>
+                <default>false</default>
+                <label>Woodhall Spa</label>
+            </value>
+            <value>
+                <fullName>Wyeside</fullName>
+                <default>false</default>
+                <label>Wyeside</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

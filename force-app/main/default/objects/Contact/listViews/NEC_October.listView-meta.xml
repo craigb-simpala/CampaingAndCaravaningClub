@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NEC_October</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Date_Joined__c</columns>
+    <columns>Hybrid_Membership_Number__c</columns>
+    <columns>CONTACT.SALUTATION</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>CONTACT.LAST_NAME</columns>
+    <columns>Account.Membership_Type_Name__c</columns>
+    <columns>Account.dc__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Joined__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>10/8/2020</value>
+    </filters>
+    <filters>
+        <field>Account.dc__c</field>
+        <operation>contains</operation>
+        <value>0900,900</value>
+    </filters>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.Lead</value>
+    </filters>
+    <filters>
+        <field>Date_Joined__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>2/20/2023</value>
+    </filters>
+    <label>NEC October</label>
+</ListView>

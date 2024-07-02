@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Num_of_children_doesnt_match_child_det</fullName>
+    <active>false</active>
+    <description>The &apos;Number of Children&apos; field does not equal the number of children&apos;s details entered</description>
+    <errorConditionFormula>OR(
+AND(
+VALUE(TEXT(Number_of_Children__c))&gt;=1,
+OR(
+ISBLANK(Child_1_First_Name__c), ISBLANK(Child_1_Surname__c), ISBLANK(Child_1_Date_of_Birth__c))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&gt;=2,
+OR(
+ISBLANK(Child_2_First_Name__c), ISBLANK(Child_2_Surname__c), ISBLANK(Child_2_Date_of_Birth__c))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&gt;=3,
+OR(
+ISBLANK(Child_3_First_Name__c), ISBLANK(Child_3_Surname__c), ISBLANK(Child_3_Date_of_Birth__c))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&gt;=4,
+OR(
+ISBLANK(Child_4_First_Name__c), ISBLANK(Child_4_Surname__c), ISBLANK(Child_4_Date_of_Birth__c))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&gt;=5,
+OR(
+ISBLANK(Child_5_First_Name__c), ISBLANK(Child_5_Surname__c), ISBLANK(Child_5_Date_of_Birth__c))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&gt;=6,
+OR(
+ISBLANK(Child_6_First_Name__c), ISBLANK(Child_6_Surname__c), ISBLANK(Child_6_Date_of_Birth__c))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&lt;6 || ISBLANK(TEXT(Number_of_Children__c)),
+OR(
+NOT(ISBLANK(Child_6_First_Name__c)), NOT(ISBLANK(Child_6_Surname__c)),
+NOT(ISBLANK(Child_6_Date_of_Birth__c)))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&lt;5 || ISBLANK(TEXT(Number_of_Children__c)),
+OR(
+NOT(ISBLANK(Child_5_First_Name__c)), NOT(ISBLANK(Child_5_Surname__c)),
+NOT(ISBLANK(Child_5_Date_of_Birth__c)))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&lt;4 || ISBLANK(TEXT(Number_of_Children__c)),
+OR(
+NOT(ISBLANK(Child_4_First_Name__c)), NOT(ISBLANK(Child_4_Surname__c)),
+NOT(ISBLANK(Child_4_Date_of_Birth__c)))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&lt;3 || ISBLANK(TEXT(Number_of_Children__c)),
+OR(
+NOT(ISBLANK(Child_3_First_Name__c)), NOT(ISBLANK(Child_3_Surname__c)),
+NOT(ISBLANK(Child_3_Date_of_Birth__c)))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&lt;2 || ISBLANK(TEXT(Number_of_Children__c)),
+OR(
+NOT(ISBLANK(Child_2_First_Name__c)), NOT(ISBLANK(Child_2_Surname__c)),
+NOT(ISBLANK(Child_2_Date_of_Birth__c)))
+),
+
+AND(
+VALUE(TEXT(Number_of_Children__c))&lt;1 || ISBLANK(TEXT(Number_of_Children__c)),
+OR(
+NOT(ISBLANK(Child_1_First_Name__c)), NOT(ISBLANK(Child_1_Surname__c)),
+NOT(ISBLANK(Child_1_Date_of_Birth__c)))
+)
+)</errorConditionFormula>
+    <errorDisplayField>Number_of_Children__c</errorDisplayField>
+    <errorMessage>The &apos;Number of Children&apos; field, does not match the details entered. Please amend this before continuing.</errorMessage>
+</ValidationRule>

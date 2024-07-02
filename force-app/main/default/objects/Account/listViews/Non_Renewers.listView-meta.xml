@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Renewers</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Hybrid_Membership_Number__c</columns>
+    <columns>Status_Indicator__c</columns>
+    <columns>Renewal_Date__c</columns>
+    <columns>Tenure2__c</columns>
+    <columns>Membership_Type__c</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Membership_Status__c</field>
+        <operation>equals</operation>
+        <value>Non-Renewer</value>
+    </filters>
+    <label>Non-Renewers</label>
+</ListView>

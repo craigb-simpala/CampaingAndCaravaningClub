@@ -1,0 +1,16 @@
+.neutral-button {
+    --slds-c-button-text-color : rgba(180, 26, 47, 1);
+    --slds-c-button-text-color-hover : rgba(180, 26, 47, 1);
+    --slds-c-button-text-color-active : rgba(180, 26, 47, 1);
+    --slds-c-button-neutral-color-border: rgb(201, 201, 201);
+    --slds-c-button-neutral-color-border-hover: rgb(201, 201, 201);
+    --slds-c-button-neutral-color-border-active: rgb(201, 201, 201);
+}
+
+.brand-button {
+    --slds-c-button-brand-color-background : rgba(180, 26, 47, 1);
+    --slds-c-button-brand-color-background-hover : rgb(137, 18, 34);
+    --slds-c-button-brand-color-background-active: rgb(137, 18, 34);
+    --slds-c-button-brand-color-border: rgba(180, 26, 47, 1);
+    --slds-c-button-brand-color-border-hover: rgb(137, 18, 34);
+}

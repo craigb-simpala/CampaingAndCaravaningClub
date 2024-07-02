@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_isnt_allowed_on_New_Membership</fullName>
+    <active>false</active>
+    <description>Used to check if Partner&apos;s aren&apos;t allowed with the current membership type</description>
+    <errorConditionFormula>AND(
+ Membership_Type__r.PartnerAllowed__c = FALSE,
+ hasPartner__c =TRUE)</errorConditionFormula>
+    <errorDisplayField>hasPartner__c</errorDisplayField>
+    <errorMessage>Secondary members cannot be added to the selected membership type.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partners_or_Caravan_MHome_Manufacturer</fullName>
+    <columns>NAME</columns>
+    <columns>RT_Code__c</columns>
+    <columns>Level_One__c</columns>
+    <columns>Contact_Name__c</columns>
+    <columns>Postcode__c</columns>
+    <columns>Active__c</columns>
+    <columns>Commission_Paid__c</columns>
+    <columns>Show_on_Website__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Dealer_Ad_Category__c</field>
+        <operation>equals</operation>
+        <value>Dealers</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Level_One__c</field>
+        <operation>equals</operation>
+        <value>Partners or Caravan / Motorhome Manufacturer</value>
+    </filters>
+    <label>Partners or Caravan / MHome Manufacturer</label>
+</ListView>

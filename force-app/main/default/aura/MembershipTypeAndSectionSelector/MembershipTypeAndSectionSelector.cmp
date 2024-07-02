@@ -1,0 +1,85 @@
+<aura:component controller="MembershipController" implements="force:hasRecordId,flexipage:availableForRecordHome" access="global">
+	<aura:attribute name="recordId" type="Id" access="global"/>
+	<aura:attribute name="membershipTypes" type="Club_Product__c[]" access="global"/>
+	<aura:attribute name="membershipTypeNames" type="Object[]" access="global"/>
+	<aura:attribute name="selectedMembershipType" type="Object" />
+	<aura:attribute name="membershipTypeIsSelected" type="Boolean" default="false" access="global"/>
+	<aura:attribute name="sectionsAllowed" type="Boolean" />
+	<aura:attribute name="sections" type="List" />
+	<aura:attribute name="errors" type="String" default="" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+
+	<lightning:card title="Select Membership and Sections">
+		<div class="card">
+			<aura:renderIf isTrue="{!!v.membershipTypeIsSelected}">
+				<lightning:select value="{!v.selectedMembershipType.Name}" onchange="{! c.getSectionsAllowed }" >
+		            <aura:iteration items="{!v.membershipTypeNames}" var="mt" indexVar="i">
+		            	<aura:if isTrue="{!mt.name==v.selectedMembershipType.Name}">
+		            		<option value="{!mt.name}" selected="true">{!mt.name} - £{!mt.price}</option>
+		            		<aura:set attribute="else">
+		            			<option value="{!mt.name}">{!mt.name} - £{!mt.price}</option>
+		            		</aura:set>
+		            	</aura:if>
+		            </aura:iteration>
+		        </lightning:select>
+		        <br/>
+		        <aura:renderIf isTrue="{!v.sectionsAllowed}">
+		        	<lightning:button label="Next" onclick="{!c.next}" class="slds-button slds-button_brand button"/>
+		        </aura:renderIf>
+		        <lightning:button label="Save" onclick="{!c.save}" class="slds-button slds-button_brand button" /> 
+
+
+		        <aura:set attribute="else">
+		        		<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+	  						<thead>
+	  							<tr class="slds-line-height_reset">
+							      <th class="" scope="col">
+							        <div class="slds-truncate" title="Section Name">Section Name</div>
+							      </th>
+							      <th class="" scope="col">
+							        <div class="slds-truncate" title="Code">Price</div>
+							      </th>
+							      <th class="" scope="col">
+							        <div class="slds-truncate" title="Selected">Selected</div>
+							      </th>
+							    </tr>
+							</thead>
+							<tbody>
+								<aura:iteration items="{!v.sections}" var="sec">
+								    <tr class="slds-hint-parent">
+								      <th data-label="Opportunity Name" scope="row">
+								        <div class="slds-truncate">
+								        	{!sec.name}
+								        </div>
+								      </th>
+								      <th data-label="Opportunity Name" scope="row">
+								        <div class="slds-truncate">
+								        	£{!sec.price}
+								        </div>
+								      </th>
+								      <th data-label="Opportunity Name" scope="row">
+								        <div class="slds-truncate">
+								        	<ui:inputCheckbox value="{!sec.selected}"/>
+								        </div>
+								      </th>
+								  	</tr>
+								  </aura:iteration>
+								 </tbody>
+								</table>
+								<br/>
+								<lightning:button label="Back" onclick="{!c.back}"  class="slds-button slds-button_brand button"/>
+								<lightning:button label="Save" onclick="{!c.save}"  class="slds-button slds-button_brand button"/>
+		        </aura:set>
+			</aura:renderIf>
+			<br/>
+			<br/>
+			<aura:renderIf isTrue="{!v.errors!=''}" aura:id="error">
+				{!v.errors}
+			</aura:renderIf>
+		</div>
+	</lightning:card>
+
+
+</aura:component>

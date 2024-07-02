@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Veteran_Members_49_year_tenure</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Date_Joined__c</columns>
+    <columns>Account.Renewal_Date__c</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <columns>Tenure2__c</columns>
+    <columns>Status_Indicator__c</columns>
+    <columns>Account.Membership_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.Lead</value>
+    </filters>
+    <filters>
+        <field>Account.Membership_Type_Name__c</field>
+        <operation>contains</operation>
+        <value>Veteran</value>
+    </filters>
+    <filters>
+        <field>Account.Membership_Status__c</field>
+        <operation>equals</operation>
+        <value>Paid</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Tenure2__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>26</value>
+    </filters>
+    <label>Veteran Members</label>
+</ListView>
